@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.venv/
+*.sqlite3
+*.db
+*.zip
+!tests/fixtures/sqlite_snapshots/*.sqlite3
+!tests/fixtures/audit_samples/*.zip
+!examples/audit_packets/*.zip
