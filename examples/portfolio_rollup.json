@@ -1,0 +1,14 @@
+{
+  "band_counts": {
+    "blocked": 6
+  },
+  "count": 6,
+  "owner_average_percent": {
+    "content_ops": 46.65,
+    "finance_ops": 46.65,
+    "platform_ops": 46.65,
+    "risk_ops": 46.65,
+    "sales_ops": 46.65,
+    "support_ops": 46.65
+  }
+}

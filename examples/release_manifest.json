@@ -1,0 +1,360 @@
+{
+  "bundle_ids": [
+    "claims-intake",
+    "document-classifier",
+    "fulfillment-ledger",
+    "identity-refresh",
+    "merchant-closeout",
+    "pricing-handoff",
+    "reserve-rollforward",
+    "returns-recovery",
+    "seat-allocation",
+    "subscriber-billing",
+    "vendor-settlement",
+    "warehouse-routing"
+  ],
+  "bundle_stats": {
+    "claims-intake": {
+      "bundle_id": "claims-intake",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "support_ops",
+      "hidden_case_count": 8,
+      "owner": "support_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "support",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "document-classifier": {
+      "bundle_id": "document-classifier",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "content_ops",
+      "hidden_case_count": 8,
+      "owner": "content_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "content",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "fulfillment-ledger": {
+      "bundle_id": "fulfillment-ledger",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "platform_ops",
+      "hidden_case_count": 8,
+      "owner": "platform_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "platform",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "identity-refresh": {
+      "bundle_id": "identity-refresh",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "risk_ops",
+      "hidden_case_count": 8,
+      "owner": "risk_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "risk",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "merchant-closeout": {
+      "bundle_id": "merchant-closeout",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "finance_ops",
+      "hidden_case_count": 8,
+      "owner": "finance_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "finance",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "pricing-handoff": {
+      "bundle_id": "pricing-handoff",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "sales_ops",
+      "hidden_case_count": 8,
+      "owner": "sales_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "sales",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "reserve-rollforward": {
+      "bundle_id": "reserve-rollforward",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "treasury_ops",
+      "hidden_case_count": 8,
+      "owner": "treasury_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "treasury",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "returns-recovery": {
+      "bundle_id": "returns-recovery",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "returns_ops",
+      "hidden_case_count": 8,
+      "owner": "returns_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "returns",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "seat-allocation": {
+      "bundle_id": "seat-allocation",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "education_ops",
+      "hidden_case_count": 8,
+      "owner": "education_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "education",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "subscriber-billing": {
+      "bundle_id": "subscriber-billing",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "revops",
+      "hidden_case_count": 8,
+      "owner": "revops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "revops",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "vendor-settlement": {
+      "bundle_id": "vendor-settlement",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "procurement_ops",
+      "hidden_case_count": 8,
+      "owner": "procurement_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "procurement",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    },
+    "warehouse-routing": {
+      "bundle_id": "warehouse-routing",
+      "case_count": 24,
+      "comparators": {
+        "contains_tokens": 5,
+        "exact": 4,
+        "mapping_subset": 5,
+        "range": 5,
+        "unordered_list": 5
+      },
+      "domain": "logistics_ops",
+      "hidden_case_count": 8,
+      "owner": "logistics_ops",
+      "public_case_count": 16,
+      "sections": {
+        "audit": 5,
+        "catalog": 4,
+        "execution": 5,
+        "scoring": 5,
+        "validation": 5
+      },
+      "tags": [
+        "logistics",
+        "release",
+        "ops"
+      ],
+      "version": "2026.06"
+    }
+  },
+  "created_at": "2026-06-03T15:49:22Z",
+  "digest": "f04c676537c4e5bf480eb50f1dd8e8d4e41bee2ea8e3e56ac3ce51e758fd127c",
+  "notes": [
+    "example export"
+  ],
+  "release_id": "release-example"
+}
