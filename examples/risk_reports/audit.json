@@ -1,0 +1,65 @@
+{
+  "bundles": [
+    {
+      "bundle_id": "merchant-closeout",
+      "digest": "06cae8ddd8b35bfba6731683f2767a8eb00aade0",
+      "risk_band": "watch"
+    },
+    {
+      "bundle_id": "warehouse-routing",
+      "digest": "51abfe61deecade823760dfd0c923ec0d596ce16",
+      "risk_band": "risk"
+    },
+    {
+      "bundle_id": "claims-intake",
+      "digest": "282299e11fb8c2759b738c484b8423efb9e43887",
+      "risk_band": "blocked"
+    },
+    {
+      "bundle_id": "reserve-rollforward",
+      "digest": "936fb5915c2672e0ad8ecb37d0b30a68cf24f682",
+      "risk_band": "ready"
+    },
+    {
+      "bundle_id": "identity-refresh",
+      "digest": "c2af0bedfab8db417c1a93e08a233cf284ac9e6e",
+      "risk_band": "watch"
+    },
+    {
+      "bundle_id": "subscriber-billing",
+      "digest": "b11bbc74bcfc6e2917f2e802d148788d4f39dcc1",
+      "risk_band": "risk"
+    },
+    {
+      "bundle_id": "seat-allocation",
+      "digest": "480eaba2d4cd28930fe33776f69746b17e287aa6",
+      "risk_band": "blocked"
+    },
+    {
+      "bundle_id": "fulfillment-ledger",
+      "digest": "16ea637818cf8a96bc9cfc9954734cd41b50661a",
+      "risk_band": "ready"
+    },
+    {
+      "bundle_id": "document-classifier",
+      "digest": "073124f6a5e53e2794c35e0f4e92fcd56720d2ef",
+      "risk_band": "watch"
+    },
+    {
+      "bundle_id": "vendor-settlement",
+      "digest": "10622522309dbbe1f1eeb6ec2a4cdb05b90fb660",
+      "risk_band": "risk"
+    },
+    {
+      "bundle_id": "pricing-handoff",
+      "digest": "bc76b1246228128acb9df8c1123fd17376b88ecc",
+      "risk_band": "blocked"
+    },
+    {
+      "bundle_id": "returns-recovery",
+      "digest": "7c007abc28b3b85c082f8e0abb5b797055747605",
+      "risk_band": "ready"
+    }
+  ],
+  "section": "audit"
+}
