@@ -1,0 +1,23 @@
+{
+  "bundle_id": "document-classifier",
+  "domain": "content_ops",
+  "metadata": {
+    "author": "content_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Document routing and extraction review bundle used for acceptance rehearsal",
+    "release_channel": "internal"
+  },
+  "owner": "content_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "content",
+    "release",
+    "ops"
+  ],
+  "title": "Document routing and extraction review",
+  "version": "2026.06"
+}
