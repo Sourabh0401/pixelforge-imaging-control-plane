@@ -1,0 +1,23 @@
+{
+  "bundle_id": "merchant-closeout",
+  "domain": "finance_ops",
+  "metadata": {
+    "author": "finance_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Closeout readiness and exception handling bundle used for acceptance rehearsal",
+    "release_channel": "internal"
+  },
+  "owner": "finance_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "finance",
+    "release",
+    "ops"
+  ],
+  "title": "Closeout readiness and exception handling",
+  "version": "2026.06"
+}
