@@ -1,0 +1,23 @@
+{
+  "bundle_id": "seat-allocation",
+  "domain": "education_ops",
+  "metadata": {
+    "author": "education_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Seat allocation and roster timing bundle used for acceptance rehearsal",
+    "release_channel": "internal"
+  },
+  "owner": "education_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "education",
+    "release",
+    "ops"
+  ],
+  "title": "Seat allocation and roster timing",
+  "version": "2026.06"
+}
