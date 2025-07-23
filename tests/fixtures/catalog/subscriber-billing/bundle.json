@@ -1,0 +1,23 @@
+{
+  "bundle_id": "subscriber-billing",
+  "domain": "revops",
+  "metadata": {
+    "author": "revops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Recurring billing and entitlement checks bundle used for acceptance rehearsal",
+    "release_channel": "internal"
+  },
+  "owner": "revops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "revops",
+    "release",
+    "ops"
+  ],
+  "title": "Recurring billing and entitlement checks",
+  "version": "2026.06"
+}
