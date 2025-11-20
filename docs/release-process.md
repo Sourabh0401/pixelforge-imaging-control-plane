@@ -13,7 +13,7 @@ The release path uses:
 - a release manifest id and digest
 - a matching audit packet
 
-The process is strict on purpose. Challenge content is only one part of the decision. If the owner is blacked out for the current week, a technically healthy scorecard still cannot ship in the normal lane.
+The process is strict on purpose. Conformance content is only one part of the decision. If the owner is blacked out for the current week, a technically healthy scorecard still cannot ship in the normal lane.
 
 ## Readiness states
 

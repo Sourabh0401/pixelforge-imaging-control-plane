@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.cataloging import metadata_contracts, release_profiles
+from pixelforge_ops.cataloging import metadata_contracts, release_profiles
 
 
 class CatalogMetadataProfilesTests(unittest.TestCase):
@@ -13,16 +13,18 @@ class CatalogMetadataProfilesTests(unittest.TestCase):
         self.assertTrue(metadata_contracts.fields_for_section("catalog"))
 
     def test_contact_for_owner_returns_email(self) -> None:
-        contact = metadata_contracts.contact_for_owner("finance_ops")
+        contact = metadata_contracts.contact_for_owner("codec_ops")
         self.assertIn("@internal.example", contact["email"])
 
     def test_profile_for_bundle_returns_bundle_id(self) -> None:
-        profile = release_profiles.profile_for_bundle("merchant-closeout")
-        self.assertEqual(profile["bundle_id"], "merchant-closeout")
+        profile = release_profiles.profile_for_bundle("jpeg-codec-fidelity")
+        self.assertEqual(profile["bundle_id"], "jpeg-codec-fidelity")
 
     def test_channels_for_bundle_returns_channel_list(self) -> None:
-        channels = release_profiles.channels_for_bundle("merchant-closeout")
+        channels = release_profiles.channels_for_bundle("jpeg-codec-fidelity")
         self.assertIn("internal", channels)
 
     def test_score_floor_is_positive(self) -> None:
-        self.assertGreater(release_profiles.score_floor("merchant-closeout"), 0)
+        self.assertGreater(release_profiles.score_floor("jpeg-codec-fidelity"), 0)
+
+

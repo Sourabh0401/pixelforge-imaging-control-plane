@@ -1,0 +1,962 @@
+[
+  {
+    "description": "Audit field 1 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_001",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 2 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_002",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 3 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_003",
+    "redaction": "none",
+    "required": true,
+    "source": "manifest",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 4 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_004",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 5 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_005",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 6 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_006",
+    "redaction": "none",
+    "required": false,
+    "source": "run",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 7 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_007",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 8 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_008",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 9 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_009",
+    "redaction": "none",
+    "required": true,
+    "source": "history",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 10 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_010",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 11 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_011",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 12 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_012",
+    "redaction": "none",
+    "required": false,
+    "source": "scorecard",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 13 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_013",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 14 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_014",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 15 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_015",
+    "redaction": "none",
+    "required": true,
+    "source": "bundle",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 16 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_016",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 17 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_017",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 18 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_018",
+    "redaction": "none",
+    "required": false,
+    "source": "manifest",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 19 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_019",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 20 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_020",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 21 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_021",
+    "redaction": "none",
+    "required": true,
+    "source": "run",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 22 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_022",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 23 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_023",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 24 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_024",
+    "redaction": "none",
+    "required": false,
+    "source": "history",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 25 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_025",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 26 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_026",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 27 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_027",
+    "redaction": "none",
+    "required": true,
+    "source": "scorecard",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 28 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_028",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 29 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_029",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 30 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_030",
+    "redaction": "none",
+    "required": false,
+    "source": "bundle",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 31 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_031",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 32 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_032",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 33 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_033",
+    "redaction": "none",
+    "required": true,
+    "source": "manifest",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 34 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_034",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 35 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_035",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 36 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_036",
+    "redaction": "none",
+    "required": false,
+    "source": "run",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 37 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_037",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 38 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_038",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 39 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_039",
+    "redaction": "none",
+    "required": true,
+    "source": "history",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 40 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_040",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 41 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_041",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 42 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_042",
+    "redaction": "none",
+    "required": false,
+    "source": "scorecard",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 43 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_043",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 44 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_044",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 45 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_045",
+    "redaction": "none",
+    "required": true,
+    "source": "bundle",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 46 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_046",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 47 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_047",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 48 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_048",
+    "redaction": "none",
+    "required": false,
+    "source": "manifest",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 49 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_049",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 50 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_050",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 51 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_051",
+    "redaction": "none",
+    "required": true,
+    "source": "run",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 52 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_052",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 53 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_053",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 54 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_054",
+    "redaction": "none",
+    "required": false,
+    "source": "history",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 55 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_055",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 56 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_056",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 57 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_057",
+    "redaction": "none",
+    "required": true,
+    "source": "scorecard",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 58 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_058",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 59 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_059",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 60 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_060",
+    "redaction": "none",
+    "required": false,
+    "source": "bundle",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 61 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_061",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 62 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_062",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 63 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_063",
+    "redaction": "none",
+    "required": true,
+    "source": "manifest",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 64 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_064",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 65 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_065",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 66 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_066",
+    "redaction": "none",
+    "required": false,
+    "source": "run",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 67 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_067",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 68 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_068",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 69 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_069",
+    "redaction": "none",
+    "required": true,
+    "source": "history",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 70 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_070",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 71 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_071",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 72 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_072",
+    "redaction": "none",
+    "required": false,
+    "source": "scorecard",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 73 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_073",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 74 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_074",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 75 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_075",
+    "redaction": "none",
+    "required": true,
+    "source": "bundle",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 76 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_076",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 77 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_077",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 78 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_078",
+    "redaction": "none",
+    "required": false,
+    "source": "manifest",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 79 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_079",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 80 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_080",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 81 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_081",
+    "redaction": "none",
+    "required": true,
+    "source": "run",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 82 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_082",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 83 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_083",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 84 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_084",
+    "redaction": "none",
+    "required": false,
+    "source": "history",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 85 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_085",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 86 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_086",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 87 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_087",
+    "redaction": "none",
+    "required": true,
+    "source": "scorecard",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 88 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_088",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 89 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_089",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 90 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_090",
+    "redaction": "none",
+    "required": false,
+    "source": "bundle",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 91 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_091",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 92 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_092",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 93 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_093",
+    "redaction": "none",
+    "required": true,
+    "source": "manifest",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 94 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_094",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 95 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_095",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 96 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_096",
+    "redaction": "none",
+    "required": false,
+    "source": "run",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 97 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_097",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 98 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_098",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 99 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_099",
+    "redaction": "none",
+    "required": true,
+    "source": "history",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 100 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_100",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 101 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_101",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 102 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_102",
+    "redaction": "none",
+    "required": false,
+    "source": "scorecard",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 103 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_103",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 104 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_104",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 105 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_105",
+    "redaction": "none",
+    "required": true,
+    "source": "bundle",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 106 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_106",
+    "redaction": "digest",
+    "required": true,
+    "source": "run",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 107 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_107",
+    "redaction": "truncate",
+    "required": true,
+    "source": "scorecard",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 108 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_108",
+    "redaction": "none",
+    "required": false,
+    "source": "manifest",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 109 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_109",
+    "redaction": "digest",
+    "required": true,
+    "source": "history",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 110 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_110",
+    "redaction": "truncate",
+    "required": true,
+    "source": "bundle",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 111 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_111",
+    "redaction": "none",
+    "required": true,
+    "source": "run",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 112 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_112",
+    "redaction": "digest",
+    "required": true,
+    "source": "scorecard",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 113 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_113",
+    "redaction": "truncate",
+    "required": true,
+    "source": "manifest",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 114 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_114",
+    "redaction": "none",
+    "required": false,
+    "source": "history",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 115 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_115",
+    "redaction": "digest",
+    "required": true,
+    "source": "bundle",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 116 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_116",
+    "redaction": "truncate",
+    "required": true,
+    "source": "run",
+    "type": "text"
+  },
+  {
+    "description": "Audit field 117 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_117",
+    "redaction": "none",
+    "required": true,
+    "source": "scorecard",
+    "type": "number"
+  },
+  {
+    "description": "Audit field 118 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_118",
+    "redaction": "digest",
+    "required": true,
+    "source": "manifest",
+    "type": "mapping"
+  },
+  {
+    "description": "Audit field 119 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_119",
+    "redaction": "truncate",
+    "required": true,
+    "source": "history",
+    "type": "list"
+  },
+  {
+    "description": "Audit field 120 captures stable evidence for packet replay and retention review.",
+    "field": "audit_field_120",
+    "redaction": "none",
+    "required": false,
+    "source": "bundle",
+    "type": "text"
+  }
+]

@@ -1,40 +1,43 @@
-# Engineering Challenge Control Plane
+# PixelForge Imaging Control Plane
 
-Engineering Challenge Control Plane is the internal service bundle we use to run a private engineering challenge program for hiring loops, partner certifications, and release-readiness drills. Operators load department bundles, replay participant submissions, compute weighted scorecards, gate bundle releases, persist monthly history, and export audit packets for downstream review. The repo is intentionally broad because the work itself crosses several teams: content operations, evaluation operations, support, and release management all touch the same bundle lifecycle.
+PixelForge Imaging Control Plane is the internal release and certification repo behind PixelForge image engine drops. The team uses it to manage codec and raster conformance bundles, replay nightly decode and transform runs, score filter regressions, gate release windows, persist monthly history, and freeze deterministic audit packets before a build moves into a wider channel. It sits between imaging engineering, QA, release management, partner enablement, and support, so the repo is shaped like an operations product instead of a one-shot test harness.
 
 The product has six connected surfaces:
 
-- `cataloging` handles bundle import, metadata policy, case indexing, and operator playbooks.
-- `execution_engine` normalizes submission payloads, applies comparator rules, budgets runtime, and records transcripts.
-- `scoring_model` computes weighted section totals, fairness checks, drift analysis, and remediation queues.
-- `release_ops` builds manifests, applies rollout calendars, enforces checklists, and evaluates release gates.
-- `auditpack` assembles evidence contracts, traces, deterministic zip exports, and retention policy.
-- `persistence` stores summaries and history in SQLite and powers owner dashboards.
+- `cataloging` loads certification bundles, owner metadata, workflow contracts, and lane playbooks.
+- `execution_engine` normalizes replay payloads, compares outputs, budgets execution time, and records transcripts.
+- `scoring_model` computes weighted section totals, drift checks, fairness signals, and remediation queues.
+- `release_ops` builds manifests, applies rollout calendars, enforces checklists, and evaluates ship gates.
+- `auditpack` assembles evidence contracts, traces, deterministic zip exports, and retention rules.
+- `persistence` stores summaries and history in SQLite, then feeds dashboard and owner review views.
 
-Current bundle families cover systems-heavy tracks such as platform operations, routing, data cleanup, settlement controls, and release drills. The same product shape also supports department lanes for kernel, database, networking, compiler, graphics, distributed systems, data engineering, and financial engine tracks.
+The checked-in fixture corpus still uses durable codenames such as `jpeg-codec-fidelity` and `raster-transform-tiling`. Those names predate the current PixelForge branding and now stand in for imaging certification lanes like codec fidelity, raster transforms, color management, partner export compatibility, and recovery drills. The codenames stay because they keep long-lived history snapshots stable.
 
 ## Commands operators actually use
 
 ```bash
-PYTHONPATH=src python -m engineering_challenge.cli catalog-summary tests/fixtures/catalog
-PYTHONPATH=src python -m engineering_challenge.cli validate-bundle tests/fixtures/catalog/merchant-closeout
-PYTHONPATH=src python -m engineering_challenge.cli run-attempt tests/fixtures/catalog/merchant-closeout tests/fixtures/attempts/merchant-closeout_mixed.json
-PYTHONPATH=src python -m engineering_challenge.cli build-scorecard tests/fixtures/catalog/merchant-closeout tests/fixtures/attempts/merchant-closeout_mixed.json
-PYTHONPATH=src python -m engineering_challenge.cli build-release tests/fixtures/catalog tests/fixtures/catalog/merchant-closeout tests/fixtures/catalog/warehouse-routing
-PYTHONPATH=src python -m engineering_challenge.cli build-audit tests/fixtures/catalog/merchant-closeout tests/fixtures/attempts/merchant-closeout_mixed.json --output examples/audit_packets/manual.zip
-PYTHONPATH=src python -m engineering_challenge.cli release-readiness tests/fixtures/catalog/merchant-closeout tests/fixtures/attempts/merchant-closeout_mixed.json
+PYTHONPATH=src python -m pixelforge_ops.cli catalog-summary tests/fixtures/catalog
+PYTHONPATH=src python -m pixelforge_ops.cli validate-bundle tests/fixtures/catalog/jpeg-codec-fidelity
+PYTHONPATH=src python -m pixelforge_ops.cli run-attempt tests/fixtures/catalog/jpeg-codec-fidelity tests/fixtures/attempts/jpeg-codec-fidelity_mixed.json
+PYTHONPATH=src python -m pixelforge_ops.cli build-scorecard tests/fixtures/catalog/jpeg-codec-fidelity tests/fixtures/attempts/jpeg-codec-fidelity_mixed.json
+PYTHONPATH=src python -m pixelforge_ops.cli build-release tests/fixtures/catalog tests/fixtures/catalog/jpeg-codec-fidelity tests/fixtures/catalog/raster-transform-tiling
+PYTHONPATH=src python -m pixelforge_ops.cli build-audit tests/fixtures/catalog/jpeg-codec-fidelity tests/fixtures/attempts/jpeg-codec-fidelity_mixed.json --output examples/audit_packets/manual.zip
+PYTHONPATH=src python -m pixelforge_ops.cli release-readiness tests/fixtures/catalog/jpeg-codec-fidelity tests/fixtures/attempts/jpeg-codec-fidelity_mixed.json
+PYTHONPATH=src python -m pixelforge_ops.cli history-rollup tests/fixtures/history/ops_history_2026_01.jsonl
 python -m unittest discover -s tests -q
 ```
 
-## Fixture corpus
+## What lives here
 
-The repo includes:
+- 12 certification bundle directories with case catalogs, owner notes, and release metadata
+- mixed, strong, and weak replay payloads for each lane
+- monthly history JSONL corpora for trend and dashboard tests
+- SQLite snapshot databases with imported release history rows
+- deterministic audit packet samples, scorecard exports, release manifests, and dashboard views
 
-- 12 bundle fixture directories with case catalogs and authoring notes
-- mixed, strong, and weak submission payloads for each bundle
-- monthly history JSONL corpora for replay and dashboard tests
-- SQLite snapshot databases with imported history rows
-- deterministic audit packet samples and scorecard exports
+## Why the repo is bigger than a small library
+
+PixelForge itself is the image engine. This repo is the release control plane around it. The bundle corpus, history snapshots, and audit packet fixtures are the point: they let the team replay an old release week, prove that a JPEG regression was already visible in hidden cases, compare partner lanes before and after a fix, and export the exact evidence packet that justified a rollout decision.
 
 ## Repository map
 

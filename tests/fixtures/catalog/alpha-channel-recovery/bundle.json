@@ -1,0 +1,23 @@
+{
+  "bundle_id": "alpha-channel-recovery",
+  "domain": "archive_ops",
+  "metadata": {
+    "author": "archive_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Alpha channel recovery bundle used for acceptance rehearsal across premultiplication and transparent edge handling.",
+    "release_channel": "internal"
+  },
+  "owner": "archive_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "alpha",
+    "transparency",
+    "release"
+  ],
+  "title": "Alpha channel recovery and transparent edge handling",
+  "version": "2026.06"
+}

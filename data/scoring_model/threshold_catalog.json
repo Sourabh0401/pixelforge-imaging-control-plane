@@ -1,0 +1,628 @@
+{
+  "owner_thresholds": {
+    "archive_ops": {
+      "audit": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 77
+      },
+      "authoring": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 78
+      },
+      "catalog": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "difficulty": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 79
+      },
+      "execution": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "history": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 82
+      },
+      "release": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 80
+      },
+      "remediation": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 81
+      },
+      "scoring": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "validation": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      }
+    },
+    "codec_ops": {
+      "audit": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      },
+      "authoring": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "catalog": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 79
+      },
+      "difficulty": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "execution": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 81
+      },
+      "history": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "release": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "remediation": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "scoring": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 82
+      },
+      "validation": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 80
+      }
+    },
+    "color_ops": {
+      "audit": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 82
+      },
+      "authoring": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      },
+      "catalog": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 78
+      },
+      "difficulty": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "execution": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 80
+      },
+      "history": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "release": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "remediation": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "scoring": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 81
+      },
+      "validation": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 79
+      }
+    },
+    "export_ops": {
+      "audit": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "authoring": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "catalog": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 82
+      },
+      "difficulty": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "execution": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "history": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "release": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "remediation": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "scoring": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "validation": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      }
+    },
+    "image_quality_ops": {
+      "audit": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "authoring": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "catalog": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "difficulty": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "execution": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "history": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 79
+      },
+      "release": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 77
+      },
+      "remediation": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 78
+      },
+      "scoring": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "validation": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      }
+    },
+    "launch_ops": {
+      "audit": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "authoring": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "catalog": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "difficulty": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 77
+      },
+      "execution": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "history": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 80
+      },
+      "release": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 78
+      },
+      "remediation": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 79
+      },
+      "scoring": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "validation": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      }
+    },
+    "metadata_ops": {
+      "audit": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 81
+      },
+      "authoring": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 82
+      },
+      "catalog": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 77
+      },
+      "difficulty": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      },
+      "execution": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 79
+      },
+      "history": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "release": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "remediation": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "scoring": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 80
+      },
+      "validation": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 78
+      }
+    },
+    "partner_ops": {
+      "audit": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "authoring": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 77
+      },
+      "catalog": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "difficulty": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 78
+      },
+      "execution": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "history": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 81
+      },
+      "release": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 79
+      },
+      "remediation": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 80
+      },
+      "scoring": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "validation": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      }
+    },
+    "pipeline_ops": {
+      "audit": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "authoring": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "catalog": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 81
+      },
+      "difficulty": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "execution": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      },
+      "history": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "release": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "remediation": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "scoring": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "validation": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 82
+      }
+    },
+    "qa_ops": {
+      "audit": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "authoring": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "catalog": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      },
+      "difficulty": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "execution": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "history": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 77
+      },
+      "release": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "remediation": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "scoring": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "validation": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      }
+    },
+    "raster_ops": {
+      "audit": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "authoring": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      },
+      "catalog": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 80
+      },
+      "difficulty": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "execution": {
+        "floor": 64,
+        "stretch": 92,
+        "target": 82
+      },
+      "history": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "release": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "remediation": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "scoring": {
+        "floor": 65,
+        "stretch": 93,
+        "target": 83
+      },
+      "validation": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 81
+      }
+    },
+    "release_program_ops": {
+      "audit": {
+        "floor": 58,
+        "stretch": 92,
+        "target": 88
+      },
+      "authoring": {
+        "floor": 59,
+        "stretch": 93,
+        "target": 89
+      },
+      "catalog": {
+        "floor": 66,
+        "stretch": 94,
+        "target": 84
+      },
+      "difficulty": {
+        "floor": 60,
+        "stretch": 94,
+        "target": 90
+      },
+      "execution": {
+        "floor": 68,
+        "stretch": 96,
+        "target": 86
+      },
+      "history": {
+        "floor": 63,
+        "stretch": 97,
+        "target": 78
+      },
+      "release": {
+        "floor": 61,
+        "stretch": 95,
+        "target": 76
+      },
+      "remediation": {
+        "floor": 62,
+        "stretch": 96,
+        "target": 77
+      },
+      "scoring": {
+        "floor": 69,
+        "stretch": 97,
+        "target": 87
+      },
+      "validation": {
+        "floor": 67,
+        "stretch": 95,
+        "target": 85
+      }
+    }
+  }
+}

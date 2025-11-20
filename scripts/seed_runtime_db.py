@@ -9,12 +9,12 @@ if str(ROOT) not in sys.path:
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
-from engineering_challenge import catalog, storage
-from engineering_challenge.execution import evaluate_attempt
-from engineering_challenge.scoring import score_run
-from engineering_challenge.utils import read_json
+from pixelforge_ops import catalog, storage
+from pixelforge_ops.execution import evaluate_attempt
+from pixelforge_ops.scoring import score_run
+from pixelforge_ops.utils import read_json
 
-DB = ROOT / "runtime" / "engineering_challenge.sqlite3"
+DB = ROOT / "runtime" / "pixelforge_ops.sqlite3"
 CORPUS = ROOT / "tests" / "fixtures" / "catalog"
 ATTEMPTS = ROOT / "tests" / "fixtures" / "attempts"
 
@@ -30,3 +30,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

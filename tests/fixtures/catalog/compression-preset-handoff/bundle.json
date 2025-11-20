@@ -1,0 +1,24 @@
+{
+  "bundle_id": "compression-preset-handoff",
+  "domain": "launch_ops",
+  "metadata": {
+    "author": "launch_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Compression preset handoff bundle used for acceptance rehearsal across preset policy changes and launch notes.",
+    "release_channel": "internal"
+  },
+  "owner": "launch_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "compression",
+    "preset",
+    "launch",
+    "release"
+  ],
+  "title": "Compression preset handoff and launch packaging",
+  "version": "2026.06"
+}

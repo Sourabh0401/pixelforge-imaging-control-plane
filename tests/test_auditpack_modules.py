@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.auditpack import contracts, evidence_store, export_zip, retention, trace
-from engineering_challenge.execution import evaluate_attempt
+from pixelforge_ops.auditpack import contracts, evidence_store, export_zip, retention, trace
+from pixelforge_ops.execution import evaluate_attempt
 from tests.ext_helpers import attempt, bundle
 
 
@@ -45,11 +45,13 @@ class AuditpackModuleTests(unittest.TestCase):
         self.assertFalse(retention.should_prune("internal", 100, False))
 
     def test_trace_rows_match_run_results(self) -> None:
-        run = evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed"))
+        run = evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed"))
         rows = trace.trace_rows(run)
         self.assertEqual(len(rows), len(run.case_results))
 
     def test_trace_digest_payload_has_cases(self) -> None:
-        run = evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed"))
+        run = evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed"))
         payload = trace.trace_digest_payload(run)
         self.assertIn("cases", payload)
+
+

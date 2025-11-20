@@ -8,7 +8,7 @@ from datetime import datetime
 from importlib import import_module
 from pathlib import Path
 
-from engineering_challenge import utils
+from pixelforge_ops import utils
 
 
 class UtilsExtendedTests(unittest.TestCase):
@@ -158,9 +158,11 @@ class UtilsExtendedTests(unittest.TestCase):
             os.environ.pop("ASSESSMENT_OPS_ENV_FLAG", None)
 
     def test_package_shim_can_import_catalog_module(self) -> None:
-        module = import_module("engineering_challenge.catalog")
+        module = import_module("pixelforge_ops.catalog")
         self.assertTrue(hasattr(module, "load_bundle"))
 
     def test_package_shim_points_at_src_tree(self) -> None:
-        package = import_module("engineering_challenge")
+        package = import_module("pixelforge_ops")
         self.assertTrue(any("src" in item for item in package.__path__))
+
+

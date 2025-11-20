@@ -1,0 +1,348 @@
+{
+  "blocks": [
+    {
+      "block_id": "block-catalog",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Catalog stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Catalog summary"
+    },
+    {
+      "block_id": "block-validation",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Validation stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Validation summary"
+    },
+    {
+      "block_id": "block-execution",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Execution stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Execution summary"
+    },
+    {
+      "block_id": "block-scoring",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Scoring stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Scoring summary"
+    },
+    {
+      "block_id": "block-audit",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Audit stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Audit summary"
+    },
+    {
+      "block_id": "block-authoring",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Authoring stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Authoring summary"
+    },
+    {
+      "block_id": "block-difficulty",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Difficulty stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Difficulty summary"
+    },
+    {
+      "block_id": "block-release",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Release stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Release summary"
+    },
+    {
+      "block_id": "block-remediation",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "Remediation stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "Remediation summary"
+    },
+    {
+      "block_id": "block-history",
+      "optional_fields": [
+        "policy_flags",
+        "release_channel",
+        "notes"
+      ],
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "percent"
+      ],
+      "sample_sentence": "History stayed within the expected band and did not introduce hidden-case regressions.",
+      "title": "History summary"
+    }
+  ],
+  "panels": [
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Thumbnail Metadata Ops readiness panel",
+      "owner": "metadata_ops",
+      "panel_id": "panel-01",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Color Management Ops readiness panel",
+      "owner": "color_ops",
+      "panel_id": "panel-02",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Codec Certification readiness panel",
+      "owner": "codec_ops",
+      "panel_id": "panel-03",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Raster Transform Ops readiness panel",
+      "owner": "raster_ops",
+      "panel_id": "panel-04",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Export Pipeline Ops readiness panel",
+      "owner": "pipeline_ops",
+      "panel_id": "panel-05",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Partner Format Ops readiness panel",
+      "owner": "export_ops",
+      "panel_id": "panel-06",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Decoder Recovery Ops readiness panel",
+      "owner": "qa_ops",
+      "panel_id": "panel-07",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Render Telemetry Ops readiness panel",
+      "owner": "release_program_ops",
+      "panel_id": "panel-08",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Image Quality Ops readiness panel",
+      "owner": "image_quality_ops",
+      "panel_id": "panel-09",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Compression Launch Ops readiness panel",
+      "owner": "launch_ops",
+      "panel_id": "panel-10",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Metadata Intake Ops readiness panel",
+      "owner": "partner_ops",
+      "panel_id": "panel-11",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    },
+    {
+      "callouts": [
+        "Focus on hidden-case movement first.",
+        "Confirm release notes and audit packet digests match.",
+        "Escalate repeated watch-band bundles to release ops."
+      ],
+      "headline": "Archive and Retention Ops readiness panel",
+      "owner": "archive_ops",
+      "panel_id": "panel-12",
+      "required_metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count"
+      ]
+    }
+  ]
+}

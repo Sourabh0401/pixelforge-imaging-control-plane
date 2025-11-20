@@ -1,0 +1,246 @@
+{
+  "query_specs": [
+    {
+      "description": "Monthly owner trend with blended, public, and hidden percentages so release leads can see whether a support issue is localized or systemic.",
+      "owner": "release_ops",
+      "parameters": [
+        "owner",
+        "since",
+        "until"
+      ],
+      "query_id": "owner-trend-rollup",
+      "sql": "select\n  owner,\n  substr(started_at, 1, 7) as month_bucket,\n  count(*) as run_count,\n  round(avg(percent), 2) as average_percent,\n  round(avg(hidden_percent), 2) as average_hidden_percent,\n  round(avg(json_extract(payload_json, '$.public_percent')), 2) as average_public_percent\nfrom history_import\nwhere owner = :owner\n  and started_at >= :since\n  and started_at < :until\ngroup by owner, month_bucket\norder by month_bucket desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Owner trend rollup"
+    },
+    {
+      "description": "Breakdown of ready, watch, and blocked rows by channel so a release manager can see whether one rollout path is carrying unusual operational risk.",
+      "owner": "release_ops",
+      "parameters": [
+        "release_channel",
+        "since"
+      ],
+      "query_id": "channel-band-mix",
+      "sql": "select\n  release_channel,\n  band,\n  count(*) as row_count,\n  round(avg(percent), 2) as average_percent\nfrom history_import\nwhere release_channel = :release_channel\n  and started_at >= :since\ngroup by release_channel, band\norder by release_channel, band",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Channel band mix"
+    },
+    {
+      "description": "Rows where the public-hidden gap is large enough to require a manual read even if the total score is still above the nominal release threshold.",
+      "owner": "image_quality_ops",
+      "parameters": [
+        "gap_floor",
+        "since"
+      ],
+      "query_id": "hidden-gap-watchlist",
+      "sql": "select\n  history_id,\n  bundle_id,\n  owner,\n  percent,\n  hidden_percent,\n  json_extract(payload_json, '$.public_percent') as public_percent,\n  round(json_extract(payload_json, '$.public_percent') - hidden_percent, 2) as gap\nfrom history_import\nwhere started_at >= :since\n  and (json_extract(payload_json, '$.public_percent') - hidden_percent) >= :gap_floor\norder by gap desc, started_at desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Hidden gap watchlist"
+    },
+    {
+      "description": "Slow review rows grouped with owner and release channel so the platform team can separate runtime pressure from content drift.",
+      "owner": "pipeline_ops",
+      "parameters": [
+        "latency_floor"
+      ],
+      "query_id": "queue-latency-outliers",
+      "sql": "select\n  history_id,\n  owner,\n  bundle_id,\n  release_channel,\n  json_extract(payload_json, '$.queue_latency_ms') as queue_latency_ms,\n  started_at\nfrom history_import\nwhere json_extract(payload_json, '$.queue_latency_ms') >= :latency_floor\norder by queue_latency_ms desc, started_at desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Queue latency outliers"
+    },
+    {
+      "description": "Counts how many blocked and watch rows piled up for one owner in the recent window to support weekly staffing and blackout decisions.",
+      "owner": "metadata_ops",
+      "parameters": [
+        "owner",
+        "since"
+      ],
+      "query_id": "owner-capacity-pressure",
+      "sql": "select\n  owner,\n  band,\n  count(*) as row_count,\n  round(avg(percent), 2) as average_percent,\n  min(started_at) as first_seen,\n  max(started_at) as last_seen\nfrom history_import\nwhere owner = :owner\n  and started_at >= :since\ngroup by owner, band\norder by row_count desc, band",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Owner capacity pressure"
+    },
+    {
+      "description": "Shows the digest history for a bundle so auditors can tell whether packet or release changes coincide with scoring movement.",
+      "owner": "audit_ops",
+      "parameters": [
+        "bundle_id"
+      ],
+      "query_id": "bundle-digest-drift",
+      "sql": "select\n  bundle_id,\n  json_extract(payload_json, '$.artifact_digest') as artifact_digest,\n  count(*) as row_count,\n  min(started_at) as first_seen,\n  max(started_at) as last_seen\nfrom history_import\nwhere bundle_id = :bundle_id\ngroup by bundle_id, artifact_digest\norder by last_seen desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Bundle digest drift"
+    },
+    {
+      "description": "Summarizes auto, owner, support, and audit review states by owner to show where human review effort is actually landing.",
+      "owner": "partner_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "review-state-balance",
+      "sql": "select\n  owner,\n  json_extract(payload_json, '$.review_state') as review_state,\n  count(*) as row_count,\n  round(avg(percent), 2) as average_percent\nfrom history_import\nwhere started_at >= :since\ngroup by owner, review_state\norder by owner, review_state",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Review state balance"
+    },
+    {
+      "description": "Compares worker versions against score movement to help isolate operational shifts from content changes.",
+      "owner": "pipeline_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "worker-version-shift",
+      "sql": "select\n  json_extract(payload_json, '$.worker_version') as worker_version,\n  count(*) as row_count,\n  round(avg(percent), 2) as average_percent,\n  round(avg(hidden_percent), 2) as average_hidden_percent\nfrom history_import\nwhere started_at >= :since\ngroup by worker_version\norder by worker_version",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Worker version shift"
+    },
+    {
+      "description": "Rows that are close to ready but still blocked by policy or hidden-gap conditions. Useful when a release train is almost full and owners want to know what is one step away.",
+      "owner": "release_ops",
+      "parameters": [
+        "owner",
+        "since"
+      ],
+      "query_id": "ready-band-holdouts",
+      "sql": "select\n  history_id,\n  bundle_id,\n  owner,\n  percent,\n  hidden_percent,\n  band,\n  started_at\nfrom history_import\nwhere owner = :owner\n  and started_at >= :since\n  and band in ('watch', 'blocked')\n  and percent >= 80.0\norder by percent desc, started_at desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Ready band holdouts"
+    },
+    {
+      "description": "Owner and bundle level averages for portfolio summaries and release briefs.",
+      "owner": "reporting_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "owner-bundle-matrix",
+      "sql": "select\n  owner,\n  bundle_id,\n  count(*) as run_count,\n  round(avg(percent), 2) as average_percent,\n  round(avg(hidden_percent), 2) as average_hidden_percent\nfrom history_import\nwhere started_at >= :since\ngroup by owner, bundle_id\norder by owner, bundle_id",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Owner bundle matrix"
+    },
+    {
+      "description": "A rough inventory of rows carrying policy flags so owners can see whether review friction is a one-off or a pattern.",
+      "owner": "image_quality_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "policy-flag-frequency",
+      "sql": "select\n  owner,\n  case\n    when payload_json like '%requires-review%' then 'requires-review'\n    when payload_json like '%public-hidden-gap%' then 'public-hidden-gap'\n    else 'none'\n  end as flag_group,\n  count(*) as row_count\nfrom history_import\nwhere started_at >= :since\ngroup by owner, flag_group\norder by owner, flag_group",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Policy flag frequency"
+    },
+    {
+      "description": "Shows how one bundle moved through channels over time. Useful for validating whether a partner release is really new or simply the latest stop in a longer path.",
+      "owner": "release_ops",
+      "parameters": [
+        "bundle_id"
+      ],
+      "query_id": "bundle-release-channel-mix",
+      "sql": "select\n  bundle_id,\n  release_channel,\n  count(*) as row_count,\n  min(started_at) as first_seen,\n  max(started_at) as last_seen\nfrom history_import\nwhere bundle_id = :bundle_id\ngroup by bundle_id, release_channel\norder by last_seen desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Bundle release channel mix"
+    },
+    {
+      "description": "Focuses on rows that landed in support review and correlates their latency with owner and bundle.",
+      "owner": "partner_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "support-review-latency",
+      "sql": "select\n  owner,\n  bundle_id,\n  json_extract(payload_json, '$.queue_latency_ms') as queue_latency_ms,\n  started_at\nfrom history_import\nwhere started_at >= :since\n  and json_extract(payload_json, '$.review_state') = 'support'\norder by queue_latency_ms desc, started_at desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Support review latency"
+    },
+    {
+      "description": "Captures the audit-side queue so the team can separate evidence problems from general review backlog.",
+      "owner": "image_quality_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "audit-review-latency",
+      "sql": "select\n  owner,\n  bundle_id,\n  json_extract(payload_json, '$.queue_latency_ms') as queue_latency_ms,\n  started_at\nfrom history_import\nwhere started_at >= :since\n  and json_extract(payload_json, '$.review_state') = 'audit'\norder by queue_latency_ms desc, started_at desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Audit review latency"
+    },
+    {
+      "description": "Min/max spread for one owner over a time window. Helps explain why an average can look calm when the underlying runs are not.",
+      "owner": "reporting_ops",
+      "parameters": [
+        "owner",
+        "since"
+      ],
+      "query_id": "owner-score-volatility",
+      "sql": "select\n  owner,\n  min(percent) as min_percent,\n  max(percent) as max_percent,\n  round(max(percent) - min(percent), 2) as spread\nfrom history_import\nwhere owner = :owner\n  and started_at >= :since\ngroup by owner",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Owner score volatility"
+    },
+    {
+      "description": "Hidden score movement for a single bundle over time, grouped by month. This is the quickest way to confirm whether a bundle is decaying quietly.",
+      "owner": "image_quality_ops",
+      "parameters": [
+        "bundle_id",
+        "since"
+      ],
+      "query_id": "bundle-hidden-drift",
+      "sql": "select\n  bundle_id,\n  substr(started_at, 1, 7) as month_bucket,\n  round(avg(hidden_percent), 2) as average_hidden_percent,\n  round(avg(percent), 2) as average_percent\nfrom history_import\nwhere bundle_id = :bundle_id\n  and started_at >= :since\ngroup by bundle_id, month_bucket\norder by month_bucket desc",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Bundle hidden drift"
+    },
+    {
+      "description": "Cross-owner view of review states, intended for staffing and handoff conversations.",
+      "owner": "partner_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "review-state-owner-matrix",
+      "sql": "select\n  owner,\n  json_extract(payload_json, '$.review_state') as review_state,\n  count(*) as row_count\nfrom history_import\nwhere started_at >= :since\ngroup by owner, review_state\norder by review_state, owner",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Review state owner matrix"
+    },
+    {
+      "description": "Correlates queue latency with score band for each owner. Useful when a release train slowed down and the team wants to know whether quality or capacity drove it.",
+      "owner": "pipeline_ops",
+      "parameters": [
+        "since"
+      ],
+      "query_id": "owner-band-latency-cross",
+      "sql": "select\n  owner,\n  band,\n  round(avg(json_extract(payload_json, '$.queue_latency_ms')), 2) as average_queue_latency_ms,\n  count(*) as row_count\nfrom history_import\nwhere started_at >= :since\ngroup by owner, band\norder by owner, band",
+      "tables": [
+        "history_import"
+      ],
+      "title": "Owner band latency cross"
+    }
+  ]
+}

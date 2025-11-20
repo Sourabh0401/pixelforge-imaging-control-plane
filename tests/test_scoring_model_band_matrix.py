@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.scoring_model import band_matrix
+from pixelforge_ops.scoring_model import band_matrix
 
 
 class BandMatrixTests(unittest.TestCase):
@@ -22,7 +22,7 @@ class BandMatrixTests(unittest.TestCase):
         self.assertEqual(band_matrix.band_route("watch"), "ops-review")
 
     def test_section_weights_for_owner_returns_catalog_entry(self) -> None:
-        weights = band_matrix.section_weights_for_owner("finance_ops")
+        weights = band_matrix.section_weights_for_owner("codec_ops")
         self.assertIn("catalog", weights)
 
     def test_difficulty_target_returns_floor(self) -> None:
@@ -32,3 +32,5 @@ class BandMatrixTests(unittest.TestCase):
     def test_flag_definition_returns_route(self) -> None:
         flag = band_matrix.flag_definition("hidden-case-regression")
         self.assertEqual(flag["route"], "authoring")
+
+

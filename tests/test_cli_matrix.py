@@ -9,8 +9,8 @@ import unittest
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
-from engineering_challenge.cli import main
-from engineering_challenge.persistence.history_ingest import HistoryRowError
+from pixelforge_ops.cli import main
+from pixelforge_ops.persistence.history_ingest import HistoryRowError
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,18 +56,18 @@ class CliMatrixTests(unittest.TestCase):
 
     def test_catalog_summary_includes_domains(self) -> None:
         payload = self.run_cli_json("catalog-summary", str(CATALOG))
-        self.assertIn("finance_ops", payload["domains"])
+        self.assertIn("codec_ops", payload["domains"])
 
     def test_catalog_summary_missing_root_raises_file_not_found(self) -> None:
         with self.assertRaises(FileNotFoundError):
             self.run_cli("catalog-summary", str(CATALOG / "missing"))
 
     def test_validate_bundle_returns_bundle_id(self) -> None:
-        payload = self.run_cli_json("validate-bundle", str(CATALOG / "merchant-closeout"))
-        self.assertEqual(payload["bundle_id"], "merchant-closeout")
+        payload = self.run_cli_json("validate-bundle", str(CATALOG / "jpeg-codec-fidelity"))
+        self.assertEqual(payload["bundle_id"], "jpeg-codec-fidelity")
 
     def test_validate_bundle_includes_issues_array(self) -> None:
-        payload = self.run_cli_json("validate-bundle", str(CATALOG / "merchant-closeout"))
+        payload = self.run_cli_json("validate-bundle", str(CATALOG / "jpeg-codec-fidelity"))
         self.assertIn("issues", payload)
 
     def test_validate_bundle_missing_bundle_raises_file_not_found(self) -> None:
@@ -77,54 +77,54 @@ class CliMatrixTests(unittest.TestCase):
     def test_run_attempt_returns_bundle_id(self) -> None:
         payload = self.run_cli_json(
             "run-attempt",
-            str(CATALOG / "merchant-closeout"),
-            str(ATTEMPTS / "merchant-closeout_mixed.json"),
+            str(CATALOG / "jpeg-codec-fidelity"),
+            str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
         )
-        self.assertEqual(payload["bundle_id"], "merchant-closeout")
+        self.assertEqual(payload["bundle_id"], "jpeg-codec-fidelity")
 
     def test_run_attempt_can_write_output_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / "run.json"
             payload = self.run_cli_json(
                 "run-attempt",
-                str(CATALOG / "merchant-closeout"),
-                str(ATTEMPTS / "merchant-closeout_mixed.json"),
+                str(CATALOG / "jpeg-codec-fidelity"),
+                str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
                 "--output",
                 str(out),
             )
             self.assertTrue(out.exists())
-            self.assertEqual(payload["run_id"], "merchant-closeout-mixed-run")
+            self.assertEqual(payload["run_id"], "jpeg-codec-fidelity-mixed-run")
 
     def test_run_attempt_missing_attempt_raises_file_not_found(self) -> None:
         with self.assertRaises(FileNotFoundError):
-            self.run_cli("run-attempt", str(CATALOG / "merchant-closeout"), str(ATTEMPTS / "missing.json"))
+            self.run_cli("run-attempt", str(CATALOG / "jpeg-codec-fidelity"), str(ATTEMPTS / "missing.json"))
 
     def test_build_scorecard_returns_bundle_id(self) -> None:
         payload = self.run_cli_json(
             "build-scorecard",
-            str(CATALOG / "merchant-closeout"),
-            str(ATTEMPTS / "merchant-closeout_mixed.json"),
+            str(CATALOG / "jpeg-codec-fidelity"),
+            str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
         )
-        self.assertEqual(payload["bundle_id"], "merchant-closeout")
+        self.assertEqual(payload["bundle_id"], "jpeg-codec-fidelity")
 
     def test_build_scorecard_includes_policy_flags(self) -> None:
         payload = self.run_cli_json(
             "build-scorecard",
-            str(CATALOG / "merchant-closeout"),
-            str(ATTEMPTS / "merchant-closeout_mixed.json"),
+            str(CATALOG / "jpeg-codec-fidelity"),
+            str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
         )
         self.assertIn("requires-review", payload["policy_flags"])
 
     def test_build_scorecard_missing_attempt_raises_file_not_found(self) -> None:
         with self.assertRaises(FileNotFoundError):
-            self.run_cli("build-scorecard", str(CATALOG / "merchant-closeout"), str(ATTEMPTS / "missing.json"))
+            self.run_cli("build-scorecard", str(CATALOG / "jpeg-codec-fidelity"), str(ATTEMPTS / "missing.json"))
 
     def test_build_release_returns_release_id(self) -> None:
-        payload = self.run_cli_json("build-release", str(CATALOG), "merchant-closeout", "warehouse-routing", "--release-id", "cli-release")
+        payload = self.run_cli_json("build-release", str(CATALOG), "jpeg-codec-fidelity", "raster-transform-tiling", "--release-id", "cli-release")
         self.assertEqual(payload["release_id"], "cli-release")
 
     def test_build_release_uses_default_release_id(self) -> None:
-        payload = self.run_cli_json("build-release", str(CATALOG), "merchant-closeout")
+        payload = self.run_cli_json("build-release", str(CATALOG), "jpeg-codec-fidelity")
         self.assertEqual(payload["release_id"], "release-local")
 
     def test_build_release_missing_bundle_raises_file_not_found(self) -> None:
@@ -134,8 +134,8 @@ class CliMatrixTests(unittest.TestCase):
     def test_build_audit_returns_digest(self) -> None:
         payload = self.run_cli_json(
             "build-audit",
-            str(CATALOG / "merchant-closeout"),
-            str(ATTEMPTS / "merchant-closeout_mixed.json"),
+            str(CATALOG / "jpeg-codec-fidelity"),
+            str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
         )
         self.assertIn("digest", payload)
 
@@ -144,8 +144,8 @@ class CliMatrixTests(unittest.TestCase):
             out = Path(tmp) / "packet.zip"
             self.run_cli_json(
                 "build-audit",
-                str(CATALOG / "merchant-closeout"),
-                str(ATTEMPTS / "merchant-closeout_mixed.json"),
+                str(CATALOG / "jpeg-codec-fidelity"),
+                str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
                 "--output",
                 str(out),
             )
@@ -153,21 +153,21 @@ class CliMatrixTests(unittest.TestCase):
 
     def test_build_audit_missing_attempt_raises_file_not_found(self) -> None:
         with self.assertRaises(FileNotFoundError):
-            self.run_cli("build-audit", str(CATALOG / "merchant-closeout"), str(ATTEMPTS / "missing.json"))
+            self.run_cli("build-audit", str(CATALOG / "jpeg-codec-fidelity"), str(ATTEMPTS / "missing.json"))
 
     def test_owner_dashboard_returns_owner(self) -> None:
-        payload = self.run_cli_json("owner-dashboard", str(SNAPSHOT), "finance_ops")
-        self.assertEqual(payload["owner"], "finance_ops")
+        payload = self.run_cli_json("owner-dashboard", str(SNAPSHOT), "codec_ops")
+        self.assertEqual(payload["owner"], "codec_ops")
 
     def test_owner_dashboard_includes_callouts(self) -> None:
-        payload = self.run_cli_json("owner-dashboard", str(SNAPSHOT), "finance_ops")
+        payload = self.run_cli_json("owner-dashboard", str(SNAPSHOT), "codec_ops")
         self.assertEqual(len(payload["callouts"]), 3)
 
     def test_owner_dashboard_missing_snapshot_raises_operational_error(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             missing = Path(tmp) / "missing.sqlite3"
             with self.assertRaises(sqlite3.OperationalError):
-                self.run_cli("owner-dashboard", str(missing), "finance_ops")
+                self.run_cli("owner-dashboard", str(missing), "codec_ops")
 
     def test_history_rollup_returns_count(self) -> None:
         payload = self.run_cli_json("history-rollup", str(FIXTURES / "history" / "ops_history_2026_01.jsonl"))
@@ -201,22 +201,22 @@ class CliMatrixTests(unittest.TestCase):
     def test_release_readiness_returns_ready_flag(self) -> None:
         payload = self.run_cli_json(
             "release-readiness",
-            str(CATALOG / "merchant-closeout"),
-            str(ATTEMPTS / "merchant-closeout_mixed.json"),
+            str(CATALOG / "jpeg-codec-fidelity"),
+            str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
         )
         self.assertIn("ready", payload)
 
     def test_release_readiness_marks_blocked_bundle(self) -> None:
         payload = self.run_cli_json(
             "release-readiness",
-            str(CATALOG / "merchant-closeout"),
-            str(ATTEMPTS / "merchant-closeout_mixed.json"),
+            str(CATALOG / "jpeg-codec-fidelity"),
+            str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
         )
-        self.assertIn("merchant-closeout", payload["blocked"])
+        self.assertIn("jpeg-codec-fidelity", payload["blocked"])
 
     def test_release_readiness_missing_attempt_raises_file_not_found(self) -> None:
         with self.assertRaises(FileNotFoundError):
-            self.run_cli("release-readiness", str(CATALOG / "merchant-closeout"), str(ATTEMPTS / "missing.json"))
+            self.run_cli("release-readiness", str(CATALOG / "jpeg-codec-fidelity"), str(ATTEMPTS / "missing.json"))
 
     def test_sync_sqlite_returns_recent_runs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -224,8 +224,8 @@ class CliMatrixTests(unittest.TestCase):
             payload = self.run_cli_json(
                 "sync-sqlite",
                 str(db),
-                str(CATALOG / "merchant-closeout"),
-                str(ATTEMPTS / "merchant-closeout_mixed.json"),
+                str(CATALOG / "jpeg-codec-fidelity"),
+                str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
             )
             self.assertIn("recent_runs", payload)
 
@@ -235,8 +235,8 @@ class CliMatrixTests(unittest.TestCase):
             self.run_cli_json(
                 "sync-sqlite",
                 str(db),
-                str(CATALOG / "merchant-closeout"),
-                str(ATTEMPTS / "merchant-closeout_mixed.json"),
+                str(CATALOG / "jpeg-codec-fidelity"),
+                str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"),
             )
             self.assertTrue(db.exists())
 
@@ -244,7 +244,7 @@ class CliMatrixTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             db = Path(tmp) / "ops.sqlite3"
             with self.assertRaises(FileNotFoundError):
-                self.run_cli("sync-sqlite", str(db), str(CATALOG / "missing"), str(ATTEMPTS / "merchant-closeout_mixed.json"))
+                self.run_cli("sync-sqlite", str(db), str(CATALOG / "missing"), str(ATTEMPTS / "jpeg-codec-fidelity_mixed.json"))
 
     def test_validate_bundle_parser_requires_bundle_argument(self) -> None:
         self.assert_parser_exit("validate-bundle")
@@ -253,10 +253,12 @@ class CliMatrixTests(unittest.TestCase):
         self.assert_parser_exit("build-release", str(CATALOG))
 
     def test_sync_sqlite_parser_requires_attempt_argument(self) -> None:
-        self.assert_parser_exit("sync-sqlite", "ops.sqlite3", str(CATALOG / "merchant-closeout"))
+        self.assert_parser_exit("sync-sqlite", "ops.sqlite3", str(CATALOG / "jpeg-codec-fidelity"))
 
     def test_history_rollup_parser_requires_history_path(self) -> None:
         self.assert_parser_exit("history-rollup")
 
     def test_owner_dashboard_parser_requires_owner_argument(self) -> None:
         self.assert_parser_exit("owner-dashboard", str(SNAPSHOT))
+
+

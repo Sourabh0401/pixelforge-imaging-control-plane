@@ -1,0 +1,894 @@
+{
+  "artifact_contracts": [
+    {
+      "artifact_type": "artifact-01",
+      "notes": "Artifact 1 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_01.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 31
+    },
+    {
+      "artifact_type": "artifact-02",
+      "notes": "Artifact 2 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_02.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 32
+    },
+    {
+      "artifact_type": "artifact-03",
+      "notes": "Artifact 3 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_03.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 33
+    },
+    {
+      "artifact_type": "artifact-04",
+      "notes": "Artifact 4 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_04.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 34
+    },
+    {
+      "artifact_type": "artifact-05",
+      "notes": "Artifact 5 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_05.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 35
+    },
+    {
+      "artifact_type": "artifact-06",
+      "notes": "Artifact 6 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_06.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 36
+    },
+    {
+      "artifact_type": "artifact-07",
+      "notes": "Artifact 7 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_07.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 37
+    },
+    {
+      "artifact_type": "artifact-08",
+      "notes": "Artifact 8 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_08.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 38
+    },
+    {
+      "artifact_type": "artifact-09",
+      "notes": "Artifact 9 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_09.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 39
+    },
+    {
+      "artifact_type": "artifact-10",
+      "notes": "Artifact 10 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_10.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 40
+    },
+    {
+      "artifact_type": "artifact-11",
+      "notes": "Artifact 11 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_11.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 41
+    },
+    {
+      "artifact_type": "artifact-12",
+      "notes": "Artifact 12 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_12.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 42
+    },
+    {
+      "artifact_type": "artifact-13",
+      "notes": "Artifact 13 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_13.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 43
+    },
+    {
+      "artifact_type": "artifact-14",
+      "notes": "Artifact 14 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_14.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 44
+    },
+    {
+      "artifact_type": "artifact-15",
+      "notes": "Artifact 15 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_15.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 45
+    },
+    {
+      "artifact_type": "artifact-16",
+      "notes": "Artifact 16 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_16.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 46
+    },
+    {
+      "artifact_type": "artifact-17",
+      "notes": "Artifact 17 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_17.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 47
+    },
+    {
+      "artifact_type": "artifact-18",
+      "notes": "Artifact 18 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_18.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 48
+    },
+    {
+      "artifact_type": "artifact-19",
+      "notes": "Artifact 19 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_19.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 49
+    },
+    {
+      "artifact_type": "artifact-20",
+      "notes": "Artifact 20 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_20.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 50
+    },
+    {
+      "artifact_type": "artifact-21",
+      "notes": "Artifact 21 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_21.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 51
+    },
+    {
+      "artifact_type": "artifact-22",
+      "notes": "Artifact 22 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_22.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 52
+    },
+    {
+      "artifact_type": "artifact-23",
+      "notes": "Artifact 23 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_23.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 53
+    },
+    {
+      "artifact_type": "artifact-24",
+      "notes": "Artifact 24 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_24.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 54
+    },
+    {
+      "artifact_type": "artifact-25",
+      "notes": "Artifact 25 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_25.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 55
+    },
+    {
+      "artifact_type": "artifact-26",
+      "notes": "Artifact 26 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_26.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 56
+    },
+    {
+      "artifact_type": "artifact-27",
+      "notes": "Artifact 27 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_27.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 57
+    },
+    {
+      "artifact_type": "artifact-28",
+      "notes": "Artifact 28 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_28.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 58
+    },
+    {
+      "artifact_type": "artifact-29",
+      "notes": "Artifact 29 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_29.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 59
+    },
+    {
+      "artifact_type": "artifact-30",
+      "notes": "Artifact 30 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_30.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 60
+    },
+    {
+      "artifact_type": "artifact-31",
+      "notes": "Artifact 31 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_31.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 61
+    },
+    {
+      "artifact_type": "artifact-32",
+      "notes": "Artifact 32 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_32.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 62
+    },
+    {
+      "artifact_type": "artifact-33",
+      "notes": "Artifact 33 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_33.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 63
+    },
+    {
+      "artifact_type": "artifact-34",
+      "notes": "Artifact 34 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_34.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 64
+    },
+    {
+      "artifact_type": "artifact-35",
+      "notes": "Artifact 35 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_35.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 65
+    },
+    {
+      "artifact_type": "artifact-36",
+      "notes": "Artifact 36 preserves a slice of score and release evidence for operator replay.",
+      "path": "evidence/artifact_36.json",
+      "required_fields": [
+        "bundle_id",
+        "run_id",
+        "owner",
+        "created_at",
+        "digest"
+      ],
+      "retention_days": 66
+    }
+  ],
+  "field_contracts": [
+    {
+      "field": "field_01",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_02",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_03",
+      "required": false,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_04",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_05",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_06",
+      "required": false,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_07",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_08",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_09",
+      "required": false,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_10",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_11",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_12",
+      "required": false,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_13",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_14",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_15",
+      "required": false,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_16",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_17",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_18",
+      "required": false,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_19",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_20",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_21",
+      "required": false,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_22",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_23",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_24",
+      "required": false,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_25",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_26",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_27",
+      "required": false,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_28",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_29",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_30",
+      "required": false,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_31",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_32",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_33",
+      "required": false,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_34",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_35",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_36",
+      "required": false,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_37",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_38",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_39",
+      "required": false,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_40",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_41",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_42",
+      "required": false,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_43",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_44",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_45",
+      "required": false,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_46",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_47",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_48",
+      "required": false,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_49",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_50",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_51",
+      "required": false,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_52",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_53",
+      "required": true,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_54",
+      "required": false,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_55",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_56",
+      "required": true,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    },
+    {
+      "field": "field_57",
+      "required": false,
+      "source": "run",
+      "type": "number",
+      "validator": "non_negative"
+    },
+    {
+      "field": "field_58",
+      "required": true,
+      "source": "scorecard",
+      "type": "list",
+      "validator": "stable_json"
+    },
+    {
+      "field": "field_59",
+      "required": true,
+      "source": "manifest",
+      "type": "mapping",
+      "validator": "slug"
+    },
+    {
+      "field": "field_60",
+      "required": false,
+      "source": "bundle",
+      "type": "text",
+      "validator": "non_blank"
+    }
+  ]
+}

@@ -1,21 +1,21 @@
 {
   "bundle_ids": [
-    "claims-intake",
-    "document-classifier",
-    "fulfillment-ledger",
-    "identity-refresh",
-    "merchant-closeout",
-    "pricing-handoff",
-    "reserve-rollforward",
-    "returns-recovery",
-    "seat-allocation",
-    "subscriber-billing",
-    "vendor-settlement",
-    "warehouse-routing"
+    "metadata-exif-ingest",
+    "thumbnail-generation-stability",
+    "export-pipeline-integrity",
+    "sprite-identity-refresh",
+    "jpeg-codec-fidelity",
+    "compression-preset-handoff",
+    "alpha-channel-recovery",
+    "decoder-recovery-replay",
+    "color-profile-parity",
+    "batch-render-telemetry",
+    "partner-format-compatibility",
+    "raster-transform-tiling"
   ],
   "bundle_stats": {
-    "claims-intake": {
-      "bundle_id": "claims-intake",
+    "metadata-exif-ingest": {
+      "bundle_id": "metadata-exif-ingest",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -24,9 +24,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "support_ops",
+      "domain": "partner_ops",
       "hidden_case_count": 8,
-      "owner": "support_ops",
+      "owner": "partner_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -42,8 +42,8 @@
       ],
       "version": "2026.06"
     },
-    "document-classifier": {
-      "bundle_id": "document-classifier",
+    "thumbnail-generation-stability": {
+      "bundle_id": "thumbnail-generation-stability",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -52,9 +52,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "content_ops",
+      "domain": "metadata_ops",
       "hidden_case_count": 8,
-      "owner": "content_ops",
+      "owner": "metadata_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -70,8 +70,8 @@
       ],
       "version": "2026.06"
     },
-    "fulfillment-ledger": {
-      "bundle_id": "fulfillment-ledger",
+    "export-pipeline-integrity": {
+      "bundle_id": "export-pipeline-integrity",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -80,9 +80,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "platform_ops",
+      "domain": "pipeline_ops",
       "hidden_case_count": 8,
-      "owner": "platform_ops",
+      "owner": "pipeline_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -98,8 +98,8 @@
       ],
       "version": "2026.06"
     },
-    "identity-refresh": {
-      "bundle_id": "identity-refresh",
+    "sprite-identity-refresh": {
+      "bundle_id": "sprite-identity-refresh",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -108,9 +108,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "risk_ops",
+      "domain": "image_quality_ops",
       "hidden_case_count": 8,
-      "owner": "risk_ops",
+      "owner": "image_quality_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -126,8 +126,8 @@
       ],
       "version": "2026.06"
     },
-    "merchant-closeout": {
-      "bundle_id": "merchant-closeout",
+    "jpeg-codec-fidelity": {
+      "bundle_id": "jpeg-codec-fidelity",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -136,9 +136,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "finance_ops",
+      "domain": "codec_ops",
       "hidden_case_count": 8,
-      "owner": "finance_ops",
+      "owner": "codec_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -154,8 +154,8 @@
       ],
       "version": "2026.06"
     },
-    "pricing-handoff": {
-      "bundle_id": "pricing-handoff",
+    "compression-preset-handoff": {
+      "bundle_id": "compression-preset-handoff",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -164,9 +164,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "sales_ops",
+      "domain": "launch_ops",
       "hidden_case_count": 8,
-      "owner": "sales_ops",
+      "owner": "launch_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -182,8 +182,8 @@
       ],
       "version": "2026.06"
     },
-    "reserve-rollforward": {
-      "bundle_id": "reserve-rollforward",
+    "alpha-channel-recovery": {
+      "bundle_id": "alpha-channel-recovery",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -192,9 +192,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "treasury_ops",
+      "domain": "archive_ops",
       "hidden_case_count": 8,
-      "owner": "treasury_ops",
+      "owner": "archive_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -210,8 +210,8 @@
       ],
       "version": "2026.06"
     },
-    "returns-recovery": {
-      "bundle_id": "returns-recovery",
+    "decoder-recovery-replay": {
+      "bundle_id": "decoder-recovery-replay",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -220,9 +220,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "returns_ops",
+      "domain": "qa_ops",
       "hidden_case_count": 8,
-      "owner": "returns_ops",
+      "owner": "qa_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -232,14 +232,14 @@
         "validation": 5
       },
       "tags": [
-        "returns",
+        "decoder",
         "release",
         "ops"
       ],
       "version": "2026.06"
     },
-    "seat-allocation": {
-      "bundle_id": "seat-allocation",
+    "color-profile-parity": {
+      "bundle_id": "color-profile-parity",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -248,9 +248,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "education_ops",
+      "domain": "color_ops",
       "hidden_case_count": 8,
-      "owner": "education_ops",
+      "owner": "color_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -266,8 +266,8 @@
       ],
       "version": "2026.06"
     },
-    "subscriber-billing": {
-      "bundle_id": "subscriber-billing",
+    "batch-render-telemetry": {
+      "bundle_id": "batch-render-telemetry",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -276,9 +276,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "revops",
+      "domain": "release_program_ops",
       "hidden_case_count": 8,
-      "owner": "revops",
+      "owner": "release_program_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -288,14 +288,14 @@
         "validation": 5
       },
       "tags": [
-        "revops",
+        "release_program_ops",
         "release",
         "ops"
       ],
       "version": "2026.06"
     },
-    "vendor-settlement": {
-      "bundle_id": "vendor-settlement",
+    "partner-format-compatibility": {
+      "bundle_id": "partner-format-compatibility",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -304,9 +304,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "procurement_ops",
+      "domain": "export_ops",
       "hidden_case_count": 8,
-      "owner": "procurement_ops",
+      "owner": "export_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,
@@ -322,8 +322,8 @@
       ],
       "version": "2026.06"
     },
-    "warehouse-routing": {
-      "bundle_id": "warehouse-routing",
+    "raster-transform-tiling": {
+      "bundle_id": "raster-transform-tiling",
       "case_count": 24,
       "comparators": {
         "contains_tokens": 5,
@@ -332,9 +332,9 @@
         "range": 5,
         "unordered_list": 5
       },
-      "domain": "logistics_ops",
+      "domain": "raster_ops",
       "hidden_case_count": 8,
-      "owner": "logistics_ops",
+      "owner": "raster_ops",
       "public_case_count": 16,
       "sections": {
         "audit": 5,

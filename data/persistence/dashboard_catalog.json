@@ -1,0 +1,232 @@
+{
+  "widgets": [
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for metadata_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "metadata_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-01"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for color_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "color_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-02"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for codec_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "codec_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-03"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for raster_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "raster_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-04"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for pipeline_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "pipeline_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-05"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for export_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "export_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-06"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for qa_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "qa_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-07"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for release_program_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "release_program_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-08"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for image_quality_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "image_quality_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-09"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for launch_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "launch_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-10"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for partner_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "partner_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-11"
+    },
+    {
+      "metrics": [
+        "average_percent",
+        "hidden_gap",
+        "ready_count",
+        "blocked_count",
+        "rerun_rate"
+      ],
+      "notes": "Dashboard widget for archive_ops keeps the same columns across bundles to support weekly operations review.",
+      "owner": "archive_ops",
+      "table_columns": [
+        "bundle_id",
+        "band",
+        "percent",
+        "release_channel",
+        "review_state"
+      ],
+      "widget_id": "widget-12"
+    }
+  ]
+}

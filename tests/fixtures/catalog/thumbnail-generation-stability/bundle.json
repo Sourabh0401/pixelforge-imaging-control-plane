@@ -1,0 +1,23 @@
+{
+  "bundle_id": "thumbnail-generation-stability",
+  "domain": "metadata_ops",
+  "metadata": {
+    "author": "metadata_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Thumbnail generation stability bundle used for acceptance rehearsal across crop reproducibility and hidden thumbnail drift.",
+    "release_channel": "internal"
+  },
+  "owner": "metadata_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "thumbnail",
+    "crop",
+    "release"
+  ],
+  "title": "Thumbnail generation stability and crop reproducibility",
+  "version": "2026.06"
+}

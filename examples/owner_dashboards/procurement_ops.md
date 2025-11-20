@@ -1,4 +1,4 @@
-# Procurement Ops dashboard
+# Partner Format Ops dashboard
 
 - panel 1: average percent 73.00, hidden gap 5.00, blocked count 1, release channel rehearsal.
 - panel 2: average percent 74.00, hidden gap 6.00, blocked count 2, release channel pilot.

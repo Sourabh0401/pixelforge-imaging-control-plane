@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.execution_engine import result_normalizer, transcript
+from pixelforge_ops.execution_engine import result_normalizer, transcript
 from tests.ext_helpers import attempt, bundle
-from engineering_challenge.execution import evaluate_attempt
+from pixelforge_ops.execution import evaluate_attempt
 
 
 class NormalizerTranscriptTests(unittest.TestCase):
@@ -34,20 +34,22 @@ class NormalizerTranscriptTests(unittest.TestCase):
         self.assertEqual(counts["pass"], 2)
 
     def test_run_transcript_matches_case_count(self) -> None:
-        run = evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed"))
+        run = evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed"))
         rows = transcript.run_transcript(run)
         self.assertEqual(len(rows), len(run.case_results))
 
     def test_status_timeline_renders_strings(self) -> None:
-        run = evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed"))
+        run = evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed"))
         self.assertTrue(transcript.status_timeline(run))
 
     def test_slowest_cases_limit(self) -> None:
-        run = evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed"))
+        run = evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed"))
         rows = transcript.slowest_cases(run, limit=3)
         self.assertEqual(len(rows), 3)
 
     def test_transcript_markdown_has_table(self) -> None:
-        run = evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed"))
+        run = evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed"))
         text = transcript.transcript_markdown(run)
         self.assertIn("| Case | Status | Runtime ms | Section |", text)
+
+

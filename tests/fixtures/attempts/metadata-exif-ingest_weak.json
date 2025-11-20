@@ -1,0 +1,163 @@
+{
+  "case_results": [
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-001",
+      "runtime_ms": 930
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-002",
+      "runtime_ms": 1050
+    },
+    {
+      "answer": {
+        "extra": 3,
+        "owner": "metadata",
+        "section": "scoring"
+      },
+      "case_id": "metadata-exif-ingest-case-003",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-004",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 5
+      },
+      "case_id": "metadata-exif-ingest-case-005",
+      "runtime_ms": 1650
+    },
+    {
+      "answer": [
+        "item-6",
+        "item-7",
+        "validation"
+      ],
+      "case_id": "metadata-exif-ingest-case-006",
+      "runtime_ms": 810
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-007",
+      "runtime_ms": 930
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-008",
+      "runtime_ms": 1050
+    },
+    {
+      "answer": "metadata response for audit",
+      "case_id": "metadata-exif-ingest-case-009",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 10
+      },
+      "case_id": "metadata-exif-ingest-case-010",
+      "runtime_ms": 1530
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-011",
+      "runtime_ms": 1410
+    },
+    {
+      "answer": 76.2,
+      "case_id": "metadata-exif-ingest-case-012",
+      "runtime_ms": 810
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-013",
+      "runtime_ms": 930
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-014",
+      "runtime_ms": 1050
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 15
+      },
+      "case_id": "metadata-exif-ingest-case-015",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-016",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-017",
+      "runtime_ms": 1410
+    },
+    {
+      "answer": {
+        "extra": 18,
+        "owner": "metadata",
+        "section": "scoring"
+      },
+      "case_id": "metadata-exif-ingest-case-018",
+      "runtime_ms": 810
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-019",
+      "runtime_ms": 930
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 20
+      },
+      "case_id": "metadata-exif-ingest-case-020",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": [
+        "item-21",
+        "item-22",
+        "validation"
+      ],
+      "case_id": "metadata-exif-ingest-case-021",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-022",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": null,
+      "case_id": "metadata-exif-ingest-case-023",
+      "runtime_ms": 1410
+    },
+    {
+      "answer": "metadata response for audit",
+      "case_id": "metadata-exif-ingest-case-024",
+      "runtime_ms": 810
+    }
+  ],
+  "finished_at": "2026-06-03T09:03:00Z",
+  "notes": [
+    "weak fixture payload"
+  ],
+  "participant_id": "weak-operator",
+  "run_id": "metadata-exif-ingest-weak-run",
+  "started_at": "2026-06-03T09:00:00Z"
+}

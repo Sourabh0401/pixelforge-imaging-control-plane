@@ -4,10 +4,10 @@ import unittest
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
-from engineering_challenge.execution import evaluate_attempt
-from engineering_challenge.models import Scorecard
-from engineering_challenge.scoring import score_run
-from engineering_challenge.scoring_model import fairness, remediation
+from pixelforge_ops.execution import evaluate_attempt
+from pixelforge_ops.models import Scorecard
+from pixelforge_ops.scoring import score_run
+from pixelforge_ops.scoring_model import fairness, remediation
 from tests.ext_helpers import attempt, bundle
 
 
@@ -16,7 +16,7 @@ class FairnessRemediationTests(unittest.TestCase):
         self,
         *,
         bundle_id: str = "bundle-a",
-        owner: str = "finance_ops",
+        owner: str = "codec_ops",
         percent: float = 88.0,
         public_percent: float = 88.0,
         hidden_percent: float = 88.0,
@@ -35,46 +35,46 @@ class FairnessRemediationTests(unittest.TestCase):
         )
 
     def test_hidden_gap_returns_difference(self) -> None:
-        card = score_run(evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed")), bundle("merchant-closeout"))
+        card = score_run(evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed")), bundle("jpeg-codec-fidelity"))
         self.assertIsInstance(fairness.hidden_gap(card), float)
 
     def test_section_spread_returns_value(self) -> None:
-        card = score_run(evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed")), bundle("merchant-closeout"))
+        card = score_run(evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed")), bundle("jpeg-codec-fidelity"))
         self.assertGreaterEqual(fairness.section_spread(card), 0.0)
 
     def test_fairness_flags_can_return_public_gap(self) -> None:
-        card = score_run(evaluate_attempt(bundle("warehouse-routing"), attempt("warehouse-routing", "mixed")), bundle("warehouse-routing"))
+        card = score_run(evaluate_attempt(bundle("raster-transform-tiling"), attempt("raster-transform-tiling", "mixed")), bundle("raster-transform-tiling"))
         self.assertIsInstance(fairness.fairness_flags(card), tuple)
 
     def test_fairness_summary_averages_values(self) -> None:
         cards = [
-            score_run(evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed")), bundle("merchant-closeout")),
-            score_run(evaluate_attempt(bundle("warehouse-routing"), attempt("warehouse-routing", "mixed")), bundle("warehouse-routing")),
+            score_run(evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed")), bundle("jpeg-codec-fidelity")),
+            score_run(evaluate_attempt(bundle("raster-transform-tiling"), attempt("raster-transform-tiling", "mixed")), bundle("raster-transform-tiling")),
         ]
         summary = fairness.fairness_summary(cards)
         self.assertIn("average_hidden_gap", summary)
 
     def test_remediation_reason_handles_low_percent(self) -> None:
-        card = score_run(evaluate_attempt(bundle("claims-intake"), attempt("claims-intake", "weak")), bundle("claims-intake"))
+        card = score_run(evaluate_attempt(bundle("metadata-exif-ingest"), attempt("metadata-exif-ingest", "weak")), bundle("metadata-exif-ingest"))
         self.assertTrue(remediation.remediation_reason(card))
 
     def test_remediation_item_contains_flags(self) -> None:
-        card = score_run(evaluate_attempt(bundle("warehouse-routing"), attempt("warehouse-routing", "mixed")), bundle("warehouse-routing"))
+        card = score_run(evaluate_attempt(bundle("raster-transform-tiling"), attempt("raster-transform-tiling", "mixed")), bundle("raster-transform-tiling"))
         item = remediation.remediation_item(card)
         self.assertIn("flags", item)
 
     def test_remediation_queue_sorts_entries(self) -> None:
         cards = [
-            score_run(evaluate_attempt(bundle("merchant-closeout"), attempt("merchant-closeout", "mixed")), bundle("merchant-closeout")),
-            score_run(evaluate_attempt(bundle("claims-intake"), attempt("claims-intake", "weak")), bundle("claims-intake")),
+            score_run(evaluate_attempt(bundle("jpeg-codec-fidelity"), attempt("jpeg-codec-fidelity", "mixed")), bundle("jpeg-codec-fidelity")),
+            score_run(evaluate_attempt(bundle("metadata-exif-ingest"), attempt("metadata-exif-ingest", "weak")), bundle("metadata-exif-ingest")),
         ]
         queue = remediation.remediation_queue(cards)
         self.assertTrue(queue)
 
     def test_queue_contains_bundle_id(self) -> None:
-        card = score_run(evaluate_attempt(bundle("claims-intake"), attempt("claims-intake", "weak")), bundle("claims-intake"))
+        card = score_run(evaluate_attempt(bundle("metadata-exif-ingest"), attempt("metadata-exif-ingest", "weak")), bundle("metadata-exif-ingest"))
         item = remediation.remediation_item(card)
-        self.assertEqual(item["bundle_id"], "claims-intake")
+        self.assertEqual(item["bundle_id"], "metadata-exif-ingest")
 
     def test_remediation_reason_prefers_hidden_gap_branch(self) -> None:
         card = self._scorecard(public_percent=97.0, hidden_percent=70.0, percent=80.0)
@@ -106,9 +106,11 @@ class FairnessRemediationTests(unittest.TestCase):
         self.assertEqual(item["flags"].count("requires-review"), 1)
 
     def test_src_package_init_exports_expected_modules(self) -> None:
-        path = Path(__file__).resolve().parents[1] / "src" / "engineering_challenge" / "__init__.py"
-        spec = spec_from_file_location("engineering_challenge_src_init", path)
+        path = Path(__file__).resolve().parents[1] / "src" / "pixelforge_ops" / "__init__.py"
+        spec = spec_from_file_location("pixelforge_ops_src_init", path)
         assert spec and spec.loader
         module = module_from_spec(spec)
         spec.loader.exec_module(module)
         self.assertIn("catalog", module.__all__)
+
+

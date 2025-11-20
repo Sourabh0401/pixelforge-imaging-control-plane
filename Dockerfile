@@ -10,4 +10,4 @@ COPY . .
 
 RUN python -m compileall -q src tests scripts
 
-CMD ["python", "-m", "engineering_challenge.cli", "--help"]
+CMD ["python", "-m", "pixelforge_ops.cli", "--help"]

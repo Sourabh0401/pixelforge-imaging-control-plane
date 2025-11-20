@@ -10,9 +10,9 @@ The detailed model docs now live in:
 
 At a high level, the system revolves around four durable shapes:
 
-1. `ExerciseBundle`, which is the authoring unit
-2. `SubmissionRun`, which is the execution record
+1. `ExerciseBundle`, which is the authoring unit for a codec, transform, color, compositing, or export lane
+2. `SubmissionRun`, which is the replay and comparison record
 3. `Scorecard`, which is the release decision surface
-4. `ReleaseManifest`, which is the frozen release record
+4. `ReleaseManifest`, which is the frozen train record
 
 Those types are intentionally reused across CLI, release, audit, and persistence paths so operators can compare outputs without losing context between modules.

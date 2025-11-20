@@ -1,6 +1,6 @@
 # Audit Packets
 
-Audit packets are the product’s answer to the question, “Can we prove what we released and why it was approved?” A packet is not just a convenience export. It is the frozen record the team can hand to finance, compliance, or a release owner three weeks later when a score or rollout decision is challenged.
+Audit packets are the product's answer to the question, "Can we prove what we released and why it was approved?" A packet is not just a convenience export. It is the frozen record the team can hand to finance, compliance, or a release owner three weeks later when a score or rollout decision is challenged.
 
 ## Packet contents
 
@@ -23,7 +23,7 @@ The `auditpack.contracts` module describes required artifacts and field obligati
 1. during export, to decide what must be present
 2. during validation, to explain why an archive is incomplete
 
-This helps with one of the common failure cases in internal release tooling: a packet exists, but the important evidence is either missing or disconnected from the bundle/run pair it belongs to.
+This helps with one of the common failure cases in internal release tooling: a packet exists, but the important evidence is either missing or disconnected from the bundle and run pair it belongs to.
 
 ## Evidence path rules
 
@@ -65,4 +65,4 @@ When packet validation fails, the normal workflow is:
 3. confirm required fields for each artifact source
 4. rebuild the zip only after payload gaps are fixed
 
-The workbench treats repairability as a product feature. A validator that only says “digest mismatch” is not enough; it has to point at the missing or inconsistent evidence.
+The workbench treats repairability as a product feature. A validator that only says "digest mismatch" is not enough; it has to point at the missing or inconsistent evidence.

@@ -3,9 +3,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from engineering_challenge import catalog
-from engineering_challenge.execution import evaluate_attempt
-from engineering_challenge.scoring import score_run
+from pixelforge_ops import catalog
+from pixelforge_ops.execution import evaluate_attempt
+from pixelforge_ops.scoring import score_run
 
 ROOT = Path(__file__).resolve().parent
 FIXTURES = ROOT / "fixtures"
@@ -32,3 +32,5 @@ def history_rows(month: int) -> list[dict[str, object]]:
         if text:
             rows.append(json.loads(text))
     return rows
+
+

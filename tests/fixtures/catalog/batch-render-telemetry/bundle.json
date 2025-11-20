@@ -1,0 +1,23 @@
+{
+  "bundle_id": "batch-render-telemetry",
+  "domain": "release_program_ops",
+  "metadata": {
+    "author": "release_program_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Batch render telemetry bundle used for acceptance rehearsal across queue health and runtime drift.",
+    "release_channel": "internal"
+  },
+  "owner": "release_program_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "telemetry",
+    "batch-render",
+    "release"
+  ],
+  "title": "Batch render telemetry and queue health",
+  "version": "2026.06"
+}

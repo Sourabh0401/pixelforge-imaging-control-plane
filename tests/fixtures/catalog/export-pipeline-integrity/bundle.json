@@ -1,0 +1,24 @@
+{
+  "bundle_id": "export-pipeline-integrity",
+  "domain": "pipeline_ops",
+  "metadata": {
+    "author": "pipeline_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Export pipeline integrity bundle used for acceptance rehearsal across manifest drift and release artifact reproducibility.",
+    "release_channel": "internal"
+  },
+  "owner": "pipeline_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "export",
+    "manifest",
+    "pipeline",
+    "release"
+  ],
+  "title": "Export pipeline integrity and manifest reproducibility",
+  "version": "2026.06"
+}

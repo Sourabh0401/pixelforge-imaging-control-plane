@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.execution_engine import comparator
+from pixelforge_ops.execution_engine import comparator
 
 
 class ExecutionComparatorTests(unittest.TestCase):
@@ -28,7 +28,7 @@ class ExecutionComparatorTests(unittest.TestCase):
         self.assertFalse(comparator.ordered_pairs([[1, 2], [3, 4]], [[3, 4], [1, 2]]))
 
     def test_regex_groups_returns_named_group_match(self) -> None:
-        self.assertTrue(comparator.regex_groups("owner=finance_ops", {"pattern": r"owner=(?P<owner>\w+)", "groups": {"owner": "finance_ops"}}))
+        self.assertTrue(comparator.regex_groups("owner=codec_ops", {"pattern": r"owner=(?P<owner>\w+)", "groups": {"owner": "codec_ops"}}))
 
     def test_event_log_compares_event_sequence(self) -> None:
         answer = [{"event": "start"}, {"event": "stop"}]
@@ -43,3 +43,5 @@ class ExecutionComparatorTests(unittest.TestCase):
 
     def test_compare_dispatches_by_name(self) -> None:
         self.assertTrue(comparator.compare("exact", 1, 1))
+
+

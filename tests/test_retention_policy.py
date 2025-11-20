@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date
 import unittest
 
-from engineering_challenge.persistence import retention_policy
+from pixelforge_ops.persistence import retention_policy
 from tests.ext_helpers import history_rows
 
 
@@ -35,3 +35,5 @@ class RetentionPolicyTests(unittest.TestCase):
         rows = history_rows(1)[:5]
         actions = retention_policy.plan_actions(rows, date(2026, 4, 10), {row["history_id"] for row in rows})
         self.assertIn("# Retention summary", retention_policy.render_summary(actions))
+
+

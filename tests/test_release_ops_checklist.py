@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.release_ops import checklist
+from pixelforge_ops.release_ops import checklist
 
 
 class ReleaseChecklistTests(unittest.TestCase):
@@ -39,3 +39,5 @@ class ReleaseChecklistTests(unittest.TestCase):
     def test_codes_are_unique(self) -> None:
         codes = [item["code"] for item in checklist.checklist_items("internal")]
         self.assertEqual(len(codes), len(set(codes)))
+
+

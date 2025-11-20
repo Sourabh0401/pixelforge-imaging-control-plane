@@ -2,17 +2,17 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge import audit, release
-from engineering_challenge.auditpack import contracts, evidence_validator
-from engineering_challenge.execution import evaluate_attempt, run_to_dict
-from engineering_challenge.scoring import score_run, scorecard_to_dict
+from pixelforge_ops import audit, release
+from pixelforge_ops.auditpack import contracts, evidence_validator
+from pixelforge_ops.execution import evaluate_attempt, run_to_dict
+from pixelforge_ops.scoring import score_run, scorecard_to_dict
 from tests.ext_helpers import attempt, bundle
 
 
 class EvidenceValidatorTests(unittest.TestCase):
     def _packet(self) -> dict[str, object]:
-        item = bundle("merchant-closeout")
-        run = evaluate_attempt(item, attempt("merchant-closeout", "mixed"))
+        item = bundle("jpeg-codec-fidelity")
+        run = evaluate_attempt(item, attempt("jpeg-codec-fidelity", "mixed"))
         card = score_run(run, item)
         manifest = release.build_release_manifest("release-1", [item], notes=("internal",))
         bundle_payload = {
@@ -62,3 +62,5 @@ class EvidenceValidatorTests(unittest.TestCase):
         packet = self._packet()
         mapping = evidence_validator.expected_paths(packet["bundle"]["bundle_id"], packet["run"]["run_id"])
         self.assertTrue(all(value.startswith(f"{packet['bundle']['bundle_id']}/{packet['run']['run_id']}/") for value in mapping.values()))
+
+

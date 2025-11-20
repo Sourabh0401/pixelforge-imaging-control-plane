@@ -1,0 +1,23 @@
+{
+  "bundle_id": "color-profile-parity",
+  "domain": "color_ops",
+  "metadata": {
+    "author": "color_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Color profile parity bundle used for acceptance rehearsal across gamut, transfer curves, and parity drift.",
+    "release_channel": "internal"
+  },
+  "owner": "color_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "color",
+    "profiles",
+    "release"
+  ],
+  "title": "Color profile parity and rendering parity",
+  "version": "2026.06"
+}

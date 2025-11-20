@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from engineering_challenge.persistence import schema_diff
+from pixelforge_ops.persistence import schema_diff
 
 
 class SchemaDiffTests(unittest.TestCase):
@@ -45,3 +45,5 @@ class SchemaDiffTests(unittest.TestCase):
             conn.close()
             report = schema_diff.render_report(left, right)
             self.assertIn("history_import", report)
+
+

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.reporting_surfaces import legend
+from pixelforge_ops.reporting_surfaces import legend
 
 
 class ReportingLegendTests(unittest.TestCase):
@@ -14,3 +14,5 @@ class ReportingLegendTests(unittest.TestCase):
 
     def test_label_returns_text(self) -> None:
         self.assertEqual(legend.label("blocked"), "Blocked")
+
+

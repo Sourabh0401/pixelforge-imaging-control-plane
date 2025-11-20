@@ -1,0 +1,356 @@
+{
+  "owners": {
+    "archive_ops": {
+      "contacts": {
+        "backup": "archive-retention-backup@internal.example",
+        "lead": "archive-retention-lead@internal.example",
+        "pager": "archive-retention-primary",
+        "slack": "#archive-retention"
+      },
+      "escalation_chain": [
+        "archive_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-archive-retention-audit",
+        "release": "queue-archive-retention-release",
+        "support": "queue-archive-retention-support"
+      },
+      "region": "amer",
+      "team_name": "Archive and Retention Operations"
+    },
+    "codec_ops": {
+      "contacts": {
+        "backup": "codec-cert-backup@internal.example",
+        "lead": "codec-cert-lead@internal.example",
+        "pager": "codec-cert-primary",
+        "slack": "#codec-cert"
+      },
+      "escalation_chain": [
+        "codec_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-codec-cert-audit",
+        "release": "queue-codec-cert-release",
+        "support": "queue-codec-cert-support"
+      },
+      "region": "amer",
+      "team_name": "Codec Certification"
+    },
+    "color_ops": {
+      "contacts": {
+        "backup": "color-management-backup@internal.example",
+        "lead": "color-management-lead@internal.example",
+        "pager": "color-management-primary",
+        "slack": "#color-management"
+      },
+      "escalation_chain": [
+        "color_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-color-management-audit",
+        "release": "queue-color-management-release",
+        "support": "queue-color-management-support"
+      },
+      "region": "amer",
+      "team_name": "Color Management Operations"
+    },
+    "export_ops": {
+      "contacts": {
+        "backup": "partner-format-backup@internal.example",
+        "lead": "partner-format-lead@internal.example",
+        "pager": "partner-format-primary",
+        "slack": "#partner-format"
+      },
+      "escalation_chain": [
+        "export_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-partner-format-audit",
+        "release": "queue-partner-format-release",
+        "support": "queue-partner-format-support"
+      },
+      "region": "emea",
+      "team_name": "Partner Format Operations"
+    },
+    "image_quality_ops": {
+      "contacts": {
+        "backup": "image-quality-backup@internal.example",
+        "lead": "image-quality-lead@internal.example",
+        "pager": "image-quality-primary",
+        "slack": "#image-quality"
+      },
+      "escalation_chain": [
+        "image_quality_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-image-quality-audit",
+        "release": "queue-image-quality-release",
+        "support": "queue-image-quality-support"
+      },
+      "region": "amer",
+      "team_name": "Image Quality and Controls"
+    },
+    "launch_ops": {
+      "contacts": {
+        "backup": "compression-launch-backup@internal.example",
+        "lead": "compression-launch-lead@internal.example",
+        "pager": "compression-launch-primary",
+        "slack": "#compression-launch"
+      },
+      "escalation_chain": [
+        "launch_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-compression-launch-audit",
+        "release": "queue-compression-launch-release",
+        "support": "queue-compression-launch-support"
+      },
+      "region": "amer",
+      "team_name": "Compression Launch Operations"
+    },
+    "metadata_ops": {
+      "contacts": {
+        "backup": "thumbnail-metadata-backup@internal.example",
+        "lead": "thumbnail-metadata-lead@internal.example",
+        "pager": "thumbnail-metadata-primary",
+        "slack": "#thumbnail-metadata"
+      },
+      "escalation_chain": [
+        "metadata_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-thumbnail-metadata-audit",
+        "release": "queue-thumbnail-metadata-release",
+        "support": "queue-thumbnail-metadata-support"
+      },
+      "region": "emea",
+      "team_name": "Thumbnail and Metadata Review"
+    },
+    "partner_ops": {
+      "contacts": {
+        "backup": "metadata-intake-backup@internal.example",
+        "lead": "metadata-intake-lead@internal.example",
+        "pager": "metadata-intake-primary",
+        "slack": "#metadata-intake"
+      },
+      "escalation_chain": [
+        "partner_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-metadata-intake-audit",
+        "release": "queue-metadata-intake-release",
+        "support": "queue-metadata-intake-support"
+      },
+      "region": "amer",
+      "team_name": "Metadata Intake Operations"
+    },
+    "pipeline_ops": {
+      "contacts": {
+        "backup": "export-pipeline-backup@internal.example",
+        "lead": "export-pipeline-lead@internal.example",
+        "pager": "export-pipeline-primary",
+        "slack": "#export-pipeline"
+      },
+      "escalation_chain": [
+        "pipeline_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-export-pipeline-audit",
+        "release": "queue-export-pipeline-release",
+        "support": "queue-export-pipeline-support"
+      },
+      "region": "apac",
+      "team_name": "Export Pipeline Operations"
+    },
+    "qa_ops": {
+      "contacts": {
+        "backup": "decoder-recovery-backup@internal.example",
+        "lead": "decoder-recovery-lead@internal.example",
+        "pager": "decoder-recovery-primary",
+        "slack": "#decoder-recovery"
+      },
+      "escalation_chain": [
+        "qa_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-decoder-recovery-audit",
+        "release": "queue-decoder-recovery-release",
+        "support": "queue-decoder-recovery-support"
+      },
+      "region": "apac",
+      "team_name": "Decoder Recovery Operations"
+    },
+    "raster_ops": {
+      "contacts": {
+        "backup": "raster-transform-backup@internal.example",
+        "lead": "raster-transform-lead@internal.example",
+        "pager": "raster-transform-primary",
+        "slack": "#raster-transform"
+      },
+      "escalation_chain": [
+        "raster_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-raster-transform-audit",
+        "release": "queue-raster-transform-release",
+        "support": "queue-raster-transform-support"
+      },
+      "region": "emea",
+      "team_name": "Raster Transform Operations"
+    },
+    "release_program_ops": {
+      "contacts": {
+        "backup": "render-telemetry-backup@internal.example",
+        "lead": "render-telemetry-lead@internal.example",
+        "pager": "render-telemetry-primary",
+        "slack": "#render-telemetry"
+      },
+      "escalation_chain": [
+        "release_program_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "queues": {
+        "audit": "queue-render-telemetry-audit",
+        "release": "queue-render-telemetry-release",
+        "support": "queue-render-telemetry-support"
+      },
+      "region": "amer",
+      "team_name": "Render Telemetry Program"
+    }
+  },
+  "queue_service_levels": {
+    "queue-archive-retention-release": {
+      "escalate_after_hours": 20,
+      "target_hours": 10
+    },
+    "queue-codec-cert-release": {
+      "escalate_after_hours": 16,
+      "target_hours": 8
+    },
+    "queue-color-management-release": {
+      "escalate_after_hours": 24,
+      "target_hours": 12
+    },
+    "queue-compression-launch-release": {
+      "escalate_after_hours": 18,
+      "target_hours": 10
+    },
+    "queue-decoder-recovery-release": {
+      "escalate_after_hours": 22,
+      "target_hours": 12
+    },
+    "queue-export-pipeline-release": {
+      "escalate_after_hours": 14,
+      "target_hours": 8
+    },
+    "queue-image-quality-release": {
+      "escalate_after_hours": 12,
+      "target_hours": 6
+    },
+    "queue-metadata-intake-release": {
+      "escalate_after_hours": 16,
+      "target_hours": 8
+    },
+    "queue-partner-format-release": {
+      "escalate_after_hours": 28,
+      "target_hours": 14
+    },
+    "queue-raster-transform-release": {
+      "escalate_after_hours": 24,
+      "target_hours": 12
+    },
+    "queue-render-telemetry-release": {
+      "escalate_after_hours": 18,
+      "target_hours": 10
+    },
+    "queue-thumbnail-metadata-release": {
+      "escalate_after_hours": 18,
+      "target_hours": 10
+    }
+  },
+  "roles": [
+    {
+      "region": "amer",
+      "requires_weekly_digest": true,
+      "role": "release_manager",
+      "team": "release_ops"
+    },
+    {
+      "region": "amer",
+      "requires_weekly_digest": true,
+      "role": "support_quality",
+      "team": "support_quality"
+    },
+    {
+      "region": "emea",
+      "requires_weekly_digest": false,
+      "role": "audit_program",
+      "team": "audit_program"
+    },
+    {
+      "region": "amer",
+      "requires_weekly_digest": true,
+      "role": "difficulty_owner",
+      "team": "curriculum_quality"
+    },
+    {
+      "region": "apac",
+      "requires_weekly_digest": true,
+      "role": "hidden_owner",
+      "team": "assessment_security"
+    },
+    {
+      "region": "amer",
+      "requires_weekly_digest": false,
+      "role": "history_analyst",
+      "team": "ops_analytics"
+    },
+    {
+      "region": "emea",
+      "requires_weekly_digest": false,
+      "role": "dashboard_editor",
+      "team": "ops_analytics"
+    },
+    {
+      "region": "amer",
+      "requires_weekly_digest": true,
+      "role": "remediation_owner",
+      "team": "bundle_remediation"
+    }
+  ]
+}

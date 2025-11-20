@@ -32,20 +32,20 @@ Inspect:
 - readiness state from the scorecard
 - any missing checklist or audit evidence items
 
-The gate is supposed to be strict. A “blocked” result can be correct even when the score itself looks healthy.
+The gate is supposed to be strict. A "blocked" result can be correct even when the score itself looks healthy.
 
 ## Owner dashboard and snapshot numbers disagree
 
 Start with the snapshot:
 
 ```bash
-python -m engineering_challenge.cli snapshot-summary tests/fixtures/sqlite_snapshots/ops_history_2026_q1.sqlite3
+python -m pixelforge_ops.cli snapshot-summary tests/fixtures/sqlite_snapshots/ops_history_2026_q1.sqlite3
 ```
 
 Then compare against the JSONL feed rollup:
 
 ```bash
-python -m engineering_challenge.cli history-rollup tests/fixtures/history/ops_history_2026_01.jsonl
+python -m pixelforge_ops.cli history-rollup tests/fixtures/history/ops_history_2026_01.jsonl
 ```
 
 If the two disagree, inspect schema drift or retained row count before assuming the reporting layer is wrong.
@@ -68,3 +68,5 @@ This usually means something still has a SQLite file open. The persistence helpe
 ## Import path surprises when running scripts directly
 
 Run commands from the repo root or set `PYTHONPATH=src:tests`. The project is structured to support in-repo execution without an editable install, but the working directory still matters for fixture-relative paths.
+
+

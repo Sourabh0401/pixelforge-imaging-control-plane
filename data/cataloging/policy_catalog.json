@@ -1,0 +1,987 @@
+{
+  "comparator_contracts": {
+    "artifact_manifest": {
+      "artifact_types": [
+        "stdout",
+        "stderr"
+      ],
+      "failure_message": "artifact_manifest comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings"
+      ],
+      "runtime_bucket": "short",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "codec_summary": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "metrics"
+      ],
+      "failure_message": "codec_summary comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "stable_sort",
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
+    "contains_tokens": {
+      "artifact_types": [
+        "stdout",
+        "stderr",
+        "trace"
+      ],
+      "failure_message": "contains_tokens comparator mismatch",
+      "input_shape": "scalar",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers",
+        "stable_sort"
+      ],
+      "runtime_bucket": "long",
+      "supports_hidden_cases": false,
+      "supports_partial_credit": true
+    },
+    "csv_rows": {
+      "artifact_types": [
+        "stdout",
+        "stderr"
+      ],
+      "failure_message": "csv_rows comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
+    "event_log": {
+      "artifact_types": [
+        "stdout",
+        "stderr",
+        "trace"
+      ],
+      "failure_message": "event_log comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings"
+      ],
+      "runtime_bucket": "short",
+      "supports_hidden_cases": false,
+      "supports_partial_credit": true
+    },
+    "exact": {
+      "artifact_types": [
+        "stdout",
+        "stderr",
+        "trace"
+      ],
+      "failure_message": "exact comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": false,
+      "supports_partial_credit": true
+    },
+    "image_audit": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "audit"
+      ],
+      "failure_message": "image_audit comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "long",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "json_pointer_subset": {
+      "artifact_types": [
+        "stdout",
+        "stderr",
+        "trace"
+      ],
+      "failure_message": "json_pointer_subset comparator mismatch",
+      "input_shape": "scalar",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers",
+        "stable_sort"
+      ],
+      "runtime_bucket": "long",
+      "supports_hidden_cases": false,
+      "supports_partial_credit": true
+    },
+    "mapping_subset": {
+      "artifact_types": [
+        "stdout",
+        "stderr"
+      ],
+      "failure_message": "mapping_subset comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "ordered_pairs": {
+      "artifact_types": [
+        "stdout",
+        "stderr",
+        "trace"
+      ],
+      "failure_message": "ordered_pairs comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": false,
+      "supports_partial_credit": true
+    },
+    "perceptual_hash": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "image-matrix"
+      ],
+      "failure_message": "perceptual_hash comparator mismatch",
+      "input_shape": "matrix",
+      "normalizers": [
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "short",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
+    "pixel_matrix": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "image-matrix"
+      ],
+      "failure_message": "pixel_matrix comparator mismatch",
+      "input_shape": "matrix",
+      "normalizers": [
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
+    "range": {
+      "artifact_types": [
+        "stdout",
+        "stderr",
+        "trace"
+      ],
+      "failure_message": "range comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings"
+      ],
+      "runtime_bucket": "short",
+      "supports_hidden_cases": false,
+      "supports_partial_credit": true
+    },
+    "regex_groups": {
+      "artifact_types": [
+        "stdout",
+        "stderr"
+      ],
+      "failure_message": "regex_groups comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings"
+      ],
+      "runtime_bucket": "short",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
+    "rounded_number": {
+      "artifact_types": [
+        "stdout",
+        "stderr"
+      ],
+      "failure_message": "rounded_number comparator mismatch",
+      "input_shape": "scalar",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers",
+        "stable_sort"
+      ],
+      "runtime_bucket": "long",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "tile_manifest": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "manifest"
+      ],
+      "failure_message": "tile_manifest comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "stable_sort",
+        "trim_strings"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "transform_pipeline": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "pipeline"
+      ],
+      "failure_message": "transform_pipeline comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "unordered_list": {
+      "artifact_types": [
+        "stdout",
+        "stderr"
+      ],
+      "failure_message": "unordered_list comparator mismatch",
+      "input_shape": "scalar",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers",
+        "stable_sort"
+      ],
+      "runtime_bucket": "long",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    }
+  },
+  "domain_policies": {
+    "archive_ops": {
+      "domain": "archive_ops",
+      "handoff_owners": [
+        "archive_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 18,
+      "risk_thresholds": {
+        "ready": 92,
+        "risk": 59,
+        "watch": 78
+      },
+      "section_weights": {
+        "audit": 1.12,
+        "authoring": 1.24,
+        "catalog": 1.24,
+        "difficulty": 1.36,
+        "execution": 1.48,
+        "history": 1.12,
+        "release": 1.48,
+        "remediation": 1.0,
+        "scoring": 1.0,
+        "validation": 1.36
+      }
+    },
+    "codec_ops": {
+      "domain": "codec_ops",
+      "handoff_owners": [
+        "codec_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 9,
+      "risk_thresholds": {
+        "ready": 92,
+        "risk": 58,
+        "watch": 75
+      },
+      "section_weights": {
+        "audit": 1.24,
+        "authoring": 1.36,
+        "catalog": 1.36,
+        "difficulty": 1.48,
+        "execution": 1.0,
+        "history": 1.24,
+        "release": 1.0,
+        "remediation": 1.12,
+        "scoring": 1.12,
+        "validation": 1.48
+      }
+    },
+    "color_ops": {
+      "domain": "color_ops",
+      "handoff_owners": [
+        "color_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 8,
+      "risk_thresholds": {
+        "ready": 90,
+        "risk": 59,
+        "watch": 76
+      },
+      "section_weights": {
+        "audit": 1.12,
+        "authoring": 1.24,
+        "catalog": 1.24,
+        "difficulty": 1.36,
+        "execution": 1.48,
+        "history": 1.12,
+        "release": 1.48,
+        "remediation": 1.0,
+        "scoring": 1.0,
+        "validation": 1.36
+      }
+    },
+    "export_ops": {
+      "domain": "export_ops",
+      "handoff_owners": [
+        "export_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 12,
+      "risk_thresholds": {
+        "ready": 92,
+        "risk": 60,
+        "watch": 76
+      },
+      "section_weights": {
+        "audit": 1.0,
+        "authoring": 1.12,
+        "catalog": 1.12,
+        "difficulty": 1.24,
+        "execution": 1.36,
+        "history": 1.0,
+        "release": 1.36,
+        "remediation": 1.48,
+        "scoring": 1.48,
+        "validation": 1.24
+      }
+    },
+    "image_quality_ops": {
+      "domain": "image_quality_ops",
+      "handoff_owners": [
+        "image_quality_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 15,
+      "risk_thresholds": {
+        "ready": 92,
+        "risk": 57,
+        "watch": 77
+      },
+      "section_weights": {
+        "audit": 1.36,
+        "authoring": 1.48,
+        "catalog": 1.48,
+        "difficulty": 1.0,
+        "execution": 1.12,
+        "history": 1.36,
+        "release": 1.12,
+        "remediation": 1.24,
+        "scoring": 1.24,
+        "validation": 1.0
+      }
+    },
+    "launch_ops": {
+      "domain": "launch_ops",
+      "handoff_owners": [
+        "launch_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 16,
+      "risk_thresholds": {
+        "ready": 91,
+        "risk": 61,
+        "watch": 76
+      },
+      "section_weights": {
+        "audit": 1.48,
+        "authoring": 1.0,
+        "catalog": 1.0,
+        "difficulty": 1.12,
+        "execution": 1.24,
+        "history": 1.48,
+        "release": 1.24,
+        "remediation": 1.36,
+        "scoring": 1.36,
+        "validation": 1.12
+      }
+    },
+    "metadata_ops": {
+      "domain": "metadata_ops",
+      "handoff_owners": [
+        "metadata_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 7,
+      "risk_thresholds": {
+        "ready": 91,
+        "risk": 60,
+        "watch": 77
+      },
+      "section_weights": {
+        "audit": 1.0,
+        "authoring": 1.12,
+        "catalog": 1.12,
+        "difficulty": 1.24,
+        "execution": 1.36,
+        "history": 1.0,
+        "release": 1.36,
+        "remediation": 1.48,
+        "scoring": 1.48,
+        "validation": 1.24
+      }
+    },
+    "partner_ops": {
+      "domain": "partner_ops",
+      "handoff_owners": [
+        "partner_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 17,
+      "risk_thresholds": {
+        "ready": 90,
+        "risk": 60,
+        "watch": 75
+      },
+      "section_weights": {
+        "audit": 1.0,
+        "authoring": 1.12,
+        "catalog": 1.12,
+        "difficulty": 1.24,
+        "execution": 1.36,
+        "history": 1.0,
+        "release": 1.36,
+        "remediation": 1.48,
+        "scoring": 1.48,
+        "validation": 1.24
+      }
+    },
+    "pipeline_ops": {
+      "domain": "pipeline_ops",
+      "handoff_owners": [
+        "pipeline_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 11,
+      "risk_thresholds": {
+        "ready": 90,
+        "risk": 61,
+        "watch": 77
+      },
+      "section_weights": {
+        "audit": 1.48,
+        "authoring": 1.0,
+        "catalog": 1.0,
+        "difficulty": 1.12,
+        "execution": 1.24,
+        "history": 1.48,
+        "release": 1.24,
+        "remediation": 1.36,
+        "scoring": 1.36,
+        "validation": 1.12
+      }
+    },
+    "qa_ops": {
+      "domain": "qa_ops",
+      "handoff_owners": [
+        "qa_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 13,
+      "risk_thresholds": {
+        "ready": 91,
+        "risk": 59,
+        "watch": 75
+      },
+      "section_weights": {
+        "audit": 1.12,
+        "authoring": 1.24,
+        "catalog": 1.24,
+        "difficulty": 1.36,
+        "execution": 1.48,
+        "history": 1.12,
+        "release": 1.48,
+        "remediation": 1.0,
+        "scoring": 1.0,
+        "validation": 1.36
+      }
+    },
+    "raster_ops": {
+      "domain": "raster_ops",
+      "handoff_owners": [
+        "raster_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 10,
+      "risk_thresholds": {
+        "ready": 91,
+        "risk": 57,
+        "watch": 78
+      },
+      "section_weights": {
+        "audit": 1.36,
+        "authoring": 1.48,
+        "catalog": 1.48,
+        "difficulty": 1.0,
+        "execution": 1.12,
+        "history": 1.36,
+        "release": 1.12,
+        "remediation": 1.24,
+        "scoring": 1.24,
+        "validation": 1.0
+      }
+    },
+    "release_program_ops": {
+      "domain": "release_program_ops",
+      "handoff_owners": [
+        "release_program_ops",
+        "release_ops",
+        "support_quality",
+        "audit_program"
+      ],
+      "release_channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "required_metadata": [
+        "release_channel",
+        "author",
+        "last_reviewed_at",
+        "notes",
+        "support_tier",
+        "difficulty_owner",
+        "hidden_owner"
+      ],
+      "review_sla_hours": 14,
+      "risk_thresholds": {
+        "ready": 90,
+        "risk": 58,
+        "watch": 78
+      },
+      "section_weights": {
+        "audit": 1.24,
+        "authoring": 1.36,
+        "catalog": 1.36,
+        "difficulty": 1.48,
+        "execution": 1.0,
+        "history": 1.24,
+        "release": 1.0,
+        "remediation": 1.12,
+        "scoring": 1.12,
+        "validation": 1.48
+      }
+    }
+  },
+  "section_policies": {
+    "audit": {
+      "notes_template": "Audit owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "export_ops",
+      "release_gate": "risk",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "export_ops",
+        "image_quality_ops"
+      ],
+      "weight": 1.35
+    },
+    "authoring": {
+      "notes_template": "Authoring owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "qa_ops",
+      "release_gate": "ready",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "qa_ops",
+        "launch_ops"
+      ],
+      "weight": 1.42
+    },
+    "catalog": {
+      "notes_template": "Catalog owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "color_ops",
+      "release_gate": "watch",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "color_ops",
+        "pipeline_ops"
+      ],
+      "weight": 1.07
+    },
+    "difficulty": {
+      "notes_template": "Difficulty owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "release_program_ops",
+      "release_gate": "watch",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "release_program_ops",
+        "partner_ops"
+      ],
+      "weight": 1.49
+    },
+    "execution": {
+      "notes_template": "Execution owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "raster_ops",
+      "release_gate": "ready",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "raster_ops",
+        "qa_ops"
+      ],
+      "weight": 1.21
+    },
+    "history": {
+      "notes_template": "History owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "partner_ops",
+      "release_gate": "watch",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip",
+        "history_rollup.json"
+      ],
+      "required_reviewers": [
+        "partner_ops",
+        "color_ops"
+      ],
+      "weight": 1.7
+    },
+    "release": {
+      "notes_template": "Release owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "image_quality_ops",
+      "release_gate": "risk",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "image_quality_ops",
+        "archive_ops"
+      ],
+      "weight": 1.56
+    },
+    "remediation": {
+      "notes_template": "Remediation owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "launch_ops",
+      "release_gate": "ready",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip",
+        "history_rollup.json"
+      ],
+      "required_reviewers": [
+        "launch_ops",
+        "metadata_ops"
+      ],
+      "weight": 1.63
+    },
+    "scoring": {
+      "notes_template": "Scoring owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "pipeline_ops",
+      "release_gate": "watch",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "pipeline_ops",
+        "release_program_ops"
+      ],
+      "weight": 1.28
+    },
+    "validation": {
+      "notes_template": "Validation owner confirms hidden/public case intent, score floors, and export digest stability.",
+      "owner": "codec_ops",
+      "release_gate": "risk",
+      "required_artifacts": [
+        "bundle_summary.json",
+        "scorecard.json",
+        "audit_packet.zip"
+      ],
+      "required_reviewers": [
+        "codec_ops",
+        "export_ops"
+      ],
+      "weight": 1.14
+    }
+  },
+  "tag_canonicalization": {
+    "allocation": "allocation",
+    "alpha": "alpha-logic",
+    "audit": "audit",
+    "authoring": "authoring",
+    "telemetry": "telemetry",
+    "metadata": "metadata",
+    "closeout": "closeout",
+    "codec": "codec",
+    "color": "color-profiles",
+    "compression": "compression",
+    "decoder": "decoder",
+    "difficulty": "difficulty",
+    "document": "thumbnail",
+    "documents": "document-processing",
+    "exif": "exif",
+    "export": "export",
+    "export": "export",
+    "hidden": "hidden-cases",
+    "history": "history",
+    "identity": "sprite",
+    "jpeg": "jpeg",
+    "ledger": "event-ledger",
+    "manifest": "manifest",
+    "codec": "codec",
+    "metadata": "metadata",
+    "ops": "operations",
+    "partner": "partner-format",
+    "pilot": "pilot",
+    "preset": "preset",
+    "compression": "compression",
+    "public": "public-cases",
+    "raster": "raster",
+    "recovery": "recovery",
+    "rehearsal": "rehearsal",
+    "release": "release",
+    "replay": "replay",
+    "alpha": "alpha-logic",
+    "decoder": "decoder",
+    "routing": "routing",
+    "score": "scoring",
+    "seat": "color-profiles",
+    "sprite": "sprite",
+    "support": "support",
+    "telemetry": "telemetry",
+    "thumbnail": "thumbnail",
+    "tiling": "tiling",
+    "partner": "partner-format",
+    "raster": "raster"
+  }
+}

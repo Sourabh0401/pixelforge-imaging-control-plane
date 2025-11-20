@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.persistence import saved_query_sql
+from pixelforge_ops.persistence import saved_query_sql
 
 
 class SavedQuerySqlTests(unittest.TestCase):
@@ -18,8 +18,10 @@ class SavedQuerySqlTests(unittest.TestCase):
         self.assertIn("gap_floor", params)
 
     def test_queries_for_owner_filters_catalog(self) -> None:
-        rows = saved_query_sql.queries_for_owner("risk_ops")
+        rows = saved_query_sql.queries_for_owner("image_quality_ops")
         self.assertTrue(rows)
 
     def test_markdown_catalog_has_heading(self) -> None:
         self.assertIn("# Saved query catalog", saved_query_sql.markdown_catalog())
+
+

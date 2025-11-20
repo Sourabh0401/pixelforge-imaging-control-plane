@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.reporting_surfaces import narrative_catalog
+from pixelforge_ops.reporting_surfaces import narrative_catalog
 
 
 class NarrativeCatalogTests(unittest.TestCase):
@@ -14,3 +14,5 @@ class NarrativeCatalogTests(unittest.TestCase):
 
     def test_section_narrative_returns_text(self) -> None:
         self.assertTrue(narrative_catalog.section_narrative("catalog"))
+
+

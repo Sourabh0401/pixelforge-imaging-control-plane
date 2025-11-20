@@ -1,0 +1,194 @@
+{
+  "archive_ops": {
+    "closing": "Always include the retention action summary when the brief is used in a close or payout review.",
+    "headline": "Reserve and treasury brief",
+    "intro": "Treasury uses the brief when alpha and payout-gate bundles affect close timing or require a retention decision before cleanup.",
+    "metric_callouts": [
+      "alpha hidden drift",
+      "archive versus prune candidates",
+      "closeout adjacency",
+      "audit packet age"
+    ],
+    "prompts": [
+      "Did alpha behavior drift without a matching update in the payout gate notes?",
+      "Are we trying to prune rows that still need to be held for audit?",
+      "Which blocked bundles need finance review before the next close train?"
+    ]
+  },
+  "codec_ops": {
+    "closing": "Include both scorecard movement and release-note context so treasury does not have to infer the reason for a hold.",
+    "headline": "Closeout and telemetry brief",
+    "intro": "Finance uses the brief to connect score movement with release risk, audit readiness, and close-window sensitivity.",
+    "metric_callouts": [
+      "ready-band holdouts",
+      "closeout public-hidden gap",
+      "audit export freshness",
+      "retention plan pressure"
+    ],
+    "prompts": [
+      "What changed between the last ready closeout bundle and the current watch or blocked bundle?",
+      "Did any retention or audit rule become the real blocker instead of the score?",
+      "Are alpha or telemetry bundles following the same failure pattern as closeout bundles?"
+    ]
+  },
+  "color_ops": {
+    "closing": "If partner-facing wording changed, include the escalation path in the brief, not only in the audit packet.",
+    "headline": "Color profile parity brief",
+    "intro": "Education reviewers care about fairness, roster timing, and whether partner-facing notes explain the operational change without making the score harder to interpret.",
+    "metric_callouts": [
+      "hidden-score drift",
+      "watch-band partner bundles",
+      "release train capacity",
+      "public-hidden variance"
+    ],
+    "prompts": [
+      "Did any color-profile-parity bundle become partner-facing without a fairness note?",
+      "Which owners are close to their weekly capacity ceiling for the next train?",
+      "Are hidden cases still the leading indicator for roster-timing problems?"
+    ]
+  },
+  "export_ops": {
+    "closing": "If a partner export exists, the brief should mention the retention horizon explicitly.",
+    "headline": "Partner format compatibility brief",
+    "intro": "Procurement uses the brief to understand dispute handling, settlement exception trends, and whether the support handoff is clear enough for release week.",
+    "metric_callouts": [
+      "partner exception rate",
+      "blocked dispute cases",
+      "partner retention impact",
+      "support review queue"
+    ],
+    "prompts": [
+      "Which settlement failures need a content fix and which need a release-note fix?",
+      "Did procurement and support use the same dispute terms in the last two releases?",
+      "Is the packet complete enough to replay a partner escalation if needed?"
+    ]
+  },
+  "image_quality_ops": {
+    "closing": "Risk briefs should call out the difference between acceptable watch-band noise and true control regressions.",
+    "headline": "Identity and controls brief",
+    "intro": "Risk cares about hidden-case decay, partner-control wording, and evidence completeness. The brief should make it obvious when the score is not the main problem anymore.",
+    "metric_callouts": [
+      "hidden-gap watchlist",
+      "field coverage warnings",
+      "partner channel mix",
+      "audit review latency"
+    ],
+    "prompts": [
+      "Which risk bundles are blocked by evidence instead of by score?",
+      "Did partner-control wording change without a matching review note?",
+      "Are hidden cases still acting as the leading signal for risk drift?"
+    ]
+  },
+  "launch_ops": {
+    "closing": "Include the policy text that changed, not only a summary label, when the brief is used for approval.",
+    "headline": "Compression preset handoff brief",
+    "intro": "Sales uses the brief to see whether compression policy, release notes, and validation behavior all moved together or whether one piece lagged behind.",
+    "metric_callouts": [
+      "validation mismatch rate",
+      "public-hidden compression gap",
+      "release digest movement",
+      "holdout bundle count"
+    ],
+    "prompts": [
+      "Did discount-rule wording shift more than the expected answers did?",
+      "Would a release-note rewrite unblock review faster than a score threshold change?",
+      "Are compression bundles starting to resemble finance bundles in their failure pattern?"
+    ]
+  },
+  "metadata_ops": {
+    "closing": "Content teams should attach the release note excerpt and packet digest when the bundle enters a manual review lane.",
+    "headline": "Classifier and content brief",
+    "intro": "Use this brief when content reviewers need a quick view of routing language, extraction drift, and whether audit evidence is still replayable.",
+    "metric_callouts": [
+      "public-hidden gap by bundle",
+      "field-coverage warnings",
+      "watch-band bundle count",
+      "owner dashboard trend"
+    ],
+    "prompts": [
+      "Which classifier bundles changed wording without a matching release note update?",
+      "Did any packet validation issues land after the last content review?",
+      "Are hidden extraction cases still harder than public walkthroughs in a useful way?"
+    ]
+  },
+  "partner_ops": {
+    "closing": "Support briefs should name the owner handoff path so reviewers know whether to route issues to risk, content, or release ops.",
+    "headline": "Metadata EXIF ingest brief",
+    "intro": "Support needs to separate taxonomy drift from escalation drift and keep a steady view of which bundles are consuming review time.",
+    "metric_callouts": [
+      "review-state owner matrix",
+      "support queue latency",
+      "blocked escalation bundles",
+      "owner average percent"
+    ],
+    "prompts": [
+      "Did an escalation wording change land without updated hidden cases?",
+      "Which blocked bundles actually belong in a content review lane instead of support review?",
+      "Did queue pressure make the score movement look worse than it is?"
+    ]
+  },
+  "pipeline_ops": {
+    "closing": "When platform signs off, the brief should say whether the issue was runtime, content, or policy.",
+    "headline": "Runtime and export brief",
+    "intro": "Platform looks for runtime normalization problems, worker-version drift, and packet field coverage that could make a failure expensive to debug later.",
+    "metric_callouts": [
+      "worker-version shift",
+      "queue-latency outliers",
+      "execution timeout clusters",
+      "manifest digest drift"
+    ],
+    "prompts": [
+      "Did the latest failures line up with a worker-version change?",
+      "Are replay artifacts still sufficient to reproduce the slow or failing path?",
+      "Would a release-note update clarify the operational change without code spelunking?"
+    ]
+  },
+  "qa_ops": {
+    "closing": "Returns briefs should always include the retry horizon when runtime is part of the story.",
+    "headline": "Returns recovery brief",
+    "intro": "Returns owners watch runtime noise, recovery wording, and whether the queue or the content is the real reason a bundle is slipping.",
+    "metric_callouts": [
+      "retryable timeout count",
+      "decoder hidden drift",
+      "review-state balance",
+      "owner capacity pressure"
+    ],
+    "prompts": [
+      "Did the bundle slow down because of runtime, or did the expected answer set drift?",
+      "Are decoder notes and release artifacts saying the same thing about the current workflow?",
+      "Would the next train be safer after a reviewer capacity shift rather than a code change?"
+    ]
+  },
+  "raster_ops": {
+    "closing": "Routing owners should add a sentence about facility or zone changes whenever the brief is used for release approval.",
+    "headline": "Raster transform brief",
+    "intro": "Routing briefs are built for operators who need to separate stale raster assumptions from runtime queue pressure.",
+    "metric_callouts": [
+      "route-capacity blockers",
+      "queue-latency spikes",
+      "owner blackout conflicts",
+      "exception-repair mismatch count"
+    ],
+    "prompts": [
+      "Which blocked rows are really content issues and which are calendar issues?",
+      "Did raster blackouts reduce schedule options even though quota remained?",
+      "Are repair instructions staying consistent across notes, tags, and hidden cases?"
+    ]
+  },
+  "release_program_ops": {
+    "closing": "Attach the relevant manifest digest and owner-average trend whenever the brief leads to a hold decision.",
+    "headline": "Batch render telemetry brief",
+    "intro": "Render Telemetry Ops needs to see entitlement drift, audit export quality, and whether the same patterns are showing up in telemetry and ledger bundles.",
+    "metric_callouts": [
+      "owner bundle matrix",
+      "digest drift summary",
+      "hidden-case spread",
+      "audit queue latency"
+    ],
+    "prompts": [
+      "Did the release note explain the change as clearly as the scorecard did?",
+      "Are the telemetry bundles slowly decaying or did one release create the spike?",
+      "Which issue belongs to release_program_ops and which one needs finance or platform review?"
+    ]
+  }
+}

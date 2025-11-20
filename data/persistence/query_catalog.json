@@ -1,0 +1,388 @@
+{
+  "materialized_views": [
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "catalog",
+      "refresh_policy": "hourly",
+      "view_name": "mv_catalog_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "validation",
+      "refresh_policy": "release",
+      "view_name": "mv_validation_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "execution",
+      "refresh_policy": "daily",
+      "view_name": "mv_execution_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "scoring",
+      "refresh_policy": "hourly",
+      "view_name": "mv_scoring_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "audit",
+      "refresh_policy": "release",
+      "view_name": "mv_audit_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "authoring",
+      "refresh_policy": "daily",
+      "view_name": "mv_authoring_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "difficulty",
+      "refresh_policy": "hourly",
+      "view_name": "mv_difficulty_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "release",
+      "refresh_policy": "release",
+      "view_name": "mv_release_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "remediation",
+      "refresh_policy": "daily",
+      "view_name": "mv_remediation_summary"
+    },
+    {
+      "columns": [
+        "bundle_id",
+        "owner",
+        "band",
+        "percent",
+        "public_percent",
+        "hidden_percent"
+      ],
+      "grain": "history",
+      "refresh_policy": "hourly",
+      "view_name": "mv_history_summary"
+    }
+  ],
+  "saved_queries": [
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for metadata_ops.",
+      "query_id": "owner-rollup-01",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "metadata_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for color_ops.",
+      "query_id": "owner-rollup-02",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "color_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for codec_ops.",
+      "query_id": "owner-rollup-03",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "codec_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for raster_ops.",
+      "query_id": "owner-rollup-04",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "raster_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for pipeline_ops.",
+      "query_id": "owner-rollup-05",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "pipeline_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for export_ops.",
+      "query_id": "owner-rollup-06",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "export_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for qa_ops.",
+      "query_id": "owner-rollup-07",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "qa_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for release_program_ops.",
+      "query_id": "owner-rollup-08",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "release_program_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for image_quality_ops.",
+      "query_id": "owner-rollup-09",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "image_quality_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for launch_ops.",
+      "query_id": "owner-rollup-10",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "launch_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for partner_ops.",
+      "query_id": "owner-rollup-11",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "partner_ops score rollup"
+    },
+    {
+      "dimensions": [
+        "owner",
+        "band",
+        "release_channel",
+        "month"
+      ],
+      "filters": [
+        "owner",
+        "band",
+        "release_channel",
+        "started_at"
+      ],
+      "notes": "Default dashboard query for archive_ops.",
+      "query_id": "owner-rollup-12",
+      "sort": [
+        "month desc",
+        "percent desc"
+      ],
+      "title": "archive_ops score rollup"
+    }
+  ]
+}

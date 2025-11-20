@@ -1,0 +1,23 @@
+{
+  "bundle_id": "sprite-identity-refresh",
+  "domain": "image_quality_ops",
+  "metadata": {
+    "author": "image_quality_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Sprite identity refresh bundle used for acceptance rehearsal across lineage checks and hidden asset drift.",
+    "release_channel": "internal"
+  },
+  "owner": "image_quality_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "sprite",
+    "identity",
+    "release"
+  ],
+  "title": "Sprite identity refresh and asset lineage checks",
+  "version": "2026.06"
+}

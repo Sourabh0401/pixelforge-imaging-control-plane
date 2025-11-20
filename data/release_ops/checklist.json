@@ -1,0 +1,812 @@
+[
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-01",
+    "instruction": "Verify score control 1 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-02",
+    "instruction": "Verify release control 2 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-03",
+    "instruction": "Verify audit control 3 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-04",
+    "instruction": "Verify handoff control 4 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-05",
+    "instruction": "Verify retention control 5 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-06",
+    "instruction": "Verify bundle control 6 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-07",
+    "instruction": "Verify score control 7 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-08",
+    "instruction": "Verify release control 8 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-09",
+    "instruction": "Verify audit control 9 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-10",
+    "instruction": "Verify handoff control 10 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-11",
+    "instruction": "Verify retention control 11 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-12",
+    "instruction": "Verify bundle control 12 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-13",
+    "instruction": "Verify score control 13 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-14",
+    "instruction": "Verify release control 14 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-15",
+    "instruction": "Verify audit control 15 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-16",
+    "instruction": "Verify handoff control 16 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-17",
+    "instruction": "Verify retention control 17 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-18",
+    "instruction": "Verify bundle control 18 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-19",
+    "instruction": "Verify score control 19 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-20",
+    "instruction": "Verify release control 20 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-21",
+    "instruction": "Verify audit control 21 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-22",
+    "instruction": "Verify handoff control 22 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-23",
+    "instruction": "Verify retention control 23 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-24",
+    "instruction": "Verify bundle control 24 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-25",
+    "instruction": "Verify score control 25 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-26",
+    "instruction": "Verify release control 26 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-27",
+    "instruction": "Verify audit control 27 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-28",
+    "instruction": "Verify handoff control 28 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-29",
+    "instruction": "Verify retention control 29 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-30",
+    "instruction": "Verify bundle control 30 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-31",
+    "instruction": "Verify score control 31 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-32",
+    "instruction": "Verify release control 32 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-33",
+    "instruction": "Verify audit control 33 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-34",
+    "instruction": "Verify handoff control 34 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-35",
+    "instruction": "Verify retention control 35 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-36",
+    "instruction": "Verify bundle control 36 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-37",
+    "instruction": "Verify score control 37 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-38",
+    "instruction": "Verify release control 38 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-39",
+    "instruction": "Verify audit control 39 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-40",
+    "instruction": "Verify handoff control 40 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-41",
+    "instruction": "Verify retention control 41 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-42",
+    "instruction": "Verify bundle control 42 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "score-check-43",
+    "instruction": "Verify score control 43 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "score",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "release-check-44",
+    "instruction": "Verify release control 44 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "release",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "audit-check-45",
+    "instruction": "Verify audit control 45 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "audit",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": [
+      "requires-review"
+    ]
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "code": "handoff-check-46",
+    "instruction": "Verify handoff control 46 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "handoff",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": true,
+    "channel_scope": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "code": "retention-check-47",
+    "instruction": "Verify retention control 47 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "retention",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl",
+      "release_manifest.json"
+    ],
+    "required_flags": []
+  },
+  {
+    "blocking": false,
+    "channel_scope": [
+      "internal",
+      "rehearsal"
+    ],
+    "code": "bundle-check-48",
+    "instruction": "Verify bundle control 48 for case visibility, owner notes, and digest reproducibility.",
+    "phase": "bundle",
+    "required_files": [
+      "bundle.json",
+      "cases.jsonl"
+    ],
+    "required_flags": []
+  }
+]

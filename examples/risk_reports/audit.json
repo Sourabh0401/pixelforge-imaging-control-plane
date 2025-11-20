@@ -1,62 +1,62 @@
 {
   "bundles": [
     {
-      "bundle_id": "merchant-closeout",
+      "bundle_id": "jpeg-codec-fidelity",
       "digest": "06cae8ddd8b35bfba6731683f2767a8eb00aade0",
       "risk_band": "watch"
     },
     {
-      "bundle_id": "warehouse-routing",
+      "bundle_id": "raster-transform-tiling",
       "digest": "51abfe61deecade823760dfd0c923ec0d596ce16",
       "risk_band": "risk"
     },
     {
-      "bundle_id": "claims-intake",
+      "bundle_id": "metadata-exif-ingest",
       "digest": "282299e11fb8c2759b738c484b8423efb9e43887",
       "risk_band": "blocked"
     },
     {
-      "bundle_id": "reserve-rollforward",
+      "bundle_id": "alpha-channel-recovery",
       "digest": "936fb5915c2672e0ad8ecb37d0b30a68cf24f682",
       "risk_band": "ready"
     },
     {
-      "bundle_id": "identity-refresh",
+      "bundle_id": "sprite-identity-refresh",
       "digest": "c2af0bedfab8db417c1a93e08a233cf284ac9e6e",
       "risk_band": "watch"
     },
     {
-      "bundle_id": "subscriber-billing",
+      "bundle_id": "batch-render-telemetry",
       "digest": "b11bbc74bcfc6e2917f2e802d148788d4f39dcc1",
       "risk_band": "risk"
     },
     {
-      "bundle_id": "seat-allocation",
+      "bundle_id": "color-profile-parity",
       "digest": "480eaba2d4cd28930fe33776f69746b17e287aa6",
       "risk_band": "blocked"
     },
     {
-      "bundle_id": "fulfillment-ledger",
+      "bundle_id": "export-pipeline-integrity",
       "digest": "16ea637818cf8a96bc9cfc9954734cd41b50661a",
       "risk_band": "ready"
     },
     {
-      "bundle_id": "document-classifier",
+      "bundle_id": "thumbnail-generation-stability",
       "digest": "073124f6a5e53e2794c35e0f4e92fcd56720d2ef",
       "risk_band": "watch"
     },
     {
-      "bundle_id": "vendor-settlement",
+      "bundle_id": "partner-format-compatibility",
       "digest": "10622522309dbbe1f1eeb6ec2a4cdb05b90fb660",
       "risk_band": "risk"
     },
     {
-      "bundle_id": "pricing-handoff",
+      "bundle_id": "compression-preset-handoff",
       "digest": "bc76b1246228128acb9df8c1123fd17376b88ecc",
       "risk_band": "blocked"
     },
     {
-      "bundle_id": "returns-recovery",
+      "bundle_id": "decoder-recovery-replay",
       "digest": "7c007abc28b3b85c082f8e0abb5b797055747605",
       "risk_band": "ready"
     }

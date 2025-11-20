@@ -2,24 +2,24 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.execution import evaluate_attempt
-from engineering_challenge.scoring import score_run
+from pixelforge_ops.execution import evaluate_attempt
+from pixelforge_ops.scoring import score_run
 from tests.ext_helpers import attempt, bundle
 
 
 BUNDLES = {
-    "merchant-closeout": {"owner": "finance_ops", "tag": "finance", "phrase": "Closeout"},
-    "warehouse-routing": {"owner": "logistics_ops", "tag": "logistics", "phrase": "Warehouse"},
-    "claims-intake": {"owner": "support_ops", "tag": "support", "phrase": "Claims"},
-    "reserve-rollforward": {"owner": "treasury_ops", "tag": "treasury", "phrase": "Reserve"},
-    "identity-refresh": {"owner": "risk_ops", "tag": "risk", "phrase": "Identity"},
-    "subscriber-billing": {"owner": "revops", "tag": "revops", "phrase": "Recurring"},
-    "seat-allocation": {"owner": "education_ops", "tag": "education", "phrase": "Seat"},
-    "fulfillment-ledger": {"owner": "platform_ops", "tag": "platform", "phrase": "Fulfillment"},
-    "document-classifier": {"owner": "content_ops", "tag": "content", "phrase": "Document"},
-    "vendor-settlement": {"owner": "procurement_ops", "tag": "procurement", "phrase": "Vendor"},
-    "pricing-handoff": {"owner": "sales_ops", "tag": "sales", "phrase": "Pricing"},
-    "returns-recovery": {"owner": "returns_ops", "tag": "returns", "phrase": "Recovery"},
+    "jpeg-codec-fidelity": {"owner": "codec_ops", "tag": "codec", "phrase": "JPEG codec"},
+    "raster-transform-tiling": {"owner": "raster_ops", "tag": "raster", "phrase": "Raster transform"},
+    "metadata-exif-ingest": {"owner": "partner_ops", "tag": "metadata", "phrase": "Metadata EXIF"},
+    "alpha-channel-recovery": {"owner": "archive_ops", "tag": "alpha", "phrase": "Alpha channel"},
+    "sprite-identity-refresh": {"owner": "image_quality_ops", "tag": "sprite", "phrase": "Sprite identity"},
+    "batch-render-telemetry": {"owner": "release_program_ops", "tag": "telemetry", "phrase": "Batch render"},
+    "color-profile-parity": {"owner": "color_ops", "tag": "color", "phrase": "Color profile"},
+    "export-pipeline-integrity": {"owner": "pipeline_ops", "tag": "export", "phrase": "Export pipeline"},
+    "thumbnail-generation-stability": {"owner": "metadata_ops", "tag": "thumbnail", "phrase": "Thumbnail generation"},
+    "partner-format-compatibility": {"owner": "export_ops", "tag": "partner", "phrase": "Partner format"},
+    "compression-preset-handoff": {"owner": "launch_ops", "tag": "compression", "phrase": "Compression preset"},
+    "decoder-recovery-replay": {"owner": "qa_ops", "tag": "decoder", "phrase": "Decoder recovery"},
 }
 
 
@@ -62,23 +62,24 @@ class BundleRegressionTests(unittest.TestCase):
                 self.assertIn("requires-review", mixed.policy_flags)
                 self.assertGreater(mixed.public_percent, mixed.hidden_percent)
 
-    def test_merchant_closeout_keeps_audit_section_visible(self) -> None:
-        item = bundle("merchant-closeout")
+    def test_jpeg_codec_bundle_keeps_audit_section_visible(self) -> None:
+        item = bundle("jpeg-codec-fidelity")
         self.assertIn("audit", item.sections())
-        self.assertIn("exception handling", item.metadata["notes"].lower())
+        self.assertIn("quantization", item.metadata["notes"].lower())
 
-    def test_warehouse_routing_mentions_repair_in_operator_notes(self) -> None:
-        item = bundle("warehouse-routing")
-        self.assertIn("repair", item.metadata["notes"].lower())
-        self.assertIn("logistics", item.domain)
+    def test_raster_transform_bundle_mentions_crop_in_operator_notes(self) -> None:
+        item = bundle("raster-transform-tiling")
+        self.assertIn("crop", item.metadata["notes"].lower())
+        self.assertEqual(item.domain, "raster_ops")
 
-    def test_claims_intake_preserves_escalation_language(self) -> None:
-        item = bundle("claims-intake")
-        self.assertIn("escalation", item.metadata["notes"].lower())
-        self.assertEqual(item.domain, "support_ops")
+    def test_metadata_exif_bundle_preserves_ingest_language(self) -> None:
+        item = bundle("metadata-exif-ingest")
+        self.assertIn("exif", item.metadata["notes"].lower())
+        self.assertEqual(item.domain, "partner_ops")
 
-    def test_returns_recovery_uses_treasury_owner(self) -> None:
-        item = bundle("returns-recovery")
-        card = score_run(evaluate_attempt(item, attempt("returns-recovery", "mixed")), item)
-        self.assertEqual(card.owner, "returns_ops")
+    def test_decoder_recovery_scorecard_keeps_decoder_owner(self) -> None:
+        item = bundle("decoder-recovery-replay")
+        card = score_run(evaluate_attempt(item, attempt("decoder-recovery-replay", "mixed")), item)
+        self.assertEqual(card.owner, "qa_ops")
         self.assertGreater(card.percent, 40.0)
+

@@ -6,7 +6,7 @@ import unittest
 from contextlib import closing
 from pathlib import Path
 
-from engineering_challenge.persistence import dashboard, history_ingest, migrations, query_catalog, query_service, snapshots
+from pixelforge_ops.persistence import dashboard, history_ingest, migrations, query_catalog, query_service, snapshots
 from tests.ext_helpers import history_rows
 
 
@@ -48,7 +48,7 @@ class PersistenceModuleTests(unittest.TestCase):
     def test_owner_mix_reports_owners(self) -> None:
         path = Path(__file__).resolve().parent / "fixtures" / "sqlite_snapshots" / "ops_history_2026_q1.sqlite3"
         mix = snapshots.owner_mix(path)
-        self.assertIn("finance_ops", mix)
+        self.assertIn("codec_ops", mix)
 
     def test_query_service_recent_history_returns_rows(self) -> None:
         path = Path(__file__).resolve().parent / "fixtures" / "sqlite_snapshots" / "ops_history_2026_q1.sqlite3"
@@ -62,7 +62,7 @@ class PersistenceModuleTests(unittest.TestCase):
     def test_query_service_owner_average_returns_mapping(self) -> None:
         path = Path(__file__).resolve().parent / "fixtures" / "sqlite_snapshots" / "ops_history_2026_q1.sqlite3"
         averages = query_service.owner_average(path)
-        self.assertIn("finance_ops", averages)
+        self.assertIn("codec_ops", averages)
 
     def test_dashboard_payload_contains_bands(self) -> None:
         path = Path(__file__).resolve().parent / "fixtures" / "sqlite_snapshots" / "ops_history_2026_q1.sqlite3"
@@ -85,3 +85,5 @@ class PersistenceModuleTests(unittest.TestCase):
                 history_ingest.insert_rows(conn, rows)
                 count = conn.execute("select count(*) from history_import").fetchone()[0]
             self.assertEqual(count, 20)
+
+

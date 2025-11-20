@@ -1,7 +1,7 @@
 [project]
-name = "engineering-challenge-control-plane"
+name = "pixelforge-imaging-control-plane"
 version = "0.1.0"
-description = "Internal catalog, scoring, release, and audit control plane for challenge operations"
+description = "Internal release, scoring, and audit control plane for PixelForge imaging certification"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []

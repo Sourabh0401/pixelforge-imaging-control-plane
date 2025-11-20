@@ -1,0 +1,98 @@
+[
+  {
+    "bundle_id": "jpeg-codec-fidelity",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "codec_ops",
+    "public_case_count": 16,
+    "title": "JPEG codec fidelity and quantization drift"
+  },
+  {
+    "bundle_id": "raster-transform-tiling",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "raster_ops",
+    "public_case_count": 16,
+    "title": "Raster transform tiling and canvas stability"
+  },
+  {
+    "bundle_id": "metadata-exif-ingest",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "partner_ops",
+    "public_case_count": 16,
+    "title": "Metadata EXIF ingest and schema drift"
+  },
+  {
+    "bundle_id": "alpha-channel-recovery",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "archive_ops",
+    "public_case_count": 16,
+    "title": "Alpha channel recovery and transparent edge handling"
+  },
+  {
+    "bundle_id": "sprite-identity-refresh",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "image_quality_ops",
+    "public_case_count": 16,
+    "title": "Sprite identity refresh and asset lineage checks"
+  },
+  {
+    "bundle_id": "batch-render-telemetry",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "release_program_ops",
+    "public_case_count": 16,
+    "title": "Batch render telemetry and queue health"
+  },
+  {
+    "bundle_id": "color-profile-parity",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "color_ops",
+    "public_case_count": 16,
+    "title": "Color profile parity and rendering parity"
+  },
+  {
+    "bundle_id": "export-pipeline-integrity",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "pipeline_ops",
+    "public_case_count": 16,
+    "title": "Export pipeline integrity and manifest reproducibility"
+  },
+  {
+    "bundle_id": "thumbnail-generation-stability",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "metadata_ops",
+    "public_case_count": 16,
+    "title": "Thumbnail generation stability and crop reproducibility"
+  },
+  {
+    "bundle_id": "partner-format-compatibility",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "export_ops",
+    "public_case_count": 16,
+    "title": "Partner format compatibility and codec packaging"
+  },
+  {
+    "bundle_id": "compression-preset-handoff",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "launch_ops",
+    "public_case_count": 16,
+    "title": "Compression preset handoff and launch packaging"
+  },
+  {
+    "bundle_id": "decoder-recovery-replay",
+    "case_count": 24,
+    "hidden_case_count": 8,
+    "owner": "qa_ops",
+    "public_case_count": 16,
+    "title": "Decoder recovery replay and corruption fallback"
+  }
+]

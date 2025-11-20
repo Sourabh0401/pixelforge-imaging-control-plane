@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.execution_engine import runtime_budget
+from pixelforge_ops.execution_engine import runtime_budget
 
 
 class RuntimeBudgetTests(unittest.TestCase):
@@ -38,3 +38,5 @@ class RuntimeBudgetTests(unittest.TestCase):
     def test_queue_bucket_short_for_small_ceiling(self) -> None:
         budget = runtime_budget.budget_for("case-1", 600, False, "exact")
         self.assertEqual(budget.queue_bucket, "short")
+
+

@@ -1,0 +1,86 @@
+[
+  {
+    "first_history_id": "jpeg-codec-fidelity-01-00000",
+    "last_history_id": "decoder-recovery-replay-01-02399",
+    "month": "2026-01",
+    "path": "history/ops_history_2026_01.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-02-00000",
+    "last_history_id": "decoder-recovery-replay-02-02399",
+    "month": "2026-02",
+    "path": "history/ops_history_2026_02.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-03-00000",
+    "last_history_id": "decoder-recovery-replay-03-02399",
+    "month": "2026-03",
+    "path": "history/ops_history_2026_03.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-04-00000",
+    "last_history_id": "decoder-recovery-replay-04-02399",
+    "month": "2026-04",
+    "path": "history/ops_history_2026_04.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-05-00000",
+    "last_history_id": "decoder-recovery-replay-05-02399",
+    "month": "2026-05",
+    "path": "history/ops_history_2026_05.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-06-00000",
+    "last_history_id": "decoder-recovery-replay-06-02399",
+    "month": "2026-06",
+    "path": "history/ops_history_2026_06.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-07-00000",
+    "last_history_id": "decoder-recovery-replay-07-02399",
+    "month": "2026-07",
+    "path": "history/ops_history_2026_07.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-08-00000",
+    "last_history_id": "decoder-recovery-replay-08-02399",
+    "month": "2026-08",
+    "path": "history/ops_history_2026_08.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-09-00000",
+    "last_history_id": "decoder-recovery-replay-09-02399",
+    "month": "2026-09",
+    "path": "history/ops_history_2026_09.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-10-00000",
+    "last_history_id": "decoder-recovery-replay-10-02399",
+    "month": "2026-10",
+    "path": "history/ops_history_2026_10.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-11-00000",
+    "last_history_id": "decoder-recovery-replay-11-02399",
+    "month": "2026-11",
+    "path": "history/ops_history_2026_11.jsonl",
+    "row_count": 2400
+  },
+  {
+    "first_history_id": "jpeg-codec-fidelity-12-00000",
+    "last_history_id": "decoder-recovery-replay-12-02399",
+    "month": "2026-12",
+    "path": "history/ops_history_2026_12.jsonl",
+    "row_count": 2400
+  }
+]

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.auditpack import evidence_status
-from engineering_challenge.auditpack.evidence_validator import ValidationIssue
+from pixelforge_ops.auditpack import evidence_status
+from pixelforge_ops.auditpack.evidence_validator import ValidationIssue
 
 
 def _issue(code: str, severity: str, path: str) -> ValidationIssue:
@@ -39,13 +39,13 @@ class EvidenceStatusExtendedTests(unittest.TestCase):
         self.assertIn("worth recording", evidence_status.severity_guidance("info"))
 
     def test_route_for_bundle_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("missing-field", "error", "bundle.owner")), "content_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("missing-field", "error", "bundle.owner")), "metadata_ops")
 
     def test_route_for_run_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("missing-field", "error", "run.started_at")), "platform_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("missing-field", "error", "run.started_at")), "pipeline_ops")
 
     def test_route_for_scorecard_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("missing-field", "error", "scorecard.percent")), "finance_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("missing-field", "error", "scorecard.percent")), "codec_ops")
 
     def test_route_for_release_manifest_issue(self) -> None:
         self.assertEqual(
@@ -54,37 +54,37 @@ class EvidenceStatusExtendedTests(unittest.TestCase):
         )
 
     def test_route_for_trace_rows_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("missing-trace-row", "error", "trace_rows")), "platform_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("missing-trace-row", "error", "trace_rows")), "pipeline_ops")
 
     def test_route_for_artifact_paths_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("missing-path", "error", "artifact_paths.bundle")), "risk_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("missing-path", "error", "artifact_paths.bundle")), "image_quality_ops")
 
     def test_route_for_packet_digest_issue(self) -> None:
         self.assertEqual(evidence_status.route_for_issue(_issue("packet-drift", "error", "packet_digest")), "audit_ops")
 
     def test_route_for_retention_link_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("retention-gap", "warn", "retention_link")), "treasury_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("retention-gap", "warn", "retention_link")), "archive_ops")
 
     def test_route_for_history_import_issue(self) -> None:
         self.assertEqual(evidence_status.route_for_issue(_issue("stale-history", "warn", "history_import.started_at")), "reporting_ops")
 
     def test_route_for_owner_dashboard_issue(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("dashboard-gap", "warn", "owner_dashboard.blocked")), "support_ops")
+        self.assertEqual(evidence_status.route_for_issue(_issue("dashboard-gap", "warn", "owner_dashboard.blocked")), "partner_ops")
 
-    def test_route_for_unknown_prefix_defaults_to_support_ops(self) -> None:
-        self.assertEqual(evidence_status.route_for_issue(_issue("oddity", "warn", "mystery.path")), "support_ops")
+    def test_route_for_unknown_prefix_defaults_to_partner_ops(self) -> None:
+        self.assertEqual(evidence_status.route_for_issue(_issue("oddity", "warn", "mystery.path")), "partner_ops")
 
     def test_owner_summary_counts_routed_owners(self) -> None:
         summary = evidence_status.owner_summary(
             [_issue("missing-field", "error", "bundle.owner"), _issue("missing-path", "error", "artifact_paths.bundle")]
         )
-        self.assertEqual(summary, {"content_ops": 1, "risk_ops": 1})
+        self.assertEqual(summary, {"metadata_ops": 1, "image_quality_ops": 1})
 
     def test_owner_summary_sorts_keys(self) -> None:
         summary = evidence_status.owner_summary(
             [_issue("dashboard-gap", "warn", "owner_dashboard.blocked"), _issue("missing-field", "error", "bundle.owner")]
         )
-        self.assertEqual(list(summary), ["content_ops", "support_ops"])
+        self.assertEqual(list(summary), ["metadata_ops", "partner_ops"])
 
     def test_severity_summary_counts_all_levels(self) -> None:
         summary = evidence_status.severity_summary(
@@ -96,23 +96,23 @@ class EvidenceStatusExtendedTests(unittest.TestCase):
         digest = evidence_status.owner_digest(
             [_issue("missing-field", "error", "bundle.owner"), _issue("missing-other", "warn", "bundle.title")]
         )
-        self.assertEqual(digest["content_ops"]["count"], 2)
+        self.assertEqual(digest["metadata_ops"]["count"], 2)
 
     def test_owner_digest_sorts_codes(self) -> None:
         digest = evidence_status.owner_digest(
             [_issue("zeta", "warn", "bundle.owner"), _issue("alpha", "warn", "bundle.title")]
         )
-        self.assertEqual(digest["content_ops"]["codes"], ["alpha", "zeta"])
+        self.assertEqual(digest["metadata_ops"]["codes"], ["alpha", "zeta"])
 
     def test_owner_digest_sorts_paths(self) -> None:
         digest = evidence_status.owner_digest(
             [_issue("a", "warn", "bundle.title"), _issue("b", "warn", "bundle.owner")]
         )
-        self.assertEqual(digest["content_ops"]["paths"], ["bundle.owner", "bundle.title"])
+        self.assertEqual(digest["metadata_ops"]["paths"], ["bundle.owner", "bundle.title"])
 
     def test_owner_digest_ignores_empty_paths(self) -> None:
         digest = evidence_status.owner_digest([ValidationIssue("missing", "warn", "msg", "")])
-        self.assertEqual(digest["support_ops"]["paths"], [])
+        self.assertEqual(digest["partner_ops"]["paths"], [])
 
     def test_status_payload_contains_severity_summary(self) -> None:
         payload = evidence_status.status_payload([_issue("missing-field", "error", "bundle.owner")])
@@ -120,11 +120,11 @@ class EvidenceStatusExtendedTests(unittest.TestCase):
 
     def test_status_payload_contains_owner_digest(self) -> None:
         payload = evidence_status.status_payload([_issue("missing-field", "error", "bundle.owner")])
-        self.assertIn("content_ops", payload["owner_digest"])
+        self.assertIn("metadata_ops", payload["owner_digest"])
 
     def test_notification_lines_include_owner_counts(self) -> None:
         lines = evidence_status.notification_lines([_issue("missing-field", "error", "bundle.owner")])
-        self.assertIn("content_ops: 1 issue(s)", lines)
+        self.assertIn("metadata_ops: 1 issue(s)", lines)
 
     def test_notification_lines_include_severity_guidance(self) -> None:
         lines = evidence_status.notification_lines([_issue("missing-field", "error", "bundle.owner")])
@@ -136,15 +136,15 @@ class EvidenceStatusExtendedTests(unittest.TestCase):
 
     def test_owner_action_cards_include_known_owner_actions(self) -> None:
         cards = evidence_status.owner_action_cards([_issue("missing-field", "error", "bundle.owner")])
-        self.assertIn("primary_action", cards["content_ops"])
+        self.assertIn("primary_action", cards["metadata_ops"])
 
     def test_owner_action_cards_include_support_route_for_unknown_issue(self) -> None:
         cards = evidence_status.owner_action_cards([_issue("oddity", "warn", "mystery.path")])
-        self.assertIn("primary_action", cards["support_ops"])
+        self.assertIn("primary_action", cards["partner_ops"])
 
     def test_remediation_summary_contains_primary_and_escalation_text(self) -> None:
         summary = evidence_status.remediation_summary([_issue("missing-field", "error", "bundle.owner")])
-        self.assertIn("primary action", summary["content_ops"].lower())
+        self.assertIn("primary action", summary["metadata_ops"].lower())
 
     def test_remediation_summary_is_empty_without_issues(self) -> None:
         self.assertEqual(evidence_status.remediation_summary([]), {})
@@ -173,5 +173,7 @@ class EvidenceStatusExtendedTests(unittest.TestCase):
         text = evidence_status.render_status_brief(
             [_issue("missing-field", "error", "bundle.owner"), _issue("missing-path", "error", "artifact_paths.bundle")]
         )
-        self.assertIn("- content_ops: 1 issue(s)", text)
-        self.assertIn("- risk_ops: 1 issue(s)", text)
+        self.assertIn("- metadata_ops: 1 issue(s)", text)
+        self.assertIn("- image_quality_ops: 1 issue(s)", text)
+
+

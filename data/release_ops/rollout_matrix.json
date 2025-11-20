@@ -1,0 +1,546 @@
+{
+  "owner_quotas": {
+    "metadata_ops": {
+      "internal": 4,
+      "partner": 1,
+      "pilot": 2
+    },
+    "color_ops": {
+      "internal": 5,
+      "partner": 2,
+      "pilot": 3
+    },
+    "codec_ops": {
+      "internal": 6,
+      "partner": 1,
+      "pilot": 2
+    },
+    "raster_ops": {
+      "internal": 4,
+      "partner": 2,
+      "pilot": 3
+    },
+    "pipeline_ops": {
+      "internal": 5,
+      "partner": 1,
+      "pilot": 2
+    },
+    "export_ops": {
+      "internal": 6,
+      "partner": 2,
+      "pilot": 3
+    },
+    "qa_ops": {
+      "internal": 4,
+      "partner": 1,
+      "pilot": 2
+    },
+    "release_program_ops": {
+      "internal": 5,
+      "partner": 2,
+      "pilot": 3
+    },
+    "image_quality_ops": {
+      "internal": 6,
+      "partner": 1,
+      "pilot": 2
+    },
+    "launch_ops": {
+      "internal": 4,
+      "partner": 2,
+      "pilot": 3
+    },
+    "partner_ops": {
+      "internal": 5,
+      "partner": 1,
+      "pilot": 2
+    },
+    "archive_ops": {
+      "internal": 6,
+      "partner": 2,
+      "pilot": 3
+    }
+  },
+  "release_trains": [
+    {
+      "audit_cutoff": "2026-01-04",
+      "freeze_starts": "2026-01-02",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-01-05",
+      "train_id": "train-01"
+    },
+    {
+      "audit_cutoff": "2026-01-18",
+      "freeze_starts": "2026-01-16",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-01-19",
+      "train_id": "train-02"
+    },
+    {
+      "audit_cutoff": "2026-02-01",
+      "freeze_starts": "2026-01-30",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-02-02",
+      "train_id": "train-03"
+    },
+    {
+      "audit_cutoff": "2026-02-15",
+      "freeze_starts": "2026-02-13",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-02-16",
+      "train_id": "train-04"
+    },
+    {
+      "audit_cutoff": "2026-03-01",
+      "freeze_starts": "2026-02-27",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-03-02",
+      "train_id": "train-05"
+    },
+    {
+      "audit_cutoff": "2026-03-15",
+      "freeze_starts": "2026-03-13",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-03-16",
+      "train_id": "train-06"
+    },
+    {
+      "audit_cutoff": "2026-03-29",
+      "freeze_starts": "2026-03-27",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-03-30",
+      "train_id": "train-07"
+    },
+    {
+      "audit_cutoff": "2026-04-12",
+      "freeze_starts": "2026-04-10",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-04-13",
+      "train_id": "train-08"
+    },
+    {
+      "audit_cutoff": "2026-04-26",
+      "freeze_starts": "2026-04-24",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-04-27",
+      "train_id": "train-09"
+    },
+    {
+      "audit_cutoff": "2026-05-10",
+      "freeze_starts": "2026-05-08",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-05-11",
+      "train_id": "train-10"
+    },
+    {
+      "audit_cutoff": "2026-05-24",
+      "freeze_starts": "2026-05-22",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-05-25",
+      "train_id": "train-11"
+    },
+    {
+      "audit_cutoff": "2026-06-07",
+      "freeze_starts": "2026-06-05",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-06-08",
+      "train_id": "train-12"
+    },
+    {
+      "audit_cutoff": "2026-06-21",
+      "freeze_starts": "2026-06-19",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-06-22",
+      "train_id": "train-13"
+    },
+    {
+      "audit_cutoff": "2026-07-05",
+      "freeze_starts": "2026-07-03",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-07-06",
+      "train_id": "train-14"
+    },
+    {
+      "audit_cutoff": "2026-07-19",
+      "freeze_starts": "2026-07-17",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-07-20",
+      "train_id": "train-15"
+    },
+    {
+      "audit_cutoff": "2026-08-02",
+      "freeze_starts": "2026-07-31",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-08-03",
+      "train_id": "train-16"
+    },
+    {
+      "audit_cutoff": "2026-08-16",
+      "freeze_starts": "2026-08-14",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-08-17",
+      "train_id": "train-17"
+    },
+    {
+      "audit_cutoff": "2026-08-30",
+      "freeze_starts": "2026-08-28",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-08-31",
+      "train_id": "train-18"
+    },
+    {
+      "audit_cutoff": "2026-09-13",
+      "freeze_starts": "2026-09-11",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-09-14",
+      "train_id": "train-19"
+    },
+    {
+      "audit_cutoff": "2026-09-27",
+      "freeze_starts": "2026-09-25",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-09-28",
+      "train_id": "train-20"
+    },
+    {
+      "audit_cutoff": "2026-10-11",
+      "freeze_starts": "2026-10-09",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-10-12",
+      "train_id": "train-21"
+    },
+    {
+      "audit_cutoff": "2026-10-25",
+      "freeze_starts": "2026-10-23",
+      "owner_capacity": {
+        "metadata_ops": 1,
+        "color_ops": 2,
+        "codec_ops": 3,
+        "raster_ops": 1,
+        "pipeline_ops": 2,
+        "export_ops": 3,
+        "qa_ops": 1,
+        "release_program_ops": 2,
+        "image_quality_ops": 3,
+        "launch_ops": 1,
+        "partner_ops": 2,
+        "archive_ops": 3
+      },
+      "ship_date": "2026-10-26",
+      "train_id": "train-22"
+    },
+    {
+      "audit_cutoff": "2026-11-08",
+      "freeze_starts": "2026-11-06",
+      "owner_capacity": {
+        "metadata_ops": 2,
+        "color_ops": 3,
+        "codec_ops": 1,
+        "raster_ops": 2,
+        "pipeline_ops": 3,
+        "export_ops": 1,
+        "qa_ops": 2,
+        "release_program_ops": 3,
+        "image_quality_ops": 1,
+        "launch_ops": 2,
+        "partner_ops": 3,
+        "archive_ops": 1
+      },
+      "ship_date": "2026-11-09",
+      "train_id": "train-23"
+    },
+    {
+      "audit_cutoff": "2026-11-22",
+      "freeze_starts": "2026-11-20",
+      "owner_capacity": {
+        "metadata_ops": 3,
+        "color_ops": 1,
+        "codec_ops": 2,
+        "raster_ops": 3,
+        "pipeline_ops": 1,
+        "export_ops": 2,
+        "qa_ops": 3,
+        "release_program_ops": 1,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "partner_ops": 1,
+        "archive_ops": 2
+      },
+      "ship_date": "2026-11-23",
+      "train_id": "train-24"
+    }
+  ]
+}

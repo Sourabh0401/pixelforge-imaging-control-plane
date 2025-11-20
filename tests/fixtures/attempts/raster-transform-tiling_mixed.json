@@ -1,0 +1,177 @@
+{
+  "case_results": [
+    {
+      "answer": [
+        "validation",
+        "item-2",
+        "item-1"
+      ],
+      "case_id": "raster-transform-tiling-case-001",
+      "runtime_ms": 930
+    },
+    {
+      "answer": 76.2,
+      "case_id": "raster-transform-tiling-case-002",
+      "runtime_ms": 1050
+    },
+    {
+      "answer": {
+        "extra": 3,
+        "owner": "raster",
+        "section": "scoring"
+      },
+      "case_id": "raster-transform-tiling-case-003",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": "partial response audit",
+      "case_id": "raster-transform-tiling-case-004",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 5
+      },
+      "case_id": "raster-transform-tiling-case-005",
+      "runtime_ms": 1410
+    },
+    {
+      "case_id": "raster-transform-tiling-case-006",
+      "error": "normalizer raised a field error",
+      "runtime_ms": 810
+    },
+    {
+      "answer": 76.2,
+      "case_id": "raster-transform-tiling-case-007",
+      "runtime_ms": 995
+    },
+    {
+      "answer": {
+        "extra": 8,
+        "owner": "raster",
+        "section": "mismatch"
+      },
+      "case_id": "raster-transform-tiling-case-008",
+      "runtime_ms": 1050
+    },
+    {
+      "answer": "raster response for audit",
+      "case_id": "raster-transform-tiling-case-009",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 10
+      },
+      "case_id": "raster-transform-tiling-case-010",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": [
+        "validation",
+        "item-12",
+        "item-11"
+      ],
+      "case_id": "raster-transform-tiling-case-011",
+      "runtime_ms": 1410
+    },
+    {
+      "case_id": "raster-transform-tiling-case-012",
+      "error": "normalizer raised a field error",
+      "runtime_ms": 810
+    },
+    {
+      "answer": {
+        "extra": 13,
+        "owner": "raster",
+        "section": "scoring"
+      },
+      "case_id": "raster-transform-tiling-case-013",
+      "runtime_ms": 930
+    },
+    {
+      "answer": "raster response for audit",
+      "case_id": "raster-transform-tiling-case-014",
+      "runtime_ms": 1115
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 15
+      },
+      "case_id": "raster-transform-tiling-case-015",
+      "runtime_ms": 1170
+    },
+    {
+      "answer": [
+        "validation"
+      ],
+      "case_id": "raster-transform-tiling-case-016",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": 76.2,
+      "case_id": "raster-transform-tiling-case-017",
+      "runtime_ms": 1410
+    },
+    {
+      "case_id": "raster-transform-tiling-case-018",
+      "error": "normalizer raised a field error",
+      "runtime_ms": 810
+    },
+    {
+      "answer": "raster response for audit",
+      "case_id": "raster-transform-tiling-case-019",
+      "runtime_ms": 930
+    },
+    {
+      "answer": {
+        "bucket": "catalog",
+        "decision": "pass",
+        "ordinal": 21
+      },
+      "case_id": "raster-transform-tiling-case-020",
+      "runtime_ms": 1050
+    },
+    {
+      "answer": [
+        "item-21",
+        "item-22",
+        "validation"
+      ],
+      "case_id": "raster-transform-tiling-case-021",
+      "runtime_ms": 1235
+    },
+    {
+      "answer": 76.2,
+      "case_id": "raster-transform-tiling-case-022",
+      "runtime_ms": 1290
+    },
+    {
+      "answer": {
+        "extra": 23,
+        "owner": "raster",
+        "section": "scoring"
+      },
+      "case_id": "raster-transform-tiling-case-023",
+      "runtime_ms": 1410
+    },
+    {
+      "case_id": "raster-transform-tiling-case-024",
+      "error": "normalizer raised a field error",
+      "runtime_ms": 810
+    }
+  ],
+  "finished_at": "2026-06-03T09:03:00Z",
+  "notes": [
+    "mixed fixture payload"
+  ],
+  "participant_id": "mixed-operator",
+  "run_id": "raster-transform-tiling-mixed-run",
+  "started_at": "2026-06-03T09:00:00Z"
+}

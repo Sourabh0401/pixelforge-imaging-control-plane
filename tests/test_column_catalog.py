@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.reporting_surfaces import column_catalog
+from pixelforge_ops.reporting_surfaces import column_catalog
 
 
 class ColumnCatalogTests(unittest.TestCase):
@@ -16,3 +16,5 @@ class ColumnCatalogTests(unittest.TestCase):
     def test_display_labels_returns_mapping(self) -> None:
         labels = column_catalog.display_labels("owner_dashboard")
         self.assertIn("average_percent", labels)
+
+

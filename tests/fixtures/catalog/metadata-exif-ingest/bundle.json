@@ -1,0 +1,23 @@
+{
+  "bundle_id": "metadata-exif-ingest",
+  "domain": "partner_ops",
+  "metadata": {
+    "author": "partner_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Metadata EXIF ingest bundle used for acceptance rehearsal across field contracts and ingest drift.",
+    "release_channel": "internal"
+  },
+  "owner": "partner_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "metadata",
+    "exif",
+    "release"
+  ],
+  "title": "Metadata EXIF ingest and schema drift",
+  "version": "2026.06"
+}

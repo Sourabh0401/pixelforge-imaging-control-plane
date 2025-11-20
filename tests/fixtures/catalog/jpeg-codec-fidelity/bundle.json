@@ -1,0 +1,23 @@
+{
+  "bundle_id": "jpeg-codec-fidelity",
+  "domain": "codec_ops",
+  "metadata": {
+    "author": "codec_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "JPEG codec fidelity bundle used for acceptance rehearsal across quantization and hidden decode drift.",
+    "release_channel": "internal"
+  },
+  "owner": "codec_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "codec",
+    "jpeg",
+    "release"
+  ],
+  "title": "JPEG codec fidelity and quantization drift",
+  "version": "2026.06"
+}

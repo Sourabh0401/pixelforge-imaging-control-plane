@@ -1,0 +1,23 @@
+{
+  "bundle_id": "raster-transform-tiling",
+  "domain": "raster_ops",
+  "metadata": {
+    "author": "raster_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Raster transform tiling bundle used for acceptance rehearsal across canvas splits and crop stability.",
+    "release_channel": "internal"
+  },
+  "owner": "raster_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "raster",
+    "tiling",
+    "release"
+  ],
+  "title": "Raster transform tiling and canvas stability",
+  "version": "2026.06"
+}

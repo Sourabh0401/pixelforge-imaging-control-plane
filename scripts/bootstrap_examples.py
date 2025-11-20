@@ -9,11 +9,11 @@ if str(ROOT) not in sys.path:
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
-from engineering_challenge import audit, catalog, reporting
-from engineering_challenge.execution import evaluate_attempt
-from engineering_challenge.release import build_release_manifest, manifest_to_dict
-from engineering_challenge.scoring import portfolio_rollup, score_run, scorecard_to_dict
-from engineering_challenge.utils import read_json, write_json
+from pixelforge_ops import audit, catalog, reporting
+from pixelforge_ops.execution import evaluate_attempt
+from pixelforge_ops.release import build_release_manifest, manifest_to_dict
+from pixelforge_ops.scoring import portfolio_rollup, score_run, scorecard_to_dict
+from pixelforge_ops.utils import read_json, write_json
 
 FIXTURES = ROOT / "tests" / "fixtures"
 EXAMPLES = ROOT / "examples"
@@ -43,3 +43,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

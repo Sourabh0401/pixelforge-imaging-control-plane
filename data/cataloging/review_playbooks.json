@@ -1,0 +1,1422 @@
+{
+  "audit": [
+    {
+      "blocking": false,
+      "code": "audi-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "qa_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "audi-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "release_program_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "audi-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "image_quality_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "audi-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "launch_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "audi-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "audi-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "audi-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "audi-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for audit checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Audit review step 8"
+    }
+  ],
+  "authoring": [
+    {
+      "blocking": false,
+      "code": "auth-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "auth-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "auth-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "auth-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "auth-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "auth-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "auth-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "pipeline_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "auth-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for authoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "export_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Authoring review step 8"
+    }
+  ],
+  "catalog": [
+    {
+      "blocking": false,
+      "code": "cata-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "image_quality_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "cata-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "launch_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "cata-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "cata-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "cata-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "cata-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "cata-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "cata-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for catalog checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Catalog review step 8"
+    }
+  ],
+  "difficulty": [
+    {
+      "blocking": false,
+      "code": "diff-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "diff-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "diff-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "diff-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "diff-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "diff-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "pipeline_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "diff-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "export_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "diff-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for difficulty checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "qa_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Difficulty review step 8"
+    }
+  ],
+  "execution": [
+    {
+      "blocking": false,
+      "code": "exec-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "exec-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "exec-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "exec-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "exec-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "exec-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "exec-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "pipeline_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "exec-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for execution checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "export_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Execution review step 8"
+    }
+  ],
+  "history": [
+    {
+      "blocking": false,
+      "code": "hist-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "image_quality_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "hist-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "launch_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "hist-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "hist-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "hist-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "hist-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "hist-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "hist-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for history checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "History review step 8"
+    }
+  ],
+  "release": [
+    {
+      "blocking": false,
+      "code": "rele-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "image_quality_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "rele-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "launch_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "rele-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "rele-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "rele-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "rele-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "rele-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "rele-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for release checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Release review step 8"
+    }
+  ],
+  "remediation": [
+    {
+      "blocking": false,
+      "code": "reme-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "reme-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "reme-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "reme-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "reme-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "pipeline_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "reme-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "export_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "reme-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "qa_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "reme-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for remediation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "release_program_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Remediation review step 8"
+    }
+  ],
+  "scoring": [
+    {
+      "blocking": false,
+      "code": "scor-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "image_quality_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "scor-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "launch_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "scor-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "partner_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "scor-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "scor-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "scor-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "scor-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "scor-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for scoring checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Scoring review step 8"
+    }
+  ],
+  "validation": [
+    {
+      "blocking": false,
+      "code": "vali-step-1",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 1 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "archive_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 1"
+    },
+    {
+      "blocking": true,
+      "code": "vali-step-2",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 2 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "metadata_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 2"
+    },
+    {
+      "blocking": false,
+      "code": "vali-step-3",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 3 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "color_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 3"
+    },
+    {
+      "blocking": false,
+      "code": "vali-step-4",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 4 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "codec_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 4"
+    },
+    {
+      "blocking": true,
+      "code": "vali-step-5",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 5 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "raster_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 5"
+    },
+    {
+      "blocking": false,
+      "code": "vali-step-6",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 6 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "pipeline_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 6"
+    },
+    {
+      "blocking": true,
+      "code": "vali-step-7",
+      "evidence": [
+        "catalog_summary",
+        "scorecard",
+        "release_manifest"
+      ],
+      "notes": "Review step 7 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "export_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 7"
+    },
+    {
+      "blocking": false,
+      "code": "vali-step-8",
+      "evidence": [
+        "catalog_summary",
+        "scorecard"
+      ],
+      "notes": "Review step 8 for validation checks comparator coverage, hidden-case intent, and operator handoff notes.",
+      "owner": "qa_ops",
+      "required_fields": [
+        "bundle_id",
+        "owner",
+        "release_channel",
+        "review_state"
+      ],
+      "title": "Validation review step 8"
+    }
+  ]
+}

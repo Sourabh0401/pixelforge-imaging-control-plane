@@ -1,0 +1,616 @@
+{
+  "metadata_ops": {
+    "channels": [
+      "internal",
+      "ops-only"
+    ],
+    "downstream": [
+      "classifier-review",
+      "owner-dashboard",
+      "release-brief"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "content-authoring",
+        "notes": "Content owners maintain routing prompts and extraction expectations used by the thumbnail-generation-stability bundle.",
+        "owner_role": "metadata_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "review_notes.md"
+        ],
+        "code": "content-quality-review",
+        "notes": "Content reviewers check wording drift and confirm that hidden examples still match the live annotation flow.",
+        "owner_role": "metadata_ops",
+        "phase": "review",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json"
+        ],
+        "code": "content-audit-check",
+        "notes": "Risk joins when extraction changes touch partner-controlled data fields.",
+        "owner_role": "image_quality_ops",
+        "phase": "audit",
+        "required": false
+      },
+      {
+        "artifacts": [
+          "release_notes.md"
+        ],
+        "code": "content-release-note",
+        "notes": "Release notes summarize prompt wording changes and any expected shift in extraction failure patterns.",
+        "owner_role": "metadata_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "color_ops": {
+    "channels": [
+      "internal",
+      "partner",
+      "pilot"
+    ],
+    "downstream": [
+      "seat-fairness",
+      "partner-review",
+      "support-queue"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "seat-authoring",
+        "notes": "Color profile parity bundles are audited for fairness language and partner-policy compliance together.",
+        "owner_role": "color_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "review_notes.md"
+        ],
+        "code": "seat-hidden-review",
+        "notes": "Hidden cases should reflect the current exception path rather than a simplified demo path.",
+        "owner_role": "color_ops",
+        "phase": "review",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "scorecard.json"
+        ],
+        "code": "seat-fairness-check",
+        "notes": "Risk reviews hidden/public gap movement because those bundles are sensitive to rubric drift.",
+        "owner_role": "image_quality_ops",
+        "phase": "scoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "release_notes.md"
+        ],
+        "code": "seat-release-note",
+        "notes": "Release notes need to say whether partner reviewers should expect any new remediation flow.",
+        "owner_role": "color_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "codec_ops": {
+    "channels": [
+      "internal",
+      "partner"
+    ],
+    "downstream": [
+      "close-review",
+      "audit-export",
+      "treasury-handoff"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "finance-intake",
+        "notes": "Finance authors refresh closeout inputs and confirms that release-facing examples still match the ledger shape used by current reviewers.",
+        "owner_role": "codec_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "scorecard.json"
+        ],
+        "code": "finance-thresholds",
+        "notes": "Finance checks that hidden penalty weighting still matches the most recent review guidance before the bundle moves to a release train.",
+        "owner_role": "codec_ops",
+        "phase": "scoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json",
+          "manifest.json"
+        ],
+        "code": "finance-audit-evidence",
+        "notes": "Audit evidence must be exported before raw run payloads are eligible for pruning.",
+        "owner_role": "codec_ops",
+        "phase": "audit",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "release_notes.md"
+        ],
+        "code": "finance-treasury-handoff",
+        "notes": "Treasury consumes the release note summary and any queue-delay caveats that could affect downstream close timing.",
+        "owner_role": "archive_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "raster_ops": {
+    "channels": [
+      "internal",
+      "pilot"
+    ],
+    "downstream": [
+      "routing-watch",
+      "capacity-audit",
+      "partner-ops"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "route-intake",
+        "notes": "Routing owners keep zone-coverage cases current and flag whether any raster outages changed the expected answer set.",
+        "owner_role": "raster_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "review_notes.md"
+        ],
+        "code": "route-repair-review",
+        "notes": "Support reviews the exception-repair prompts because those are where routing bundles tend to drift under live queue pressure.",
+        "owner_role": "partner_ops",
+        "phase": "review",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "release_manifest.json"
+        ],
+        "code": "route-capacity",
+        "notes": "Capacity checks need to happen before scheduling because blackout weeks are common in raster transitions.",
+        "owner_role": "raster_ops",
+        "phase": "release",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json"
+        ],
+        "code": "route-audit",
+        "notes": "Risk only joins when the routing bundle is headed to a partner-facing channel.",
+        "owner_role": "image_quality_ops",
+        "phase": "audit",
+        "required": false
+      }
+    ]
+  },
+  "pipeline_ops": {
+    "channels": [
+      "internal",
+      "pilot"
+    ],
+    "downstream": [
+      "identity-audit",
+      "runtime-watch",
+      "policy-review"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "platform-schema-check",
+        "notes": "Identity and runtime bundles should be checked against current payload contracts before they are scored.",
+        "owner_role": "pipeline_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "run.json"
+        ],
+        "code": "platform-runtime-review",
+        "notes": "Platform owns runtime normalization and timeout tuning, so replay output must be reviewed when latency shifts.",
+        "owner_role": "pipeline_ops",
+        "phase": "execution",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "release_manifest.json",
+          "checklist.json"
+        ],
+        "code": "platform-release-signoff",
+        "notes": "Platform signs off on release only after runtime and retry guidance are in the checklist payload.",
+        "owner_role": "pipeline_ops",
+        "phase": "release",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json"
+        ],
+        "code": "platform-audit-retain",
+        "notes": "Audit exports for platform bundles stay longer because sprite-identity-refresh issues are often investigated weeks later.",
+        "owner_role": "pipeline_ops",
+        "phase": "audit",
+        "required": true
+      }
+    ]
+  },
+  "export_ops": {
+    "channels": [
+      "internal",
+      "ops-only"
+    ],
+    "downstream": [
+      "telemetry-rollup",
+      "partner-support",
+      "ops-review"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json"
+        ],
+        "code": "telemetry-authoring",
+        "notes": "Billing owners keep supplier exception examples current and annotate any rule-set changes in bundle metadata.",
+        "owner_role": "export_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "scorecard.json"
+        ],
+        "code": "telemetry-score-compare",
+        "notes": "Finance compares public and hidden scoring on batch-render-telemetry changes before the bundle can be marked ready.",
+        "owner_role": "codec_ops",
+        "phase": "scoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "dashboard.json",
+          "release_notes.md"
+        ],
+        "code": "telemetry-ops-note",
+        "notes": "Ops notes need to mention whether review latency is driven by data quality or rubric movement.",
+        "owner_role": "export_ops",
+        "phase": "reporting",
+        "required": true
+      }
+    ]
+  },
+  "qa_ops": {
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "downstream": [
+      "decoder-audit",
+      "owner-watch",
+      "queue-repair"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "decoder-authoring",
+        "notes": "Returns owners keep disposition and recovery examples aligned with the current queue handling workflow.",
+        "owner_role": "qa_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "run.json"
+        ],
+        "code": "decoder-runtime-review",
+        "notes": "Execution output is reviewed for long-tail case timing because late results are common in decoder remediation bundles.",
+        "owner_role": "qa_ops",
+        "phase": "execution",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "scorecard.json"
+        ],
+        "code": "decoder-score-review",
+        "notes": "Finance reviews blended score movement when the recovery policy changes affect downstream close handling.",
+        "owner_role": "codec_ops",
+        "phase": "scoring",
+        "required": false
+      },
+      {
+        "artifacts": [
+          "release_notes.md"
+        ],
+        "code": "decoder-release-note",
+        "notes": "Release notes call out any recovery-path changes that support or raster teams will feel immediately.",
+        "owner_role": "qa_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "release_program_ops": {
+    "channels": [
+      "internal",
+      "rehearsal",
+      "partner"
+    ],
+    "downstream": [
+      "ledger-close",
+      "finance-audit",
+      "owner-summary"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "ledger-authoring",
+        "notes": "Ledger bundle authors confirm the score impact of every new exception case before release week.",
+        "owner_role": "release_program_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "scorecard.json"
+        ],
+        "code": "ledger-score-review",
+        "notes": "Finance checks that export-pipeline-integrity scoring still tracks the closeout bundle expectations.",
+        "owner_role": "codec_ops",
+        "phase": "scoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json",
+          "manifest.json"
+        ],
+        "code": "ledger-audit-export",
+        "notes": "Ledger bundles require audit export on every train because their artifacts are frequently compared across quarters.",
+        "owner_role": "release_program_ops",
+        "phase": "audit",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "owner_dashboard.json"
+        ],
+        "code": "ledger-owner-brief",
+        "notes": "The owner brief is the first place operators look when a ledger bundle starts failing hidden checks.",
+        "owner_role": "release_program_ops",
+        "phase": "reporting",
+        "required": true
+      }
+    ]
+  },
+  "image_quality_ops": {
+    "channels": [
+      "internal",
+      "partner",
+      "ops-only"
+    ],
+    "downstream": [
+      "classifier-review",
+      "partner-controls",
+      "release-watch"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json"
+        ],
+        "code": "risk-authoring",
+        "notes": "Risk owns classifier wording, partner-control metadata, and audit-field expectations.",
+        "owner_role": "image_quality_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json",
+          "trace.json"
+        ],
+        "code": "risk-evidence-check",
+        "notes": "Evidence completeness matters more than raw percent for some partner-facing risk bundles.",
+        "owner_role": "image_quality_ops",
+        "phase": "audit",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "release_manifest.json"
+        ],
+        "code": "risk-release-gate",
+        "notes": "Risk bundles do not ship when owner capacity is available but required field coverage still falls short.",
+        "owner_role": "image_quality_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "launch_ops": {
+    "channels": [
+      "internal",
+      "partner"
+    ],
+    "downstream": [
+      "partner-triage",
+      "partner-sales",
+      "ops-summary"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json",
+          "cases.jsonl"
+        ],
+        "code": "partner-authoring",
+        "notes": "Partner format compatibility bundles reflect the latest compression-launch dispute flow and payment exception language.",
+        "owner_role": "launch_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "review_notes.md"
+        ],
+        "code": "partner-support-review",
+        "notes": "Support reviews new remediation language when the partner workflow changes materially.",
+        "owner_role": "partner_ops",
+        "phase": "review",
+        "required": false
+      },
+      {
+        "artifacts": [
+          "release_notes.md"
+        ],
+        "code": "partner-release-note",
+        "notes": "Release notes must call out partner-facing changes in terminology and remediation expectations.",
+        "owner_role": "launch_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "partner_ops": {
+    "channels": [
+      "internal",
+      "rehearsal",
+      "ops-only"
+    ],
+    "downstream": [
+      "escalation-runbook",
+      "owner-dashboard",
+      "release-support"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json"
+        ],
+        "code": "support-normalization",
+        "notes": "Support keeps intake prompts aligned with current escalation macros so the hidden cases still exercise the real review flow.",
+        "owner_role": "partner_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "case_review.json"
+        ],
+        "code": "support-shadow-review",
+        "notes": "Risk does a shadow review when a support bundle introduces a new comparator or wording pattern.",
+        "owner_role": "image_quality_ops",
+        "phase": "review",
+        "required": false
+      },
+      {
+        "artifacts": [
+          "owner_dashboard.json"
+        ],
+        "code": "support-dashboard-brief",
+        "notes": "Support expects a dashboard snapshot before release so slow-moving hidden score regressions are easy to spot.",
+        "owner_role": "partner_ops",
+        "phase": "reporting",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "release_notes.md"
+        ],
+        "code": "support-release-note",
+        "notes": "The release note has to call out escalation policy changes explicitly because downstream runbooks are written from it.",
+        "owner_role": "partner_ops",
+        "phase": "release",
+        "required": true
+      }
+    ]
+  },
+  "archive_ops": {
+    "channels": [
+      "internal",
+      "rehearsal"
+    ],
+    "downstream": [
+      "decoder-audit",
+      "finance-close",
+      "ops-watch"
+    ],
+    "steps": [
+      {
+        "artifacts": [
+          "bundle.json"
+        ],
+        "code": "decoder-authoring",
+        "notes": "Treasury keeps recovery assumptions aligned with the return-clearing process used in the close window.",
+        "owner_role": "archive_ops",
+        "phase": "authoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "scorecard.json"
+        ],
+        "code": "decoder-close-compare",
+        "notes": "Treasury and finance compare decoder-recovery-replay hidden scores during close rehearsals.",
+        "owner_role": "codec_ops",
+        "phase": "scoring",
+        "required": true
+      },
+      {
+        "artifacts": [
+          "audit_packet.json"
+        ],
+        "code": "decoder-audit-packet",
+        "notes": "Audit packets for treasury bundles stay attached to the release record until the close window expires.",
+        "owner_role": "archive_ops",
+        "phase": "audit",
+        "required": true
+      }
+    ]
+  }
+}

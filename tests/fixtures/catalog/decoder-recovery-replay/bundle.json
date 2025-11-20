@@ -1,0 +1,24 @@
+{
+  "bundle_id": "decoder-recovery-replay",
+  "domain": "qa_ops",
+  "metadata": {
+    "author": "qa_ops",
+    "last_reviewed_at": "2026-05-28T12:00:00Z",
+    "notes": "Decoder recovery replay bundle used for acceptance rehearsal across fallback paths and corruption handling.",
+    "release_channel": "internal"
+  },
+  "owner": "qa_ops",
+  "rubric": {
+    "hidden_weight": 1.25,
+    "notes_required": true,
+    "public_weight": 1.0
+  },
+  "tags": [
+    "decoder",
+    "recovery",
+    "replay",
+    "release"
+  ],
+  "title": "Decoder recovery replay and corruption fallback",
+  "version": "2026.06"
+}

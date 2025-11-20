@@ -1,0 +1,170 @@
+[
+  {
+    "bundle_id": "jpeg-codec-fidelity",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "hidden_floor": 61,
+    "max_public_hidden_gap": 19,
+    "notes": "Release profile for jpeg-codec-fidelity controls minimum score floors and hidden/public spread.",
+    "owner": "color_ops",
+    "profile_id": "profile-01",
+    "score_floor": 73
+  },
+  {
+    "bundle_id": "raster-transform-tiling",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "hidden_floor": 62,
+    "max_public_hidden_gap": 20,
+    "notes": "Release profile for raster-transform-tiling controls minimum score floors and hidden/public spread.",
+    "owner": "codec_ops",
+    "profile_id": "profile-02",
+    "score_floor": 74
+  },
+  {
+    "bundle_id": "metadata-exif-ingest",
+    "channels": [
+      "internal",
+      "rehearsal"
+    ],
+    "hidden_floor": 63,
+    "max_public_hidden_gap": 21,
+    "notes": "Release profile for metadata-exif-ingest controls minimum score floors and hidden/public spread.",
+    "owner": "raster_ops",
+    "profile_id": "profile-03",
+    "score_floor": 75
+  },
+  {
+    "bundle_id": "alpha-channel-recovery",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "hidden_floor": 64,
+    "max_public_hidden_gap": 22,
+    "notes": "Release profile for alpha-channel-recovery controls minimum score floors and hidden/public spread.",
+    "owner": "pipeline_ops",
+    "profile_id": "profile-04",
+    "score_floor": 76
+  },
+  {
+    "bundle_id": "sprite-identity-refresh",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "hidden_floor": 65,
+    "max_public_hidden_gap": 23,
+    "notes": "Release profile for sprite-identity-refresh controls minimum score floors and hidden/public spread.",
+    "owner": "export_ops",
+    "profile_id": "profile-05",
+    "score_floor": 77
+  },
+  {
+    "bundle_id": "batch-render-telemetry",
+    "channels": [
+      "internal",
+      "rehearsal"
+    ],
+    "hidden_floor": 66,
+    "max_public_hidden_gap": 24,
+    "notes": "Release profile for batch-render-telemetry controls minimum score floors and hidden/public spread.",
+    "owner": "qa_ops",
+    "profile_id": "profile-06",
+    "score_floor": 78
+  },
+  {
+    "bundle_id": "color-profile-parity",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "hidden_floor": 67,
+    "max_public_hidden_gap": 18,
+    "notes": "Release profile for color-profile-parity controls minimum score floors and hidden/public spread.",
+    "owner": "release_program_ops",
+    "profile_id": "profile-07",
+    "score_floor": 79
+  },
+  {
+    "bundle_id": "export-pipeline-integrity",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "hidden_floor": 68,
+    "max_public_hidden_gap": 19,
+    "notes": "Release profile for export-pipeline-integrity controls minimum score floors and hidden/public spread.",
+    "owner": "image_quality_ops",
+    "profile_id": "profile-08",
+    "score_floor": 80
+  },
+  {
+    "bundle_id": "thumbnail-generation-stability",
+    "channels": [
+      "internal",
+      "rehearsal"
+    ],
+    "hidden_floor": 69,
+    "max_public_hidden_gap": 20,
+    "notes": "Release profile for thumbnail-generation-stability controls minimum score floors and hidden/public spread.",
+    "owner": "launch_ops",
+    "profile_id": "profile-09",
+    "score_floor": 81
+  },
+  {
+    "bundle_id": "partner-format-compatibility",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot"
+    ],
+    "hidden_floor": 70,
+    "max_public_hidden_gap": 21,
+    "notes": "Release profile for partner-format-compatibility controls minimum score floors and hidden/public spread.",
+    "owner": "partner_ops",
+    "profile_id": "profile-10",
+    "score_floor": 82
+  },
+  {
+    "bundle_id": "compression-preset-handoff",
+    "channels": [
+      "internal",
+      "rehearsal",
+      "pilot",
+      "partner"
+    ],
+    "hidden_floor": 71,
+    "max_public_hidden_gap": 22,
+    "notes": "Release profile for compression-preset-handoff controls minimum score floors and hidden/public spread.",
+    "owner": "archive_ops",
+    "profile_id": "profile-11",
+    "score_floor": 83
+  },
+  {
+    "bundle_id": "decoder-recovery-replay",
+    "channels": [
+      "internal",
+      "rehearsal"
+    ],
+    "hidden_floor": 72,
+    "max_public_hidden_gap": 23,
+    "notes": "Release profile for decoder-recovery-replay controls minimum score floors and hidden/public spread.",
+    "owner": "metadata_ops",
+    "profile_id": "profile-12",
+    "score_floor": 84
+  }
+]

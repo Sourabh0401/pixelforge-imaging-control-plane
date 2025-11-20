@@ -4,11 +4,11 @@
   },
   "count": 6,
   "owner_average_percent": {
-    "content_ops": 46.65,
-    "finance_ops": 46.65,
-    "platform_ops": 46.65,
-    "risk_ops": 46.65,
-    "sales_ops": 46.65,
-    "support_ops": 46.65
+    "metadata_ops": 46.65,
+    "codec_ops": 46.65,
+    "pipeline_ops": 46.65,
+    "image_quality_ops": 46.65,
+    "launch_ops": 46.65,
+    "partner_ops": 46.65
   }
 }

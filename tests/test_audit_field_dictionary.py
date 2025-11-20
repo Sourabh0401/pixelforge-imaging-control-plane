@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.auditpack import field_dictionary
+from pixelforge_ops.auditpack import field_dictionary
 
 
 class AuditFieldDictionaryTests(unittest.TestCase):
@@ -16,3 +16,5 @@ class AuditFieldDictionaryTests(unittest.TestCase):
     def test_fields_for_source_filters_rows(self) -> None:
         rows = field_dictionary.fields_for_source("bundle")
         self.assertTrue(rows)
+
+

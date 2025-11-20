@@ -2,15 +2,15 @@ from __future__ import annotations
 
 import unittest
 
-from engineering_challenge.execution import evaluate_attempt
-from engineering_challenge.reporting_surfaces import portfolio_rollup
-from engineering_challenge.scoring import score_run
+from pixelforge_ops.execution import evaluate_attempt
+from pixelforge_ops.reporting_surfaces import portfolio_rollup
+from pixelforge_ops.scoring import score_run
 from tests.ext_helpers import attempt, bundle
 
 
 def _cards() -> list:
     cards = []
-    for name in ("merchant-closeout", "warehouse-routing", "claims-intake"):
+    for name in ("jpeg-codec-fidelity", "raster-transform-tiling", "metadata-exif-ingest"):
         item = bundle(name)
         cards.append(score_run(evaluate_attempt(item, attempt(name, "mixed")), item))
     return cards
@@ -40,3 +40,5 @@ class ReportingPortfolioRollupTests(unittest.TestCase):
 
     def test_markdown_summary_has_heading(self) -> None:
         self.assertIn("# Portfolio rollup", portfolio_rollup.markdown_summary(_cards()))
+
+

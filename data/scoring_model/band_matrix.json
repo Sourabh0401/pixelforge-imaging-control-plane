@@ -1,0 +1,229 @@
+{
+  "band_matrix": [
+    {
+      "band": "ready",
+      "floor": 88.0,
+      "notes_required": false,
+      "queue": "release-ready"
+    },
+    {
+      "band": "watch",
+      "floor": 72.0,
+      "notes_required": true,
+      "queue": "ops-review"
+    },
+    {
+      "band": "risk",
+      "floor": 56.0,
+      "notes_required": true,
+      "queue": "remediation"
+    },
+    {
+      "band": "blocked",
+      "floor": 0.0,
+      "notes_required": true,
+      "queue": "release-stop"
+    }
+  ],
+  "difficulty_targets": {
+    "advanced": {
+      "floor": 74.0,
+      "stretch": 86.0
+    },
+    "core": {
+      "floor": 84.0,
+      "stretch": 92.0
+    },
+    "edge": {
+      "floor": 62.0,
+      "stretch": 80.0
+    },
+    "intro": {
+      "floor": 92.0,
+      "stretch": 97.0
+    }
+  },
+  "flag_library": [
+    {
+      "code": "hidden-case-regression",
+      "route": "authoring",
+      "severity": "high"
+    },
+    {
+      "code": "public-hidden-gap",
+      "route": "scoring",
+      "severity": "medium"
+    },
+    {
+      "code": "release-doc-gap",
+      "route": "release",
+      "severity": "medium"
+    },
+    {
+      "code": "history-noise",
+      "route": "analytics",
+      "severity": "low"
+    },
+    {
+      "code": "operator-overrides",
+      "route": "audit",
+      "severity": "high"
+    },
+    {
+      "code": "bundle-too-wide",
+      "route": "catalog",
+      "severity": "medium"
+    },
+    {
+      "code": "support-escalation",
+      "route": "support",
+      "severity": "high"
+    }
+  ],
+  "section_weight_matrix": {
+    "archive_ops": {
+      "audit": 1.42,
+      "authoring": 1.56,
+      "catalog": 1.7,
+      "difficulty": 1.7,
+      "execution": 1.14,
+      "history": 1.28,
+      "release": 1.0,
+      "remediation": 1.14,
+      "scoring": 1.28,
+      "validation": 1.0
+    },
+    "codec_ops": {
+      "audit": 1.0,
+      "authoring": 1.14,
+      "catalog": 1.28,
+      "difficulty": 1.28,
+      "execution": 1.56,
+      "history": 1.7,
+      "release": 1.42,
+      "remediation": 1.56,
+      "scoring": 1.7,
+      "validation": 1.42
+    },
+    "color_ops": {
+      "audit": 1.7,
+      "authoring": 1.0,
+      "catalog": 1.14,
+      "difficulty": 1.14,
+      "execution": 1.42,
+      "history": 1.56,
+      "release": 1.28,
+      "remediation": 1.42,
+      "scoring": 1.56,
+      "validation": 1.28
+    },
+    "export_ops": {
+      "audit": 1.42,
+      "authoring": 1.56,
+      "catalog": 1.7,
+      "difficulty": 1.7,
+      "execution": 1.14,
+      "history": 1.28,
+      "release": 1.0,
+      "remediation": 1.14,
+      "scoring": 1.28,
+      "validation": 1.0
+    },
+    "image_quality_ops": {
+      "audit": 1.0,
+      "authoring": 1.14,
+      "catalog": 1.28,
+      "difficulty": 1.28,
+      "execution": 1.56,
+      "history": 1.7,
+      "release": 1.42,
+      "remediation": 1.56,
+      "scoring": 1.7,
+      "validation": 1.42
+    },
+    "launch_ops": {
+      "audit": 1.14,
+      "authoring": 1.28,
+      "catalog": 1.42,
+      "difficulty": 1.42,
+      "execution": 1.7,
+      "history": 1.0,
+      "release": 1.56,
+      "remediation": 1.7,
+      "scoring": 1.0,
+      "validation": 1.56
+    },
+    "metadata_ops": {
+      "audit": 1.56,
+      "authoring": 1.7,
+      "catalog": 1.0,
+      "difficulty": 1.0,
+      "execution": 1.28,
+      "history": 1.42,
+      "release": 1.14,
+      "remediation": 1.28,
+      "scoring": 1.42,
+      "validation": 1.14
+    },
+    "partner_ops": {
+      "audit": 1.28,
+      "authoring": 1.42,
+      "catalog": 1.56,
+      "difficulty": 1.56,
+      "execution": 1.0,
+      "history": 1.14,
+      "release": 1.7,
+      "remediation": 1.0,
+      "scoring": 1.14,
+      "validation": 1.7
+    },
+    "pipeline_ops": {
+      "audit": 1.28,
+      "authoring": 1.42,
+      "catalog": 1.56,
+      "difficulty": 1.56,
+      "execution": 1.0,
+      "history": 1.14,
+      "release": 1.7,
+      "remediation": 1.0,
+      "scoring": 1.14,
+      "validation": 1.7
+    },
+    "qa_ops": {
+      "audit": 1.56,
+      "authoring": 1.7,
+      "catalog": 1.0,
+      "difficulty": 1.0,
+      "execution": 1.28,
+      "history": 1.42,
+      "release": 1.14,
+      "remediation": 1.28,
+      "scoring": 1.42,
+      "validation": 1.14
+    },
+    "raster_ops": {
+      "audit": 1.14,
+      "authoring": 1.28,
+      "catalog": 1.42,
+      "difficulty": 1.42,
+      "execution": 1.7,
+      "history": 1.0,
+      "release": 1.56,
+      "remediation": 1.7,
+      "scoring": 1.0,
+      "validation": 1.56
+    },
+    "release_program_ops": {
+      "audit": 1.7,
+      "authoring": 1.0,
+      "catalog": 1.14,
+      "difficulty": 1.14,
+      "execution": 1.42,
+      "history": 1.56,
+      "release": 1.28,
+      "remediation": 1.42,
+      "scoring": 1.56,
+      "validation": 1.28
+    }
+  }
+}

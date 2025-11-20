@@ -1,0 +1,1427 @@
+{
+  "metadata_contracts": [
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 1,
+      "field": "meta_field_01",
+      "notes": "Metadata field 1 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 2,
+      "field": "meta_field_02",
+      "notes": "Metadata field 2 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 3,
+      "field": "meta_field_03",
+      "notes": "Metadata field 3 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 4,
+      "field": "meta_field_04",
+      "notes": "Metadata field 4 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 5,
+      "field": "meta_field_05",
+      "notes": "Metadata field 5 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 6,
+      "field": "meta_field_06",
+      "notes": "Metadata field 6 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 7,
+      "field": "meta_field_07",
+      "notes": "Metadata field 7 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 8,
+      "field": "meta_field_08",
+      "notes": "Metadata field 8 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 9,
+      "field": "meta_field_09",
+      "notes": "Metadata field 9 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 10,
+      "field": "meta_field_10",
+      "notes": "Metadata field 10 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 11,
+      "field": "meta_field_11",
+      "notes": "Metadata field 11 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 12,
+      "field": "meta_field_12",
+      "notes": "Metadata field 12 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 13,
+      "field": "meta_field_13",
+      "notes": "Metadata field 13 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 14,
+      "field": "meta_field_14",
+      "notes": "Metadata field 14 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 15,
+      "field": "meta_field_15",
+      "notes": "Metadata field 15 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 16,
+      "field": "meta_field_16",
+      "notes": "Metadata field 16 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 17,
+      "field": "meta_field_17",
+      "notes": "Metadata field 17 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 18,
+      "field": "meta_field_18",
+      "notes": "Metadata field 18 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 19,
+      "field": "meta_field_19",
+      "notes": "Metadata field 19 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 20,
+      "field": "meta_field_20",
+      "notes": "Metadata field 20 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 21,
+      "field": "meta_field_21",
+      "notes": "Metadata field 21 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 22,
+      "field": "meta_field_22",
+      "notes": "Metadata field 22 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 23,
+      "field": "meta_field_23",
+      "notes": "Metadata field 23 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 24,
+      "field": "meta_field_24",
+      "notes": "Metadata field 24 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 25,
+      "field": "meta_field_25",
+      "notes": "Metadata field 25 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 26,
+      "field": "meta_field_26",
+      "notes": "Metadata field 26 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 27,
+      "field": "meta_field_27",
+      "notes": "Metadata field 27 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 28,
+      "field": "meta_field_28",
+      "notes": "Metadata field 28 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 29,
+      "field": "meta_field_29",
+      "notes": "Metadata field 29 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 30,
+      "field": "meta_field_30",
+      "notes": "Metadata field 30 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 31,
+      "field": "meta_field_31",
+      "notes": "Metadata field 31 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 32,
+      "field": "meta_field_32",
+      "notes": "Metadata field 32 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 33,
+      "field": "meta_field_33",
+      "notes": "Metadata field 33 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 34,
+      "field": "meta_field_34",
+      "notes": "Metadata field 34 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 35,
+      "field": "meta_field_35",
+      "notes": "Metadata field 35 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 36,
+      "field": "meta_field_36",
+      "notes": "Metadata field 36 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 37,
+      "field": "meta_field_37",
+      "notes": "Metadata field 37 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 38,
+      "field": "meta_field_38",
+      "notes": "Metadata field 38 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 39,
+      "field": "meta_field_39",
+      "notes": "Metadata field 39 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 40,
+      "field": "meta_field_40",
+      "notes": "Metadata field 40 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 41,
+      "field": "meta_field_41",
+      "notes": "Metadata field 41 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 42,
+      "field": "meta_field_42",
+      "notes": "Metadata field 42 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 43,
+      "field": "meta_field_43",
+      "notes": "Metadata field 43 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 44,
+      "field": "meta_field_44",
+      "notes": "Metadata field 44 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 45,
+      "field": "meta_field_45",
+      "notes": "Metadata field 45 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 46,
+      "field": "meta_field_46",
+      "notes": "Metadata field 46 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 47,
+      "field": "meta_field_47",
+      "notes": "Metadata field 47 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 48,
+      "field": "meta_field_48",
+      "notes": "Metadata field 48 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 49,
+      "field": "meta_field_49",
+      "notes": "Metadata field 49 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 50,
+      "field": "meta_field_50",
+      "notes": "Metadata field 50 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 51,
+      "field": "meta_field_51",
+      "notes": "Metadata field 51 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 52,
+      "field": "meta_field_52",
+      "notes": "Metadata field 52 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 53,
+      "field": "meta_field_53",
+      "notes": "Metadata field 53 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 54,
+      "field": "meta_field_54",
+      "notes": "Metadata field 54 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 55,
+      "field": "meta_field_55",
+      "notes": "Metadata field 55 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 56,
+      "field": "meta_field_56",
+      "notes": "Metadata field 56 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 57,
+      "field": "meta_field_57",
+      "notes": "Metadata field 57 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 58,
+      "field": "meta_field_58",
+      "notes": "Metadata field 58 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 59,
+      "field": "meta_field_59",
+      "notes": "Metadata field 59 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 60,
+      "field": "meta_field_60",
+      "notes": "Metadata field 60 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 61,
+      "field": "meta_field_61",
+      "notes": "Metadata field 61 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 62,
+      "field": "meta_field_62",
+      "notes": "Metadata field 62 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 63,
+      "field": "meta_field_63",
+      "notes": "Metadata field 63 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 64,
+      "field": "meta_field_64",
+      "notes": "Metadata field 64 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 65,
+      "field": "meta_field_65",
+      "notes": "Metadata field 65 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 66,
+      "field": "meta_field_66",
+      "notes": "Metadata field 66 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 67,
+      "field": "meta_field_67",
+      "notes": "Metadata field 67 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 68,
+      "field": "meta_field_68",
+      "notes": "Metadata field 68 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 69,
+      "field": "meta_field_69",
+      "notes": "Metadata field 69 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 70,
+      "field": "meta_field_70",
+      "notes": "Metadata field 70 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 71,
+      "field": "meta_field_71",
+      "notes": "Metadata field 71 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 72,
+      "field": "meta_field_72",
+      "notes": "Metadata field 72 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 73,
+      "field": "meta_field_73",
+      "notes": "Metadata field 73 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 74,
+      "field": "meta_field_74",
+      "notes": "Metadata field 74 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 75,
+      "field": "meta_field_75",
+      "notes": "Metadata field 75 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 76,
+      "field": "meta_field_76",
+      "notes": "Metadata field 76 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 77,
+      "field": "meta_field_77",
+      "notes": "Metadata field 77 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal"
+      ],
+      "display_order": 78,
+      "field": "meta_field_78",
+      "notes": "Metadata field 78 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot"
+      ],
+      "display_order": 79,
+      "field": "meta_field_79",
+      "notes": "Metadata field 79 stays attached to bundle release review and audit replay.",
+      "required": true,
+      "sections": [
+        "catalog",
+        "validation",
+        "execution",
+        "scoring",
+        "audit",
+        "authoring"
+      ]
+    },
+    {
+      "channels": [
+        "internal",
+        "rehearsal",
+        "pilot",
+        "partner"
+      ],
+      "display_order": 80,
+      "field": "meta_field_80",
+      "notes": "Metadata field 80 stays attached to bundle release review and audit replay.",
+      "required": false,
+      "sections": [
+        "catalog",
+        "validation"
+      ]
+    }
+  ],
+  "owner_contacts": {
+    "metadata_ops": {
+      "email": "metadata_ops@internal.example",
+      "pager_group": "content-ops-rotation",
+      "slack": "#content-ops"
+    },
+    "color_ops": {
+      "email": "color_ops@internal.example",
+      "pager_group": "education-ops-rotation",
+      "slack": "#education-ops"
+    },
+    "codec_ops": {
+      "email": "codec_ops@internal.example",
+      "pager_group": "finance-ops-rotation",
+      "slack": "#finance-ops"
+    },
+    "raster_ops": {
+      "email": "raster_ops@internal.example",
+      "pager_group": "logistics-ops-rotation",
+      "slack": "#logistics-ops"
+    },
+    "pipeline_ops": {
+      "email": "pipeline_ops@internal.example",
+      "pager_group": "platform-ops-rotation",
+      "slack": "#platform-ops"
+    },
+    "export_ops": {
+      "email": "export_ops@internal.example",
+      "pager_group": "procurement-ops-rotation",
+      "slack": "#procurement-ops"
+    },
+    "qa_ops": {
+      "email": "qa_ops@internal.example",
+      "pager_group": "decoder-ops-rotation",
+      "slack": "#decoder-ops"
+    },
+    "release_program_ops": {
+      "email": "release_program_ops@internal.example",
+      "pager_group": "release_program_ops-rotation",
+      "slack": "#release_program_ops"
+    },
+    "image_quality_ops": {
+      "email": "image_quality_ops@internal.example",
+      "pager_group": "risk-ops-rotation",
+      "slack": "#risk-ops"
+    },
+    "launch_ops": {
+      "email": "launch_ops@internal.example",
+      "pager_group": "sales-ops-rotation",
+      "slack": "#sales-ops"
+    },
+    "partner_ops": {
+      "email": "partner_ops@internal.example",
+      "pager_group": "support-ops-rotation",
+      "slack": "#support-ops"
+    },
+    "archive_ops": {
+      "email": "archive_ops@internal.example",
+      "pager_group": "treasury-ops-rotation",
+      "slack": "#treasury-ops"
+    }
+  }
+}

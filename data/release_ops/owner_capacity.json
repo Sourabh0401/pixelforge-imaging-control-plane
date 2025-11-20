@@ -1,0 +1,487 @@
+{
+  "weeks": [
+    {
+      "blackout": [
+        "metadata_ops",
+        "archive_ops"
+      ],
+      "capacity": {
+        "archive_ops": 5,
+        "codec_ops": 4,
+        "color_ops": 3,
+        "export_ops": 3,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "metadata_ops": 2,
+        "partner_ops": 4,
+        "pipeline_ops": 2,
+        "qa_ops": 4,
+        "raster_ops": 5,
+        "release_program_ops": 5
+      },
+      "week_start": "2026-01-05"
+    },
+    {
+      "blackout": [
+        "partner_ops"
+      ],
+      "capacity": {
+        "archive_ops": 2,
+        "codec_ops": 5,
+        "color_ops": 4,
+        "export_ops": 4,
+        "image_quality_ops": 3,
+        "launch_ops": 4,
+        "metadata_ops": 3,
+        "partner_ops": 5,
+        "pipeline_ops": 3,
+        "qa_ops": 5,
+        "raster_ops": 2,
+        "release_program_ops": 2
+      },
+      "week_start": "2026-01-12"
+    },
+    {
+      "blackout": [
+        "launch_ops"
+      ],
+      "capacity": {
+        "archive_ops": 3,
+        "codec_ops": 2,
+        "color_ops": 5,
+        "export_ops": 5,
+        "image_quality_ops": 4,
+        "launch_ops": 5,
+        "metadata_ops": 4,
+        "partner_ops": 2,
+        "pipeline_ops": 4,
+        "qa_ops": 2,
+        "raster_ops": 3,
+        "release_program_ops": 3
+      },
+      "week_start": "2026-01-19"
+    },
+    {
+      "blackout": [
+        "image_quality_ops"
+      ],
+      "capacity": {
+        "archive_ops": 4,
+        "codec_ops": 3,
+        "color_ops": 2,
+        "export_ops": 2,
+        "image_quality_ops": 5,
+        "launch_ops": 2,
+        "metadata_ops": 5,
+        "partner_ops": 3,
+        "pipeline_ops": 5,
+        "qa_ops": 3,
+        "raster_ops": 4,
+        "release_program_ops": 4
+      },
+      "week_start": "2026-01-26"
+    },
+    {
+      "blackout": [
+        "release_program_ops"
+      ],
+      "capacity": {
+        "archive_ops": 5,
+        "codec_ops": 4,
+        "color_ops": 3,
+        "export_ops": 3,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "metadata_ops": 2,
+        "partner_ops": 4,
+        "pipeline_ops": 2,
+        "qa_ops": 4,
+        "raster_ops": 5,
+        "release_program_ops": 5
+      },
+      "week_start": "2026-02-02"
+    },
+    {
+      "blackout": [
+        "qa_ops"
+      ],
+      "capacity": {
+        "archive_ops": 2,
+        "codec_ops": 5,
+        "color_ops": 4,
+        "export_ops": 4,
+        "image_quality_ops": 3,
+        "launch_ops": 4,
+        "metadata_ops": 3,
+        "partner_ops": 5,
+        "pipeline_ops": 3,
+        "qa_ops": 5,
+        "raster_ops": 2,
+        "release_program_ops": 2
+      },
+      "week_start": "2026-02-09"
+    },
+    {
+      "blackout": [
+        "export_ops"
+      ],
+      "capacity": {
+        "archive_ops": 3,
+        "codec_ops": 2,
+        "color_ops": 5,
+        "export_ops": 5,
+        "image_quality_ops": 4,
+        "launch_ops": 5,
+        "metadata_ops": 4,
+        "partner_ops": 2,
+        "pipeline_ops": 4,
+        "qa_ops": 2,
+        "raster_ops": 3,
+        "release_program_ops": 3
+      },
+      "week_start": "2026-02-16"
+    },
+    {
+      "blackout": [
+        "pipeline_ops"
+      ],
+      "capacity": {
+        "archive_ops": 4,
+        "codec_ops": 3,
+        "color_ops": 2,
+        "export_ops": 2,
+        "image_quality_ops": 5,
+        "launch_ops": 2,
+        "metadata_ops": 5,
+        "partner_ops": 3,
+        "pipeline_ops": 5,
+        "qa_ops": 3,
+        "raster_ops": 4,
+        "release_program_ops": 4
+      },
+      "week_start": "2026-02-23"
+    },
+    {
+      "blackout": [
+        "raster_ops"
+      ],
+      "capacity": {
+        "archive_ops": 5,
+        "codec_ops": 4,
+        "color_ops": 3,
+        "export_ops": 3,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "metadata_ops": 2,
+        "partner_ops": 4,
+        "pipeline_ops": 2,
+        "qa_ops": 4,
+        "raster_ops": 5,
+        "release_program_ops": 5
+      },
+      "week_start": "2026-03-02"
+    },
+    {
+      "blackout": [
+        "codec_ops"
+      ],
+      "capacity": {
+        "archive_ops": 2,
+        "codec_ops": 5,
+        "color_ops": 4,
+        "export_ops": 4,
+        "image_quality_ops": 3,
+        "launch_ops": 4,
+        "metadata_ops": 3,
+        "partner_ops": 5,
+        "pipeline_ops": 3,
+        "qa_ops": 5,
+        "raster_ops": 2,
+        "release_program_ops": 2
+      },
+      "week_start": "2026-03-09"
+    },
+    {
+      "blackout": [
+        "color_ops"
+      ],
+      "capacity": {
+        "archive_ops": 3,
+        "codec_ops": 2,
+        "color_ops": 5,
+        "export_ops": 5,
+        "image_quality_ops": 4,
+        "launch_ops": 5,
+        "metadata_ops": 4,
+        "partner_ops": 2,
+        "pipeline_ops": 4,
+        "qa_ops": 2,
+        "raster_ops": 3,
+        "release_program_ops": 3
+      },
+      "week_start": "2026-03-16"
+    },
+    {
+      "blackout": [
+        "metadata_ops",
+        "archive_ops"
+      ],
+      "capacity": {
+        "archive_ops": 4,
+        "codec_ops": 3,
+        "color_ops": 2,
+        "export_ops": 2,
+        "image_quality_ops": 5,
+        "launch_ops": 2,
+        "metadata_ops": 5,
+        "partner_ops": 3,
+        "pipeline_ops": 5,
+        "qa_ops": 3,
+        "raster_ops": 4,
+        "release_program_ops": 4
+      },
+      "week_start": "2026-03-23"
+    },
+    {
+      "blackout": [
+        "partner_ops"
+      ],
+      "capacity": {
+        "archive_ops": 5,
+        "codec_ops": 4,
+        "color_ops": 3,
+        "export_ops": 3,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "metadata_ops": 2,
+        "partner_ops": 4,
+        "pipeline_ops": 2,
+        "qa_ops": 4,
+        "raster_ops": 5,
+        "release_program_ops": 5
+      },
+      "week_start": "2026-03-30"
+    },
+    {
+      "blackout": [
+        "launch_ops"
+      ],
+      "capacity": {
+        "archive_ops": 2,
+        "codec_ops": 5,
+        "color_ops": 4,
+        "export_ops": 4,
+        "image_quality_ops": 3,
+        "launch_ops": 4,
+        "metadata_ops": 3,
+        "partner_ops": 5,
+        "pipeline_ops": 3,
+        "qa_ops": 5,
+        "raster_ops": 2,
+        "release_program_ops": 2
+      },
+      "week_start": "2026-04-06"
+    },
+    {
+      "blackout": [
+        "image_quality_ops"
+      ],
+      "capacity": {
+        "archive_ops": 3,
+        "codec_ops": 2,
+        "color_ops": 5,
+        "export_ops": 5,
+        "image_quality_ops": 4,
+        "launch_ops": 5,
+        "metadata_ops": 4,
+        "partner_ops": 2,
+        "pipeline_ops": 4,
+        "qa_ops": 2,
+        "raster_ops": 3,
+        "release_program_ops": 3
+      },
+      "week_start": "2026-04-13"
+    },
+    {
+      "blackout": [
+        "release_program_ops"
+      ],
+      "capacity": {
+        "archive_ops": 4,
+        "codec_ops": 3,
+        "color_ops": 2,
+        "export_ops": 2,
+        "image_quality_ops": 5,
+        "launch_ops": 2,
+        "metadata_ops": 5,
+        "partner_ops": 3,
+        "pipeline_ops": 5,
+        "qa_ops": 3,
+        "raster_ops": 4,
+        "release_program_ops": 4
+      },
+      "week_start": "2026-04-20"
+    },
+    {
+      "blackout": [
+        "qa_ops"
+      ],
+      "capacity": {
+        "archive_ops": 5,
+        "codec_ops": 4,
+        "color_ops": 3,
+        "export_ops": 3,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "metadata_ops": 2,
+        "partner_ops": 4,
+        "pipeline_ops": 2,
+        "qa_ops": 4,
+        "raster_ops": 5,
+        "release_program_ops": 5
+      },
+      "week_start": "2026-04-27"
+    },
+    {
+      "blackout": [
+        "export_ops"
+      ],
+      "capacity": {
+        "archive_ops": 2,
+        "codec_ops": 5,
+        "color_ops": 4,
+        "export_ops": 4,
+        "image_quality_ops": 3,
+        "launch_ops": 4,
+        "metadata_ops": 3,
+        "partner_ops": 5,
+        "pipeline_ops": 3,
+        "qa_ops": 5,
+        "raster_ops": 2,
+        "release_program_ops": 2
+      },
+      "week_start": "2026-05-04"
+    },
+    {
+      "blackout": [
+        "pipeline_ops"
+      ],
+      "capacity": {
+        "archive_ops": 3,
+        "codec_ops": 2,
+        "color_ops": 5,
+        "export_ops": 5,
+        "image_quality_ops": 4,
+        "launch_ops": 5,
+        "metadata_ops": 4,
+        "partner_ops": 2,
+        "pipeline_ops": 4,
+        "qa_ops": 2,
+        "raster_ops": 3,
+        "release_program_ops": 3
+      },
+      "week_start": "2026-05-11"
+    },
+    {
+      "blackout": [
+        "raster_ops"
+      ],
+      "capacity": {
+        "archive_ops": 4,
+        "codec_ops": 3,
+        "color_ops": 2,
+        "export_ops": 2,
+        "image_quality_ops": 5,
+        "launch_ops": 2,
+        "metadata_ops": 5,
+        "partner_ops": 3,
+        "pipeline_ops": 5,
+        "qa_ops": 3,
+        "raster_ops": 4,
+        "release_program_ops": 4
+      },
+      "week_start": "2026-05-18"
+    },
+    {
+      "blackout": [
+        "codec_ops"
+      ],
+      "capacity": {
+        "archive_ops": 5,
+        "codec_ops": 4,
+        "color_ops": 3,
+        "export_ops": 3,
+        "image_quality_ops": 2,
+        "launch_ops": 3,
+        "metadata_ops": 2,
+        "partner_ops": 4,
+        "pipeline_ops": 2,
+        "qa_ops": 4,
+        "raster_ops": 5,
+        "release_program_ops": 5
+      },
+      "week_start": "2026-05-25"
+    },
+    {
+      "blackout": [
+        "color_ops"
+      ],
+      "capacity": {
+        "archive_ops": 2,
+        "codec_ops": 5,
+        "color_ops": 4,
+        "export_ops": 4,
+        "image_quality_ops": 3,
+        "launch_ops": 4,
+        "metadata_ops": 3,
+        "partner_ops": 5,
+        "pipeline_ops": 3,
+        "qa_ops": 5,
+        "raster_ops": 2,
+        "release_program_ops": 2
+      },
+      "week_start": "2026-06-01"
+    },
+    {
+      "blackout": [
+        "metadata_ops",
+        "archive_ops"
+      ],
+      "capacity": {
+        "archive_ops": 3,
+        "codec_ops": 2,
+        "color_ops": 5,
+        "export_ops": 5,
+        "image_quality_ops": 4,
+        "launch_ops": 5,
+        "metadata_ops": 4,
+        "partner_ops": 2,
+        "pipeline_ops": 4,
+        "qa_ops": 2,
+        "raster_ops": 3,
+        "release_program_ops": 3
+      },
+      "week_start": "2026-06-08"
+    },
+    {
+      "blackout": [
+        "partner_ops"
+      ],
+      "capacity": {
+        "archive_ops": 4,
+        "codec_ops": 3,
+        "color_ops": 2,
+        "export_ops": 2,
+        "image_quality_ops": 5,
+        "launch_ops": 2,
+        "metadata_ops": 5,
+        "partner_ops": 3,
+        "pipeline_ops": 5,
+        "qa_ops": 3,
+        "raster_ops": 4,
+        "release_program_ops": 4
+      },
+      "week_start": "2026-06-15"
+    }
+  ]
+}

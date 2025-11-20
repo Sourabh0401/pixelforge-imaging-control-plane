@@ -7,14 +7,14 @@ import unittest
 from contextlib import closing
 from pathlib import Path
 
-from engineering_challenge.persistence import history_ingest
+from pixelforge_ops.persistence import history_ingest
 
 
 def _row(**overrides: object) -> dict[str, object]:
     row: dict[str, object] = {
         "history_id": "hist-001",
-        "bundle_id": "merchant-closeout",
-        "owner": "finance_ops",
+        "bundle_id": "jpeg-codec-fidelity",
+        "owner": "codec_ops",
         "percent": 91.5,
         "hidden_percent": 87.2,
         "band": "ready",
@@ -53,8 +53,8 @@ class HistoryIngestExtendedTests(unittest.TestCase):
         self.assertEqual(row["history_id"], "hist-001")
 
     def test_normalize_row_strips_owner(self) -> None:
-        row = history_ingest.normalize_row(_row(owner=" finance_ops "))
-        self.assertEqual(row["owner"], "finance_ops")
+        row = history_ingest.normalize_row(_row(owner=" codec_ops "))
+        self.assertEqual(row["owner"], "codec_ops")
 
     def test_normalize_row_preserves_extra_fields(self) -> None:
         row = history_ingest.normalize_row(_row(release_channel="partner"))
@@ -175,21 +175,21 @@ class HistoryIngestExtendedTests(unittest.TestCase):
 
     def test_owner_rollup_groups_counts(self) -> None:
         rollup = history_ingest.owner_rollup(
-            [_row(owner="finance_ops"), _row(history_id="hist-002", owner="finance_ops"), _row(history_id="hist-003", owner="support_ops")]
+            [_row(owner="codec_ops"), _row(history_id="hist-002", owner="codec_ops"), _row(history_id="hist-003", owner="partner_ops")]
         )
-        self.assertEqual(rollup["finance_ops"]["count"], 2)
+        self.assertEqual(rollup["codec_ops"]["count"], 2)
 
     def test_owner_rollup_sorts_owner_keys(self) -> None:
         rollup = history_ingest.owner_rollup(
-            [_row(owner="support_ops"), _row(history_id="hist-002", owner="finance_ops")]
+            [_row(owner="partner_ops"), _row(history_id="hist-002", owner="codec_ops")]
         )
-        self.assertEqual(list(rollup), ["finance_ops", "support_ops"])
+        self.assertEqual(list(rollup), ["codec_ops", "partner_ops"])
 
     def test_owner_rollup_averages_hidden_percent(self) -> None:
         rollup = history_ingest.owner_rollup(
             [_row(hidden_percent=80), _row(history_id="hist-002", hidden_percent=90)]
         )
-        self.assertEqual(rollup["finance_ops"]["average_hidden_percent"], 85.0)
+        self.assertEqual(rollup["codec_ops"]["average_hidden_percent"], 85.0)
 
     def test_band_rollup_groups_counts(self) -> None:
         rollup = history_ingest.band_rollup(
@@ -213,11 +213,11 @@ class HistoryIngestExtendedTests(unittest.TestCase):
     def test_month_rollup_includes_owners(self) -> None:
         rollup = history_ingest.month_rollup(
             [
-                _row(owner="finance_ops", started_at="2026-01-01T09:00:00Z"),
-                _row(history_id="hist-002", owner="support_ops", started_at="2026-01-11T09:00:00Z"),
+                _row(owner="codec_ops", started_at="2026-01-01T09:00:00Z"),
+                _row(history_id="hist-002", owner="partner_ops", started_at="2026-01-11T09:00:00Z"),
             ]
         )
-        self.assertEqual(rollup["2026-01"]["owners"], ["finance_ops", "support_ops"])
+        self.assertEqual(rollup["2026-01"]["owners"], ["codec_ops", "partner_ops"])
 
     def test_import_summary_contains_expected_sections(self) -> None:
         summary = history_ingest.import_summary([_row()])
@@ -254,10 +254,10 @@ class HistoryIngestExtendedTests(unittest.TestCase):
             db = Path(tmp) / "history.sqlite3"
             with closing(sqlite3.connect(db)) as conn:
                 conn.executescript(self._history_table_sql())
-                history_ingest.insert_rows(conn, [_row(owner=" finance_ops ", percent="91.5")])
+                history_ingest.insert_rows(conn, [_row(owner=" codec_ops ", percent="91.5")])
                 payload = conn.execute("select payload_json from history_import").fetchone()[0]
         stored = json.loads(payload)
-        self.assertEqual(stored["owner"], "finance_ops")
+        self.assertEqual(stored["owner"], "codec_ops")
         self.assertEqual(stored["percent"], 91.5)
 
     def test_load_rows_from_temp_file_normalizes_numbers(self) -> None:
@@ -273,3 +273,5 @@ class HistoryIngestExtendedTests(unittest.TestCase):
         self.assertEqual(summary["owners"], {})
         self.assertEqual(summary["bands"], {})
         self.assertEqual(summary["months"], {})
+
+
