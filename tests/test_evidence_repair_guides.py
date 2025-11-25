@@ -23,4 +23,13 @@ class EvidenceRepairGuideTests(unittest.TestCase):
             evidence_repair_guides.guide_digest("bundle"),
         )
 
+    def test_guide_names_include_packet_digest(self) -> None:
+        self.assertIn("packet_digest", evidence_repair_guides.guide_names())
+
+    def test_owner_routes_include_archive_ops(self) -> None:
+        self.assertIn("archive_ops", evidence_repair_guides.owner_routes())
+
+    def test_validate_guides_data_rejects_blank_owner(self) -> None:
+        with self.assertRaises(ValueError):
+            evidence_repair_guides.validate_guides_data({"broken": {"owner": "", "symptoms": ["x"], "likely_causes": ["y"], "checks": ["z"], "repairs": ["r"]}})
 
