@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from .channel_histogram import histogram_summary
+from .color_delta import color_delta_summary
 from .pixel_tolerance import PixelMatrix, diff_summary
 
 
@@ -35,11 +37,16 @@ def golden_diff(
         max_mismatched_pixels=max_mismatched_pixels,
         mean_delta_limit=mean_delta_limit,
     )
+    histogram = histogram_summary(actual, expected)
+    color = color_delta_summary(actual, expected)
     total_pixels = int(summary.get("width", 0)) * int(summary.get("height", 0))
     mismatch_ratio = round(int(summary["mismatched_pixels"]) / max(total_pixels, 1), 6)
     return {
         **summary,
         "difference_ratio": mismatch_ratio,
+        "status": "block" if not summary["passed"] or histogram["status"] == "block" or color["status"] == "block" else "warn" if histogram["status"] == "warn" or color["status"] == "warn" else "ok",
+        "histogram_status": histogram["status"],
+        "color_status": color["status"],
         **diff_region_bounds(actual, expected, tolerance=tolerance),
     }
 

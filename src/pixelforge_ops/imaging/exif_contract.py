@@ -44,8 +44,11 @@ def exif_summary(
         forbidden_fields=forbidden_fields,
         numeric_ranges=numeric_ranges,
     )
+    status = "block" if any(message.startswith("missing required field") for message in issues) else "warn" if issues else "ok"
     return {
-        "passed": not issues,
+        "passed": status != "block",
+        "status": status,
+        "severity": status,
         "field_count": len(metadata),
         "issues": issues,
         "present_fields": sorted(str(field) for field in metadata.keys()),

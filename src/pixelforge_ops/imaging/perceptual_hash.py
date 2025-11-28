@@ -46,18 +46,32 @@ def hamming_distance(left: str, right: str) -> int:
     return sum(1 for a, b in zip(left, right, strict=True) if a != b)
 
 
+def distance_bucket(distance: int, bit_count: int) -> str:
+    if distance <= 0:
+        return "exact"
+    ratio = distance / max(bit_count, 1)
+    if ratio <= 0.05:
+        return "tight"
+    if ratio <= 0.12:
+        return "warn"
+    return "block"
+
+
 def hash_summary(matrix: PixelMatrix, reference_hash: str, max_distance: int = 0) -> dict[str, int | str | bool]:
     inferred_size = int(math.sqrt(len(reference_hash)))
     if inferred_size * inferred_size != len(reference_hash):
         raise ValueError("reference_hash must have a square bit length")
     actual_hash = average_hash(matrix, inferred_size)
     distance = hamming_distance(actual_hash, reference_hash)
+    bucket = distance_bucket(distance, len(reference_hash))
     return {
         "passed": distance <= max_distance,
+        "status": "block" if distance > max_distance else "ok",
         "hash": actual_hash,
         "reference_hash": reference_hash,
         "distance": distance,
         "max_distance": max_distance,
+        "bucket": bucket,
     }
 
 

@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from typing import Iterable, Mapping, Sequence
 
-from pixelforge_ops.utils import json_digest
+from .render_manifest import render_manifest_digest
+from .tile_coverage import tile_coverage_summary
 
 
 def _tile_rows(manifest: Sequence[Mapping[str, object]] | Mapping[str, object]) -> list[dict[str, object]]:
@@ -36,19 +37,24 @@ def validate_tile_manifest(
         if require_unique_paths and path in seen_paths:
             issues.append(f"duplicate tile path {path}")
         seen_paths.add(path)
+    coverage = tile_coverage_summary(rows)
+    issues.extend(str(issue) for issue in coverage["issues"])
     return issues
 
 
 def manifest_digest(manifest: Sequence[Mapping[str, object]] | Mapping[str, object]) -> str:
-    return json_digest({"tiles": normalized_tiles(manifest)})
+    return render_manifest_digest({"artifacts": normalized_tiles(manifest), "bundle_id": "tiles", "lane": "tile-manifest"})
 
 
 def manifest_summary(manifest: Sequence[Mapping[str, object]] | Mapping[str, object]) -> dict[str, object]:
     rows = normalized_tiles(manifest)
     zoom_levels = sorted({int(row.get("zoom", 0)) for row in rows})
+    coverage = tile_coverage_summary(rows)
     return {
         "tile_count": len(rows),
         "zoom_levels": zoom_levels,
         "digest": manifest_digest(rows),
         "issues": validate_tile_manifest(rows),
+        "coverage": coverage,
+        "passed": not coverage["issues"] and not validate_tile_manifest(rows),
     }

@@ -3,6 +3,10 @@ from __future__ import annotations
 from typing import Sequence
 
 
+def _profile_name(payload: dict[str, object]) -> str:
+    return str(payload.get("profile_name", payload.get("profile", ""))).strip()
+
+
 def validate_profile(
     payload: dict[str, object],
     required_profile: str | None = None,
@@ -11,10 +15,10 @@ def validate_profile(
     allowed_gamuts: Sequence[str] | None = None,
 ) -> list[str]:
     issues: list[str] = []
-    profile_name = str(payload.get("profile_name", "")).strip()
+    profile_name = _profile_name(payload)
     if required_profile and profile_name != required_profile:
         issues.append(f"profile_name expected {required_profile} but got {profile_name or 'missing'}")
-    if require_embedded_profile and not bool(payload.get("embedded_profile")):
+    if require_embedded_profile and not bool(payload.get("embedded_profile", payload.get("embedded", False))):
         issues.append("embedded_profile missing")
     transfer_function = str(payload.get("transfer_function", "")).strip()
     if allowed_transfer_functions and transfer_function not in set(allowed_transfer_functions):
@@ -39,10 +43,13 @@ def profile_summary(
         require_embedded_profile=require_embedded_profile,
         allowed_gamuts=allowed_gamuts,
     )
+    status = "block" if issues and any("expected" in issue or "missing" in issue for issue in issues) else "warn" if issues else "ok"
     return {
-        "passed": not issues,
-        "profile_name": payload.get("profile_name"),
-        "embedded_profile": bool(payload.get("embedded_profile")),
+        "passed": status != "block",
+        "status": status,
+        "severity": status,
+        "profile_name": _profile_name(payload),
+        "embedded_profile": bool(payload.get("embedded_profile", payload.get("embedded", False))),
         "transfer_function": payload.get("transfer_function"),
         "gamut": payload.get("gamut"),
         "issues": issues,

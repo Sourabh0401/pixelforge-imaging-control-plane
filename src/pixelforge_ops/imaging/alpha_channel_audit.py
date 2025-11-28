@@ -36,16 +36,22 @@ def audit_alpha_matrix(
     max_color_leak: int = 0,
     max_unpremultiplied: int = 0,
     max_edge_noise: int = 0,
-) -> dict[str, int | bool]:
+) -> dict[str, int | bool | str | list[str]]:
     summary = transparent_edge_summary(matrix)
-    passed = (
-        summary["color_leak_pixels"] <= max_color_leak
-        and summary["unpremultiplied_pixels"] <= max_unpremultiplied
-        and summary["edge_noise_pixels"] <= max_edge_noise
-    )
+    issues: list[str] = []
+    if summary["color_leak_pixels"] > max_color_leak:
+        issues.append("color leak exceeded threshold")
+    if summary["unpremultiplied_pixels"] > max_unpremultiplied:
+        issues.append("unpremultiplied pixels exceeded threshold")
+    if summary["edge_noise_pixels"] > max_edge_noise:
+        issues.append("edge noise exceeded threshold")
+    status = "block" if issues else "ok"
     return {
         **summary,
-        "passed": passed,
+        "passed": not issues,
+        "status": status,
+        "severity": status,
+        "issues": issues,
         "max_color_leak": max_color_leak,
         "max_unpremultiplied": max_unpremultiplied,
         "max_edge_noise": max_edge_noise,
