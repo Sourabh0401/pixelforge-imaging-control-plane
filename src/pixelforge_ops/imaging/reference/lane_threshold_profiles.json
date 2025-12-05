@@ -1,0 +1,1222 @@
+{
+  "profiles": [
+    {
+      "lane": "jpeg-codec-fidelity",
+      "owner_group": "codec-ops",
+      "release_channel": "internal",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "jpeg",
+            "webp"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 1500,
+        "warn_runtime_ms": 1190,
+        "max_bytes": 4450000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "orientation",
+          "capture_timestamp"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Focus on ringing, quantization-table churn, and whether the visible drift is isolated to the JPEG lane.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "owner_group": "raster-ops",
+      "release_channel": "internal",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "png",
+            "webp"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "edge_and_center",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 12
+      },
+      "render_budget": {
+        "max_runtime_ms": 1600,
+        "warn_runtime_ms": 1280,
+        "max_bytes": 4900000,
+        "max_tiles": 12
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "tile_origin",
+          "transform_chain"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile",
+        "tile-coverage"
+      ],
+      "notes": [
+        "Check missing tiles, overlap, and seam drift before asking the renderer team for a replay.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "owner_group": "metadata-ops",
+      "release_channel": "internal",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "jpeg"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 1700,
+        "warn_runtime_ms": 1370,
+        "max_bytes": 5350000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "camera_model",
+          "orientation",
+          "capture_timestamp",
+          "lens_model"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Treat metadata loss as a first-class release problem because partner and archive tooling depend on it.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "owner_group": "color-ops",
+      "release_channel": "internal",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.01,
+          "block_threshold": 0.03
+        },
+        "color_delta": {
+          "warn_threshold": 3.0,
+          "block_threshold": 9.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "png",
+            "avif"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 1800,
+        "warn_runtime_ms": 1460,
+        "max_bytes": 5800000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "icc_profile",
+          "transfer_function",
+          "gamut"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Look at channel histograms, profile embedding, and required-region drift together instead of chasing one metric in isolation.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "owner_group": "alpha-ops",
+      "release_channel": "internal",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 0,
+          "max_mismatched_pixels": 0
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "png",
+            "webp"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 1900,
+        "warn_runtime_ms": 1550,
+        "max_bytes": 6250000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "alpha_mode",
+          "color_profile"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Alpha regressions hide in premultiplication and halo behavior, so the brief should keep those findings separate from RGB drift.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "owner_group": "thumbnail-ops",
+      "release_channel": "pilot",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "jpeg",
+            "webp",
+            "avif"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "edge_and_center",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 12
+      },
+      "render_budget": {
+        "max_runtime_ms": 2000,
+        "warn_runtime_ms": 1640,
+        "max_bytes": 6700000,
+        "max_tiles": 12
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "crop_mode",
+          "target_aspect_ratio",
+          "color_profile"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile",
+        "tile-coverage"
+      ],
+      "notes": [
+        "Thumbnail work has real budget pressure, so include render size, runtime, and cache-key impact in every handoff.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "owner_group": "partner-ops",
+      "release_channel": "partner",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "png",
+            "webp"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 2100,
+        "warn_runtime_ms": 1730,
+        "max_bytes": 7150000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "delivery_profile",
+          "icc_profile",
+          "partner_contract"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Partner lanes are unforgiving. Missing metadata or sidecars should block even when the pixels still look clean.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "owner_group": "export-ops",
+      "release_channel": "partner",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "png",
+            "jpeg",
+            "webp"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 2200,
+        "warn_runtime_ms": 1820,
+        "max_bytes": 7600000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "delivery_profile",
+          "archive_group"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "This lane proves the packaging path, so operators need file lists, checksums, and routing notes as much as image summaries.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "owner_group": "compression-ops",
+      "release_channel": "internal",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "jpeg",
+            "avif"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 2300,
+        "warn_runtime_ms": 1910,
+        "max_bytes": 8050000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "preset_name",
+          "quality_level"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Preset changes can move quality without code motion. Keep the preset rationale next to the render evidence.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "owner_group": "sprite-ops",
+      "release_channel": "pilot",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "png",
+            "webp"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "edge_and_center",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 2400,
+        "warn_runtime_ms": 2000,
+        "max_bytes": 8500000,
+        "max_tiles": 12
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "alpha_mode",
+          "sprite_origin",
+          "color_profile"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile",
+        "tile-coverage"
+      ],
+      "notes": [
+        "Sprite lanes care about atlas completeness, alpha integrity, and deterministic names because clients patch these incrementally.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "owner_group": "replay-ops",
+      "release_channel": "pilot",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "jpeg",
+            "png"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 2500,
+        "warn_runtime_ms": 2090,
+        "max_bytes": 8950000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "color_profile",
+          "decoder_build",
+          "capture_timestamp"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Replay lanes should preserve manifest digest and issue codes so incident debugging stays deterministic across shifts.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "owner_group": "telemetry-ops",
+      "release_channel": "pilot",
+      "comparators": {
+        "pixel_matrix": {
+          "tolerance": 2,
+          "max_mismatched_pixels": 8
+        },
+        "channel_histogram": {
+          "bins": 16,
+          "warn_threshold": 0.025,
+          "block_threshold": 0.07
+        },
+        "color_delta": {
+          "warn_threshold": 6.0,
+          "block_threshold": 18.0
+        },
+        "region_diff": {
+          "required_regions": [
+            "hero-frame",
+            "text-overlay"
+          ],
+          "ignore_regions": [
+            "debug-overlay",
+            "operator-watermark"
+          ]
+        },
+        "render_manifest": {
+          "required_codecs": [
+            "jpeg",
+            "png"
+          ],
+          "strict_digest": true
+        },
+        "image_release_gate": {
+          "blocker_codes": [
+            "metadata-policy",
+            "tile-coverage",
+            "render-manifest",
+            "codec-profile"
+          ]
+        }
+      },
+      "sampling": {
+        "grid": "center_weighted",
+        "required_regions": [
+          "hero-frame",
+          "text-overlay"
+        ],
+        "ignore_regions": [
+          "debug-overlay",
+          "render-stamp"
+        ],
+        "points_per_edge": 8
+      },
+      "render_budget": {
+        "max_runtime_ms": 2600,
+        "warn_runtime_ms": 2180,
+        "max_bytes": 9400000,
+        "max_tiles": 4
+      },
+      "metadata": {
+        "required_fields": [
+          "width",
+          "height",
+          "render_host",
+          "render_job",
+          "color_profile"
+        ],
+        "allowed_profiles": [
+          "sRGB",
+          "Display P3",
+          "Rec.709"
+        ],
+        "allowed_gamuts": [
+          "srgb",
+          "p3"
+        ],
+        "forbidden_fields": [
+          "debug_profile",
+          "internal_probe"
+        ]
+      },
+      "watch_signals": [
+        "histogram-drift",
+        "color-delta",
+        "transparency-halo",
+        "jpeg-quantization"
+      ],
+      "release_blockers": [
+        "metadata-policy",
+        "render-manifest",
+        "codec-profile"
+      ],
+      "notes": [
+        "Telemetry is where budget drift gets spotted early, so every packet should carry enough context to explain the budget change.",
+        "Operators should compare lane-level digests and issue summaries before escalating to another team.",
+        "Partial rollouts are acceptable only when the unaffected codec family and partner packet stay explicitly green."
+      ]
+    }
+  ]
+}

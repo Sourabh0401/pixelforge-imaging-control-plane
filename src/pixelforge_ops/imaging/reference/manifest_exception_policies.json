@@ -1,0 +1,428 @@
+{
+  "policies": [
+    {
+      "lane": "jpeg-codec-fidelity",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for jpeg-codec-fidelity exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for raster-transform-tiling exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for metadata-exif-ingest exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for color-profile-parity exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for alpha-channel-recovery exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for thumbnail-generation-stability exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage",
+        "codec-profile"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for partner-format-compatibility exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage",
+        "codec-profile"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for export-pipeline-integrity exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for compression-preset-handoff exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for sprite-identity-refresh exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for decoder-recovery-replay exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "allowed_issue_codes": [
+        "manifest-exception",
+        "artifact-lineage",
+        "render-budget"
+      ],
+      "blocked_issue_codes": [
+        "partner-export",
+        "metadata-policy",
+        "tile-coverage"
+      ],
+      "allowed_missing_codecs": [
+        "avif"
+      ],
+      "allowed_missing_metadata": [
+        "lens_model",
+        "render_host"
+      ],
+      "expiry_classes": {
+        "same_shift": [
+          "artifact-lineage"
+        ],
+        "two_day": [
+          "render-budget",
+          "manifest-exception"
+        ],
+        "weekly": [
+          "operator-note"
+        ]
+      },
+      "notes": [
+        "Exceptions for batch-render-telemetry exist for paperwork and routing, not to hide a visual regression.",
+        "If an exception downgrades a blocker, the packet should record the expiry class and accepting owner group."
+      ]
+    }
+  ]
+}

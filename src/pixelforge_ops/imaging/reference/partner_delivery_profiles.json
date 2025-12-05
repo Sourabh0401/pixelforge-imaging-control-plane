@@ -1,0 +1,1636 @@
+{
+  "profiles": [
+    {
+      "partner": "partner-retail-eu",
+      "lane": "jpeg-codec-fidelity",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "orientation",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "codec-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for jpeg-codec-fidelity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "raster-transform-tiling",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "tile_origin",
+        "transform_chain"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "raster-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for raster-transform-tiling.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "metadata-exif-ingest",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "camera_model",
+        "orientation"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "metadata-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for metadata-exif-ingest.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "color-profile-parity",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "icc_profile",
+        "transfer_function"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "color-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for color-profile-parity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "alpha-channel-recovery",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "alpha-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for alpha-channel-recovery.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "thumbnail-generation-stability",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "crop_mode",
+        "target_aspect_ratio",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "thumbnail-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for thumbnail-generation-stability.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "partner-format-compatibility",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "icc_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "partner-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for partner-format-compatibility.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "export-pipeline-integrity",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "archive_group"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "export-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for export-pipeline-integrity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "compression-preset-handoff",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "preset_name",
+        "quality_level"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "compression-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for compression-preset-handoff.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "sprite-identity-refresh",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "sprite_origin",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "sprite-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for sprite-identity-refresh.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "decoder-recovery-replay",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "decoder_build",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "replay-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for decoder-recovery-replay.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-retail-eu",
+      "lane": "batch-render-telemetry",
+      "description": "EU retail storefront exports with strict ICC handling and manifest stability checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "render_host",
+        "render_job",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "telemetry-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-retail-eu expects deterministic outputs for batch-render-telemetry.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "jpeg-codec-fidelity",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "orientation",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "codec-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for jpeg-codec-fidelity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "raster-transform-tiling",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "tile_origin",
+        "transform_chain"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "raster-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for raster-transform-tiling.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "metadata-exif-ingest",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "camera_model",
+        "orientation"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "metadata-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for metadata-exif-ingest.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "color-profile-parity",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "icc_profile",
+        "transfer_function"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "color-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for color-profile-parity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "alpha-channel-recovery",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "alpha-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for alpha-channel-recovery.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "thumbnail-generation-stability",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "crop_mode",
+        "target_aspect_ratio",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "thumbnail-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for thumbnail-generation-stability.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "partner-format-compatibility",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "icc_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "partner-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for partner-format-compatibility.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "export-pipeline-integrity",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "archive_group"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "export-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for export-pipeline-integrity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "compression-preset-handoff",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "preset_name",
+        "quality_level"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "compression-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for compression-preset-handoff.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "sprite-identity-refresh",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "sprite_origin",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "sprite-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for sprite-identity-refresh.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "decoder-recovery-replay",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "decoder_build",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "replay-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for decoder-recovery-replay.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-marketplace-us",
+      "lane": "batch-render-telemetry",
+      "description": "Marketplace exports with PNG fallback requirements and weekly compliance spot checks.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "render_host",
+        "render_job",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "telemetry-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-marketplace-us expects deterministic outputs for batch-render-telemetry.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "jpeg-codec-fidelity",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "orientation",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "codec-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for jpeg-codec-fidelity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "raster-transform-tiling",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "tile_origin",
+        "transform_chain"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "raster-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for raster-transform-tiling.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "metadata-exif-ingest",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "camera_model",
+        "orientation"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "metadata-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for metadata-exif-ingest.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "color-profile-parity",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "icc_profile",
+        "transfer_function"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "color-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for color-profile-parity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "alpha-channel-recovery",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "alpha-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for alpha-channel-recovery.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "thumbnail-generation-stability",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "crop_mode",
+        "target_aspect_ratio",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "thumbnail-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for thumbnail-generation-stability.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "partner-format-compatibility",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "icc_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "partner-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for partner-format-compatibility.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "export-pipeline-integrity",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "archive_group"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "export-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for export-pipeline-integrity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "compression-preset-handoff",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "preset_name",
+        "quality_level"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "compression-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for compression-preset-handoff.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "sprite-identity-refresh",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "sprite_origin",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "sprite-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for sprite-identity-refresh.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "decoder-recovery-replay",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "decoder_build",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "replay-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for decoder-recovery-replay.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-social-preview",
+      "lane": "batch-render-telemetry",
+      "description": "Preview images for social surfaces where thumbnail dimensions and cache keys matter.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "render_host",
+        "render_job",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": false,
+      "routing": {
+        "owner_group": "telemetry-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-social-preview expects deterministic outputs for batch-render-telemetry.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "jpeg-codec-fidelity",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "orientation",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "codec-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for jpeg-codec-fidelity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "raster-transform-tiling",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "tile_origin",
+        "transform_chain"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "raster-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for raster-transform-tiling.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "metadata-exif-ingest",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "camera_model",
+        "orientation"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "metadata-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for metadata-exif-ingest.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "color-profile-parity",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "icc_profile",
+        "transfer_function"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "color-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for color-profile-parity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "alpha-channel-recovery",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "alpha-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for alpha-channel-recovery.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "thumbnail-generation-stability",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "webp",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "crop_mode",
+        "target_aspect_ratio",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "thumbnail-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for thumbnail-generation-stability.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "partner-format-compatibility",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "icc_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "partner-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for partner-format-compatibility.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "export-pipeline-integrity",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "png",
+        "jpeg",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "delivery_profile",
+        "archive_group"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "export-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for export-pipeline-integrity.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "compression-preset-handoff",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "avif"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "preset_name",
+        "quality_level"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "compression-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for compression-preset-handoff.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "sprite-identity-refresh",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "tiles.csv"
+      ],
+      "required_codecs": [
+        "png",
+        "webp"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "alpha_mode",
+        "sprite_origin",
+        "color_profile"
+      ],
+      "allow_alpha": true,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "sprite-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for sprite-identity-refresh.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "decoder-recovery-replay",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "color_profile",
+        "decoder_build",
+        "capture_timestamp"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "replay-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for decoder-recovery-replay.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    },
+    {
+      "partner": "partner-archive-backfill",
+      "lane": "batch-render-telemetry",
+      "description": "Archive backfill jobs that care about deterministic packets and metadata completeness.",
+      "required_files": [
+        "render.json",
+        "quality.md",
+        "issues.json",
+        "image.bin"
+      ],
+      "required_codecs": [
+        "jpeg",
+        "png"
+      ],
+      "required_metadata": [
+        "width",
+        "height",
+        "render_host",
+        "render_job",
+        "color_profile"
+      ],
+      "allow_alpha": false,
+      "strict_manifest_digest": true,
+      "routing": {
+        "owner_group": "telemetry-ops",
+        "support_group": "support-ops",
+        "release_group": "release-ops"
+      },
+      "notes": [
+        "partner-archive-backfill expects deterministic outputs for batch-render-telemetry.",
+        "If a required file or codec is missing, the export should block rather than silently fallback.",
+        "Partner packets should preserve lane-specific decisions so a healthy codec family stays visible during partial approval."
+      ]
+    }
+  ]
+}

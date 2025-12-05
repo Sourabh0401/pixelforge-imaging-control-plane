@@ -1,0 +1,220 @@
+{
+  "questionnaires": [
+    {
+      "lane": "jpeg-codec-fidelity",
+      "title": "Jpeg Codec Fidelity operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "title": "Raster Transform Tiling operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "title": "Metadata Exif Ingest operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "title": "Color Profile Parity operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "title": "Alpha Channel Recovery operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "title": "Thumbnail Generation Stability operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "title": "Partner Format Compatibility operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "title": "Export Pipeline Integrity operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "title": "Compression Preset Handoff operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "title": "Sprite Identity Refresh operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "title": "Decoder Recovery Replay operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "title": "Batch Render Telemetry operator questionnaire",
+      "questions": [
+        "Which artifact digest changed, and was the change expected for this release note?",
+        "Did a required region move from ok to warn or block, and which comparator saw it first?",
+        "Are partner-export requirements still satisfied for every required codec family?",
+        "If only one codec family failed, is a lane-limited rollout acceptable under current policy?",
+        "What should the next shift inspect first if the same lane pages again after rollout begins?"
+      ],
+      "handoff_template": [
+        "Current lane status:",
+        "Primary blocker or watch code:",
+        "Packet digest and manifest comparison:",
+        "Open follow-up with owner group:",
+        "Safe next action for the release owner:"
+      ]
+    }
+  ]
+}

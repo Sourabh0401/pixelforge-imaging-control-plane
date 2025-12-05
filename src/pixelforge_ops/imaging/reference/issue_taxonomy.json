@@ -1,0 +1,212 @@
+{
+  "issues": [
+    {
+      "code": "histogram-drift",
+      "family": "color-drift",
+      "default_severity": "warn",
+      "owner_group": "color-ops",
+      "summary": "histogram drift finding for imaging release control.",
+      "operator_action": "Inspect the color-drift evidence, compare it against the accepted packet, and route follow-up to color-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "color-delta",
+      "family": "color-drift",
+      "default_severity": "warn",
+      "owner_group": "color-ops",
+      "summary": "color delta finding for imaging release control.",
+      "operator_action": "Inspect the color-drift evidence, compare it against the accepted packet, and route follow-up to color-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "region-diff",
+      "family": "visual-integrity",
+      "default_severity": "block",
+      "owner_group": "raster-ops",
+      "summary": "region diff finding for imaging release control.",
+      "operator_action": "Inspect the visual-integrity evidence, compare it against the accepted packet, and route follow-up to raster-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "tile-coverage",
+      "family": "tile-topology",
+      "default_severity": "block",
+      "owner_group": "raster-ops",
+      "summary": "tile coverage finding for imaging release control.",
+      "operator_action": "Inspect the tile-topology evidence, compare it against the accepted packet, and route follow-up to raster-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "render-manifest",
+      "family": "artifact-contract",
+      "default_severity": "block",
+      "owner_group": "release-ops",
+      "summary": "render manifest finding for imaging release control.",
+      "operator_action": "Inspect the artifact-contract evidence, compare it against the accepted packet, and route follow-up to release-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "metadata-policy",
+      "family": "metadata",
+      "default_severity": "block",
+      "owner_group": "metadata-ops",
+      "summary": "metadata policy finding for imaging release control.",
+      "operator_action": "Inspect the metadata evidence, compare it against the accepted packet, and route follow-up to metadata-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "codec-profile",
+      "family": "codec-health",
+      "default_severity": "block",
+      "owner_group": "codec-ops",
+      "summary": "codec profile finding for imaging release control.",
+      "operator_action": "Inspect the codec-health evidence, compare it against the accepted packet, and route follow-up to codec-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "transparency-halo",
+      "family": "alpha-quality",
+      "default_severity": "warn",
+      "owner_group": "alpha-ops",
+      "summary": "transparency halo finding for imaging release control.",
+      "operator_action": "Inspect the alpha-quality evidence, compare it against the accepted packet, and route follow-up to alpha-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "jpeg-quantization",
+      "family": "codec-health",
+      "default_severity": "warn",
+      "owner_group": "codec-ops",
+      "summary": "jpeg quantization finding for imaging release control.",
+      "operator_action": "Inspect the codec-health evidence, compare it against the accepted packet, and route follow-up to codec-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "render-budget",
+      "family": "runtime-budget",
+      "default_severity": "warn",
+      "owner_group": "telemetry-ops",
+      "summary": "render budget finding for imaging release control.",
+      "operator_action": "Inspect the runtime-budget evidence, compare it against the accepted packet, and route follow-up to telemetry-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "partner-export",
+      "family": "partner-delivery",
+      "default_severity": "block",
+      "owner_group": "partner-ops",
+      "summary": "partner export finding for imaging release control.",
+      "operator_action": "Inspect the partner-delivery evidence, compare it against the accepted packet, and route follow-up to partner-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "operator-note",
+      "family": "operator-guidance",
+      "default_severity": "info",
+      "owner_group": "release-ops",
+      "summary": "operator note finding for imaging release control.",
+      "operator_action": "Inspect the operator-guidance evidence, compare it against the accepted packet, and route follow-up to release-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "artifact-lineage",
+      "family": "artifact-contract",
+      "default_severity": "warn",
+      "owner_group": "release-ops",
+      "summary": "artifact lineage finding for imaging release control.",
+      "operator_action": "Inspect the artifact-contract evidence, compare it against the accepted packet, and route follow-up to release-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "manifest-exception",
+      "family": "artifact-contract",
+      "default_severity": "warn",
+      "owner_group": "release-ops",
+      "summary": "manifest exception finding for imaging release control.",
+      "operator_action": "Inspect the artifact-contract evidence, compare it against the accepted packet, and route follow-up to release-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "baseline-envelope",
+      "family": "baseline-analysis",
+      "default_severity": "warn",
+      "owner_group": "replay-ops",
+      "summary": "baseline envelope finding for imaging release control.",
+      "operator_action": "Inspect the baseline-analysis evidence, compare it against the accepted packet, and route follow-up to replay-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    },
+    {
+      "code": "release-queue",
+      "family": "release-coordination",
+      "default_severity": "info",
+      "owner_group": "release-ops",
+      "summary": "release queue finding for imaging release control.",
+      "operator_action": "Inspect the release-coordination evidence, compare it against the accepted packet, and route follow-up to release-ops.",
+      "related_modules": [
+        "image_release_gate",
+        "quality_report",
+        "operator_guidance"
+      ]
+    }
+  ]
+}

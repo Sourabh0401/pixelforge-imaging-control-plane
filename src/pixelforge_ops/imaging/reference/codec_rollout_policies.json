@@ -1,0 +1,772 @@
+{
+  "policies": [
+    {
+      "lane": "jpeg-codec-fidelity",
+      "codec": "avif",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in jpeg-codec-fidelity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "jpeg-codec-fidelity",
+      "codec": "jpeg",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in jpeg-codec-fidelity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "jpeg-codec-fidelity",
+      "codec": "png",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in jpeg-codec-fidelity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "jpeg-codec-fidelity",
+      "codec": "webp",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in jpeg-codec-fidelity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "codec": "avif",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in raster-transform-tiling should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "codec": "jpeg",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in raster-transform-tiling should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "codec": "png",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in raster-transform-tiling should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "raster-transform-tiling",
+      "codec": "webp",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in raster-transform-tiling should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "codec": "avif",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in metadata-exif-ingest should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "codec": "jpeg",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in metadata-exif-ingest should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "codec": "png",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in metadata-exif-ingest should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "metadata-exif-ingest",
+      "codec": "webp",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in metadata-exif-ingest should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "codec": "avif",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in color-profile-parity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "codec": "jpeg",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in color-profile-parity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "codec": "png",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in color-profile-parity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "color-profile-parity",
+      "codec": "webp",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in color-profile-parity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "codec": "avif",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in alpha-channel-recovery should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "codec": "jpeg",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in alpha-channel-recovery should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "codec": "png",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in alpha-channel-recovery should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "alpha-channel-recovery",
+      "codec": "webp",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in alpha-channel-recovery should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "codec": "avif",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in thumbnail-generation-stability should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "codec": "jpeg",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in thumbnail-generation-stability should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "codec": "png",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in thumbnail-generation-stability should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "thumbnail-generation-stability",
+      "codec": "webp",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in thumbnail-generation-stability should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "codec": "avif",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in partner-format-compatibility should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "codec": "jpeg",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in partner-format-compatibility should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "codec": "png",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in partner-format-compatibility should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "partner-format-compatibility",
+      "codec": "webp",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in partner-format-compatibility should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "codec": "avif",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in export-pipeline-integrity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "codec": "jpeg",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in export-pipeline-integrity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "codec": "png",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in export-pipeline-integrity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "export-pipeline-integrity",
+      "codec": "webp",
+      "release_channel": "partner",
+      "allow_partial_rollout": false,
+      "canary_percent": 10,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in export-pipeline-integrity should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "codec": "avif",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in compression-preset-handoff should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "codec": "jpeg",
+      "release_channel": "internal",
+      "allow_partial_rollout": true,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in compression-preset-handoff should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "codec": "png",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in compression-preset-handoff should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "compression-preset-handoff",
+      "codec": "webp",
+      "release_channel": "internal",
+      "allow_partial_rollout": false,
+      "canary_percent": 35,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in compression-preset-handoff should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "codec": "avif",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in sprite-identity-refresh should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "codec": "jpeg",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in sprite-identity-refresh should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "codec": "png",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in sprite-identity-refresh should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "sprite-identity-refresh",
+      "codec": "webp",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in sprite-identity-refresh should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "codec": "avif",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in decoder-recovery-replay should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "codec": "jpeg",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in decoder-recovery-replay should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "codec": "png",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in decoder-recovery-replay should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "decoder-recovery-replay",
+      "codec": "webp",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in decoder-recovery-replay should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "codec": "avif",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1800,
+      "max_block_runtime_ms": 2500,
+      "notes": [
+        "AVIF rollout in batch-render-telemetry should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "codec": "jpeg",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "JPEG rollout in batch-render-telemetry should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "codec": "png",
+      "release_channel": "pilot",
+      "allow_partial_rollout": true,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 35.0,
+      "psnr_block_floor": 31.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "PNG rollout in batch-render-telemetry should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    },
+    {
+      "lane": "batch-render-telemetry",
+      "codec": "webp",
+      "release_channel": "pilot",
+      "allow_partial_rollout": false,
+      "canary_percent": 20,
+      "hard_block_on_decode_failure": true,
+      "psnr_watch_floor": 37.0,
+      "psnr_block_floor": 33.0,
+      "max_warn_runtime_ms": 1500,
+      "max_block_runtime_ms": 2100,
+      "notes": [
+        "WEBP rollout in batch-render-telemetry should preserve independent lane decisions.",
+        "Partner lanes use smaller canary windows because export mistakes take longer to unwind once they land."
+      ]
+    }
+  ]
+}
