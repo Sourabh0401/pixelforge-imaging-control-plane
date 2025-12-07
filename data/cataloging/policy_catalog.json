@@ -30,6 +30,21 @@
       "supports_hidden_cases": true,
       "supports_partial_credit": true
     },
+    "color_delta": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "image-matrix"
+      ],
+      "failure_message": "color_delta comparator mismatch",
+      "input_shape": "matrix",
+      "normalizers": [
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
     "contains_tokens": {
       "artifact_types": [
         "stdout",
@@ -104,6 +119,24 @@
       "normalizers": [
         "trim_strings",
         "coerce_numbers"
+      ],
+      "runtime_bucket": "long",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "image_release_gate": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "audit",
+        "manifest"
+      ],
+      "failure_message": "image_release_gate comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings",
+        "coerce_numbers",
+        "stable_sort"
       ],
       "runtime_bucket": "long",
       "supports_hidden_cases": true,
@@ -187,6 +220,21 @@
       "supports_hidden_cases": true,
       "supports_partial_credit": true
     },
+    "channel_histogram": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "image-matrix"
+      ],
+      "failure_message": "channel_histogram comparator mismatch",
+      "input_shape": "matrix",
+      "normalizers": [
+        "coerce_numbers"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": true
+    },
     "range": {
       "artifact_types": [
         "stdout",
@@ -202,6 +250,22 @@
       "supports_hidden_cases": false,
       "supports_partial_credit": true
     },
+    "region_diff": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "image-matrix"
+      ],
+      "failure_message": "region_diff comparator mismatch",
+      "input_shape": "matrix",
+      "normalizers": [
+        "coerce_numbers",
+        "stable_sort"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
     "regex_groups": {
       "artifact_types": [
         "stdout",
@@ -215,6 +279,23 @@
       "runtime_bucket": "short",
       "supports_hidden_cases": true,
       "supports_partial_credit": true
+    },
+    "render_manifest": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "manifest",
+        "audit"
+      ],
+      "failure_message": "render_manifest comparator mismatch",
+      "input_shape": "mapping",
+      "normalizers": [
+        "trim_strings",
+        "stable_sort"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
     },
     "rounded_number": {
       "artifact_types": [
@@ -243,6 +324,22 @@
       "normalizers": [
         "stable_sort",
         "trim_strings"
+      ],
+      "runtime_bucket": "medium",
+      "supports_hidden_cases": true,
+      "supports_partial_credit": false
+    },
+    "tile_coverage": {
+      "artifact_types": [
+        "stdout",
+        "trace",
+        "manifest"
+      ],
+      "failure_message": "tile_coverage comparator mismatch",
+      "input_shape": "sequence",
+      "normalizers": [
+        "stable_sort",
+        "coerce_numbers"
       ],
       "runtime_bucket": "medium",
       "supports_hidden_cases": true,

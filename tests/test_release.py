@@ -3,7 +3,11 @@ from __future__ import annotations
 import unittest
 
 from pixelforge_ops.release import build_release_manifest, manifest_to_dict, release_delta
+from pixelforge_ops.reporting_surfaces.release_notes import release_notes
+from pixelforge_ops.scoring import score_run
+from pixelforge_ops.execution import evaluate_attempt
 from tests.helpers import bundle
+from tests.helpers import attempt
 
 
 class ReleaseTests(unittest.TestCase):
@@ -28,4 +32,11 @@ class ReleaseTests(unittest.TestCase):
         payload = manifest_to_dict(manifest)
         self.assertIn("bundle_stats", payload)
 
+    def test_release_notes_include_imaging_review_when_present(self) -> None:
+        item = bundle("jpeg-codec-fidelity")
+        run = evaluate_attempt(item, attempt("jpeg-codec-fidelity", "mixed"))
+        card = score_run(run, item)
+        manifest = build_release_manifest("release-c", [item], created_at="2026-06-03T10:00:00Z")
+        text = release_notes(manifest, [card], {"jpeg-codec-fidelity": {"status": "warn", "issue_count": 2}})
+        self.assertIn("imaging gate", text)
 

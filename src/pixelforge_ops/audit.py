@@ -21,6 +21,7 @@ def build_audit_packet(
     run: SubmissionRun,
     scorecard: Scorecard,
     manifest: ReleaseManifest,
+    imaging_review: dict[str, object] | None = None,
 ) -> dict[str, object]:
     packet = {
         "bundle": {
@@ -33,6 +34,8 @@ def build_audit_packet(
         "scorecard": scorecard_to_dict(scorecard),
         "release_manifest": manifest_to_dict(manifest),
     }
+    if imaging_review:
+        packet["imaging_review"] = dict(imaging_review)
     packet["digest"] = json_digest(packet)
     return packet
 

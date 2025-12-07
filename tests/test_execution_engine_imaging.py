@@ -28,6 +28,27 @@ class ExecutionEngineImagingTests(unittest.TestCase):
         ]
         self.assertTrue(comparator.compare("transform_pipeline", stages, {}))
 
+    def test_compare_dispatches_channel_histogram(self) -> None:
+        matrix = [[(10, 10, 10), (20, 20, 20)]]
+        self.assertTrue(comparator.compare("channel_histogram", matrix, {"matrix": matrix}))
+
+    def test_compare_dispatches_color_delta(self) -> None:
+        matrix = [[(10, 10, 10)]]
+        self.assertTrue(comparator.compare("color_delta", matrix, {"matrix": matrix}))
+
+    def test_compare_dispatches_region_diff(self) -> None:
+        matrix = [[0, 1], [2, 3]]
+        expected = {"matrix": matrix, "required_regions": [{"name": "all", "x": 0, "y": 0, "width": 2, "height": 2}]}
+        self.assertTrue(comparator.compare("region_diff", matrix, expected))
+
+    def test_compare_dispatches_tile_coverage(self) -> None:
+        tiles = [{"path": "a.png", "x": 0, "y": 0, "width": 8, "height": 8, "codec": "png"}]
+        self.assertTrue(comparator.compare("tile_coverage", tiles, {}))
+
+    def test_compare_dispatches_render_manifest(self) -> None:
+        artifacts = [{"path": "a.png", "lane": "jpeg-codec-fidelity", "codec": "jpeg", "artifact_type": "frame"}]
+        self.assertTrue(comparator.compare("render_manifest", artifacts, {"bundle_id": "bundle-a", "lane": "jpeg-codec-fidelity"}))
+
     def test_validator_accepts_new_imaging_comparator(self) -> None:
         item = bundle("jpeg-codec-fidelity")
         case = AssessmentCase(
@@ -94,6 +115,10 @@ class ExecutionEngineImagingTests(unittest.TestCase):
     def test_policy_catalog_exposes_pixel_matrix_contract(self) -> None:
         contract = policy_catalog.comparator_policy("pixel_matrix")
         self.assertEqual(contract["input_shape"], "matrix")
+
+    def test_policy_catalog_exposes_image_release_gate_contract(self) -> None:
+        contract = policy_catalog.comparator_policy("image_release_gate")
+        self.assertEqual(contract["input_shape"], "mapping")
 
     def test_catalog_manifest_titles_are_imaging_specific(self) -> None:
         item = bundle("thumbnail-generation-stability")

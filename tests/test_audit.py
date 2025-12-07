@@ -33,4 +33,11 @@ class AuditTests(unittest.TestCase):
         with zipfile.ZipFile(__import__("io").BytesIO(data)) as archive:
             self.assertEqual(sorted(archive.namelist()), ["audit_packet.json", "manifest.json"])
 
+    def test_audit_packet_can_include_imaging_review(self) -> None:
+        item = bundle("jpeg-codec-fidelity")
+        run = evaluate_attempt(item, attempt("jpeg-codec-fidelity", "mixed"))
+        card = score_run(run, item)
+        manifest = build_release_manifest("release-a", [item], created_at="2026-06-03T10:00:00Z")
+        packet = audit.build_audit_packet(item, run, card, manifest, imaging_review={"status": "warn", "issue_count": 1})
+        self.assertIn("imaging_review", packet)
 

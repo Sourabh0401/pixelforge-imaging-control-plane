@@ -86,6 +86,30 @@ def transform_pipeline(answer, expected) -> bool:
     return compare_imaging_output("transform_pipeline", answer, expected)
 
 
+def channel_histogram(answer, expected) -> bool:
+    return compare_imaging_output("channel_histogram", answer, expected)
+
+
+def color_delta(answer, expected) -> bool:
+    return compare_imaging_output("color_delta", answer, expected)
+
+
+def region_diff(answer, expected) -> bool:
+    return compare_imaging_output("region_diff", answer, expected)
+
+
+def tile_coverage(answer, expected) -> bool:
+    return compare_imaging_output("tile_coverage", answer, expected)
+
+
+def render_manifest(answer, expected) -> bool:
+    return compare_imaging_output("render_manifest", answer, expected)
+
+
+def image_release_gate(answer, expected) -> bool:
+    return compare_imaging_output("image_release_gate", answer, expected)
+
+
 COMPARATORS = {
     "exact": exact,
     "unordered_list": unordered_list,
@@ -104,6 +128,12 @@ COMPARATORS = {
     "image_audit": image_audit,
     "codec_summary": codec_summary,
     "transform_pipeline": transform_pipeline,
+    "channel_histogram": channel_histogram,
+    "color_delta": color_delta,
+    "region_diff": region_diff,
+    "tile_coverage": tile_coverage,
+    "render_manifest": render_manifest,
+    "image_release_gate": image_release_gate,
 }
 
 
