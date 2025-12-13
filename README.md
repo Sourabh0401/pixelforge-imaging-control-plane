@@ -13,6 +13,8 @@ The product has six connected surfaces:
 
 The checked-in fixture corpus still uses durable codenames such as `jpeg-codec-fidelity` and `raster-transform-tiling`. Those names predate the current PixelForge branding and now stand in for imaging certification lanes like codec fidelity, raster transforms, color management, partner export compatibility, and recovery drills. The codenames stay because they keep long-lived history snapshots stable.
 
+The imaging layer is no longer a thin comparison wrapper. It now carries lane-aware threshold profiles, package-local operator templates, partner delivery contracts, codec rollout policy, manifest exception rules, and render-quality report builders. That matters because the release team does not only ask “did the image match?” They also ask “which lane failed, which codec family is still safe, does the packet still satisfy partner rules, and what should the next shift inspect first?”
+
 ## Commands operators actually use
 
 ```bash
@@ -34,6 +36,8 @@ python -m unittest discover -s tests -q
 - monthly history JSONL corpora for trend and dashboard tests
 - SQLite snapshot databases with imported release history rows
 - deterministic audit packet samples, scorecard exports, release manifests, and dashboard views
+- package-local imaging reference assets for threshold profiles, partner rules, rollout policy, exception policy, and operator questionnaires
+- lane-specific operator templates that render stable handoff context into quality reports and release packets
 
 ## Why the repo is bigger than a small library
 
@@ -42,6 +46,11 @@ PixelForge itself is the image engine. This repo is the release control plane ar
 ## Repository map
 
 - [docs/architecture.md](docs/architecture.md)
+- [docs/imaging-quality-model.md](docs/imaging-quality-model.md)
+- [docs/codec-compatibility.md](docs/codec-compatibility.md)
+- [docs/color-profile-policy.md](docs/color-profile-policy.md)
+- [docs/render-manifest.md](docs/render-manifest.md)
+- [docs/image-release-gates.md](docs/image-release-gates.md)
 - [docs/department-guides.md](docs/department-guides.md)
 - [docs/release-process.md](docs/release-process.md)
 - [docs/data-model.md](docs/data-model.md)
