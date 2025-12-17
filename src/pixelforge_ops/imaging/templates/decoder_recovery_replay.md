@@ -47,3 +47,14 @@ Warnings can move forward only when the packet records why the warning is safe, 
 ## Longer notes
 The `decoder-recovery-replay` lane exists because image releases fail in different ways depending on codec, metadata, transform ordering, alpha handling, and export policy. This template keeps those branches explicit. For this lane, operators should pay extra attention to replay lanes should preserve manifest digest and issue codes so incident debugging stays deterministic across shifts.
 The goal is not just to say pass or fail. The goal is to leave behind enough structured evidence that the next shift can make the same decision without re-learning the lane from scratch. That is why the control plane carries manifest digests, machine summaries, owner routing, and operator prose together.
+
+## Escalation examples
+If the packet blocks on manifest drift and metadata is also noisy, escalate the release owner and the lane owner together so the next replay does not fix one layer while hiding the other.
+If only one codec family regresses and the lane allows partial rollout, write the unaffected family, the allowed canary percentage, and the rollback boundary into the handoff before the release owner approves anything.
+If the lane is partner-facing, always say whether the partner packet is blocked, degraded, or unchanged. That question comes up in nearly every follow-up.
+
+## Questions not to skip
+- What changed in the artifact list besides the visible image payload?
+- Did the metadata drift only in advisory fields, or did it alter a required export contract?
+- If the next shift reruns this lane, what exact packet or digest should they compare against first?
+- Which issue code best explains the risk to a release owner who has not stared at the images yet?
