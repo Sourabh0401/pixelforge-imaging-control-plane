@@ -2,16 +2,23 @@ from __future__ import annotations
 
 from typing import Mapping
 
+from .artifact_reconciliation import artifact_reconciliation_summary
 from .artifact_lineage import lineage_summary
 from .channel_histogram import histogram_summary
+from .certification_queue import queue_summary
+from .codec_blockers import codec_blocker_summary
 from .codec_profile import codec_profile_summary
 from .color_delta import color_delta_summary
+from .export_readiness import export_readiness_summary
 from .image_release_gate import gate_imaging_release
+from .lane_release_story import release_story
+from .manifest_consistency import manifest_consistency_summary
 from .manifest_exceptions import exception_summary
 from .metadata_policy import metadata_policy_summary
 from .partner_profiles import validate_partner_delivery
 from .partner_export_gate import partner_export_summary
 from .quality_report import build_quality_report
+from .quality_envelope import quality_envelope_summary
 from .region_diff import region_diff_summary
 from .render_manifest import build_render_manifest, render_manifest_summary
 from .rollout_policy import rollout_summary
@@ -72,6 +79,7 @@ def evaluate_lane_payload(payload: Mapping[str, object]) -> dict[str, object]:
     )
     manifest_summary = render_manifest_summary(manifest)
     codecs = codec_profile_summary(payload.get("codec_rows", []))
+    codec_blockers = codec_blocker_summary(payload.get("codec_rows", []))
     partner = partner_export_summary(lane, payload.get("metadata", {}), payload.get("codec_rows", []), manifest)
     partner_delivery = validate_partner_delivery(
         str(payload.get("partner", "partner-retail-eu")),
@@ -81,6 +89,17 @@ def evaluate_lane_payload(payload: Mapping[str, object]) -> dict[str, object]:
         metadata=payload.get("metadata", {}),
     )
     rollout = rollout_summary(payload.get("codec_rows", []), lane, str(payload.get("release_channel", threshold_profile_summary(lane)["release_channel"])))
+    previous_manifest = payload.get("previous_manifest")
+    manifest_consistency = manifest_consistency_summary(
+        manifest,
+        previous_manifest if isinstance(previous_manifest, Mapping) else None,
+        allowed_categories=payload.get("allowed_manifest_categories", ()),
+    )
+    artifact_reconciliation = artifact_reconciliation_summary(
+        payload.get("expected_artifacts", payload.get("artifacts", [])),
+        payload.get("artifacts", []),
+        blocked_lanes=[lane] if str(payload.get("release_channel", threshold_profile_summary(lane)["release_channel"])) == "partner" else (),
+    )
     gate = gate_imaging_release(
         bundle_id,
         lane,
@@ -95,6 +114,21 @@ def evaluate_lane_payload(payload: Mapping[str, object]) -> dict[str, object]:
     )
     exceptions = exception_summary(lane, [{"code": code} for code in gate.get("issue_codes", [])])
     lineage = lineage_summary([manifest])
+    envelope = quality_envelope_summary(
+        lane,
+        histogram=histogram,
+        color_delta=color,
+        region_summary=regions,
+        manifest_summary=manifest_summary,
+        consistency_summary=manifest_consistency,
+    )
+    export_readiness = export_readiness_summary(
+        gate,
+        partner_delivery,
+        partner,
+        manifest_consistency=manifest_consistency,
+        artifact_reconciliation=artifact_reconciliation,
+    )
     quality_report = build_quality_report(
         bundle_id,
         lane,
@@ -108,6 +142,29 @@ def evaluate_lane_payload(payload: Mapping[str, object]) -> dict[str, object]:
         render_manifest=manifest_summary,
         partner_export=partner,
     )
+    story = release_story(
+        {
+            "lane": lane,
+            "gate": gate,
+            "export_readiness": export_readiness,
+            "manifest_consistency": manifest_consistency,
+            "artifact_reconciliation": artifact_reconciliation,
+        }
+    )
+    queue = queue_summary(
+        [
+            {
+                "lane": lane,
+                "status": gate.get("status", "ok"),
+                "release_channel": payload.get("release_channel", threshold_profile_summary(lane)["release_channel"]),
+                "owner_group": threshold_profile_summary(lane)["owner_group"],
+                "partner_visible": str(payload.get("release_channel", threshold_profile_summary(lane)["release_channel"])) == "partner",
+                "blocked_codecs": codec_blockers["blocked_families"],
+                "watch_codecs": codec_blockers["watch_families"],
+                "issues": list(gate.get("issues", [])),
+            }
+        ]
+    )
     return {
         "bundle_id": bundle_id,
         "lane": lane,
@@ -120,11 +177,18 @@ def evaluate_lane_payload(payload: Mapping[str, object]) -> dict[str, object]:
         "metadata_policy": metadata,
         "render_manifest": manifest_summary,
         "codec_profile": codecs,
+        "codec_blockers": codec_blockers,
         "partner_export": partner,
         "partner_delivery": partner_delivery,
         "rollout": rollout,
+        "manifest_consistency": manifest_consistency,
+        "artifact_reconciliation": artifact_reconciliation,
         "exceptions": exceptions,
         "lineage": lineage,
+        "quality_envelope": envelope,
+        "export_readiness": export_readiness,
         "gate": gate,
         "quality_report": quality_report,
+        "release_story": story,
+        "certification_queue": queue,
     }
